@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="fet-dS-z9r">
+            <objects>
+                <viewController id="1El-ds-H8m" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kRM-OT-LIe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banknote_currency_money_numbers_50323_3840x2160" translatesAutoresizingMaskIntoConstraints="NO" id="f9B-LI-kVo">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k2E-Fn-VdH" firstAttribute="trailing" secondItem="f9B-LI-kVo" secondAttribute="trailing" id="2AD-xT-8lV"/>
+                            <constraint firstItem="k2E-Fn-VdH" firstAttribute="bottom" secondItem="f9B-LI-kVo" secondAttribute="bottom" id="3gO-Gp-UQI"/>
+                            <constraint firstItem="f9B-LI-kVo" firstAttribute="top" secondItem="k2E-Fn-VdH" secondAttribute="top" id="4ri-GY-Mtz"/>
+                            <constraint firstItem="f9B-LI-kVo" firstAttribute="leading" secondItem="k2E-Fn-VdH" secondAttribute="leading" id="g9K-OF-Qve"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k2E-Fn-VdH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dg8-ae-V8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="177" y="90"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="banknote_currency_money_numbers_50323_3840x2160" width="3840" height="2160"/>
+    </resources>
+</document>
