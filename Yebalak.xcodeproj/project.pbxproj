@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		67BD943F2A1299584C58DF7F /* Pods_Yebalak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9182668FEE11551F15EEE8D5 /* Pods_Yebalak.framework */; };
+		7D63DAA9207E14CB00BF54E1 /* appConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAA8207E14CB00BF54E1 /* appConstant.swift */; };
+		7D63DAAB207E195200BF54E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAAA207E195200BF54E1 /* User.swift */; };
+		7D63DAAD207E2A2700BF54E1 /* GeneralMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAAC207E2A2700BF54E1 /* GeneralMethod.swift */; };
+		7D63DAAF207E2BE700BF54E1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAAE207E2BE700BF54E1 /* Extensions.swift */; };
+		7D63DAB1207E2ED700BF54E1 /* Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAB0207E2ED700BF54E1 /* Enumeration.swift */; };
+		7D63DAB5207E4C0800BF54E1 /* VerifyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAB4207E4C0800BF54E1 /* VerifyVC.swift */; };
 		7D77A6D4207CB838006D91B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D77A6D3207CB838006D91B6 /* AppDelegate.swift */; };
 		7D77A6D6207CB838006D91B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D77A6D5207CB838006D91B6 /* ViewController.swift */; };
 		7D77A6D9207CB838006D91B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D77A6D7207CB838006D91B6 /* Main.storyboard */; };
@@ -24,6 +30,12 @@
 /* Begin PBXFileReference section */
 		4944F9CA81F6A544353E14AF /* Pods-Yebalak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yebalak.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yebalak/Pods-Yebalak.release.xcconfig"; sourceTree = "<group>"; };
 		4EEDD6E6D710D51E754B95F7 /* Pods-Yebalak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yebalak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yebalak/Pods-Yebalak.debug.xcconfig"; sourceTree = "<group>"; };
+		7D63DAA8207E14CB00BF54E1 /* appConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appConstant.swift; sourceTree = "<group>"; };
+		7D63DAAA207E195200BF54E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7D63DAAC207E2A2700BF54E1 /* GeneralMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMethod.swift; sourceTree = "<group>"; };
+		7D63DAAE207E2BE700BF54E1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7D63DAB0207E2ED700BF54E1 /* Enumeration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumeration.swift; sourceTree = "<group>"; };
+		7D63DAB4207E4C0800BF54E1 /* VerifyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyVC.swift; sourceTree = "<group>"; };
 		7D77A6D0207CB837006D91B6 /* Yebalak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yebalak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D77A6D3207CB838006D91B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D77A6D5207CB838006D91B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +94,10 @@
 		7D77A6D2207CB838006D91B6 /* Yebalak */ = {
 			isa = PBXGroup;
 			children = (
+				7D63DAA8207E14CB00BF54E1 /* appConstant.swift */,
+				7D63DAAC207E2A2700BF54E1 /* GeneralMethod.swift */,
+				7D63DAAE207E2BE700BF54E1 /* Extensions.swift */,
+				7D63DAB0207E2ED700BF54E1 /* Enumeration.swift */,
 				7D77A6EE207D03CB006D91B6 /* Model */,
 				7D77A6E5207CBD2A006D91B6 /* Views */,
 				7D77A6E8207CBD64006D91B6 /* Controller */,
@@ -110,6 +126,7 @@
 			children = (
 				7D77A6E9207CBDB0006D91B6 /* RegisterVC.swift */,
 				7D77A6F3207D1506006D91B6 /* LoginVC.swift */,
+				7D63DAB4207E4C0800BF54E1 /* VerifyVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,6 +143,7 @@
 		7D77A6EE207D03CB006D91B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7D63DAAA207E195200BF54E1 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,10 +237,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Yebalak/Pods-Yebalak-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -269,10 +289,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D63DAAD207E2A2700BF54E1 /* GeneralMethod.swift in Sources */,
 				7D77A6EA207CBDB0006D91B6 /* RegisterVC.swift in Sources */,
 				7D77A6D6207CB838006D91B6 /* ViewController.swift in Sources */,
 				7D77A6F4207D1506006D91B6 /* LoginVC.swift in Sources */,
 				7D77A6F0207D0496006D91B6 /* ApiRequests.swift in Sources */,
+				7D63DAAF207E2BE700BF54E1 /* Extensions.swift in Sources */,
+				7D63DAAB207E195200BF54E1 /* User.swift in Sources */,
+				7D63DAB5207E4C0800BF54E1 /* VerifyVC.swift in Sources */,
+				7D63DAA9207E14CB00BF54E1 /* appConstant.swift in Sources */,
+				7D63DAB1207E2ED700BF54E1 /* Enumeration.swift in Sources */,
 				7D77A6ED207D0384006D91B6 /* serverManger.swift in Sources */,
 				7D77A6D4207CB838006D91B6 /* AppDelegate.swift in Sources */,
 			);
