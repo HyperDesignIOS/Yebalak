@@ -9,27 +9,22 @@
 import UIKit
 
 class RegisterVC: UIViewController {
-
+    
+    @IBOutlet weak var phoneTF: UITextField!
+    @IBOutlet weak var userNameTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var confirmPasswordTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func haveAccountButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
+        //self.present(controller, animated: true, completion: nil)
+        self.show(controller, sender: self)
     }
-    */
-
+    
 }

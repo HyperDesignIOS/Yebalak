@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67BD943F2A1299584C58DF7F /* Pods_Yebalak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9182668FEE11551F15EEE8D5 /* Pods_Yebalak.framework */; };
 		7D77A6D4207CB838006D91B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D77A6D3207CB838006D91B6 /* AppDelegate.swift */; };
 		7D77A6D6207CB838006D91B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D77A6D5207CB838006D91B6 /* ViewController.swift */; };
 		7D77A6D9207CB838006D91B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D77A6D7207CB838006D91B6 /* Main.storyboard */; };
@@ -14,9 +15,15 @@
 		7D77A6DE207CB838006D91B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D77A6DC207CB838006D91B6 /* LaunchScreen.storyboard */; };
 		7D77A6E7207CBD49006D91B6 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D77A6E6207CBD49006D91B6 /* Register.storyboard */; };
 		7D77A6EA207CBDB0006D91B6 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D77A6E9207CBDB0006D91B6 /* RegisterVC.swift */; };
+		7D77A6ED207D0384006D91B6 /* serverManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D77A6EC207D0384006D91B6 /* serverManger.swift */; };
+		7D77A6F0207D0496006D91B6 /* ApiRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D77A6EF207D0496006D91B6 /* ApiRequests.swift */; };
+		7D77A6F2207D0640006D91B6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D77A6F1207D0640006D91B6 /* Login.storyboard */; };
+		7D77A6F4207D1506006D91B6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D77A6F3207D1506006D91B6 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4944F9CA81F6A544353E14AF /* Pods-Yebalak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yebalak.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yebalak/Pods-Yebalak.release.xcconfig"; sourceTree = "<group>"; };
+		4EEDD6E6D710D51E754B95F7 /* Pods-Yebalak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yebalak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yebalak/Pods-Yebalak.debug.xcconfig"; sourceTree = "<group>"; };
 		7D77A6D0207CB837006D91B6 /* Yebalak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yebalak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D77A6D3207CB838006D91B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D77A6D5207CB838006D91B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +33,11 @@
 		7D77A6DF207CB838006D91B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D77A6E6207CBD49006D91B6 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		7D77A6E9207CBDB0006D91B6 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		7D77A6EC207D0384006D91B6 /* serverManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serverManger.swift; sourceTree = "<group>"; };
+		7D77A6EF207D0496006D91B6 /* ApiRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequests.swift; sourceTree = "<group>"; };
+		7D77A6F1207D0640006D91B6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		7D77A6F3207D1506006D91B6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		9182668FEE11551F15EEE8D5 /* Pods_Yebalak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yebalak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67BD943F2A1299584C58DF7F /* Pods_Yebalak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28DEBFF1AE69267F129FF9E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EEDD6E6D710D51E754B95F7 /* Pods-Yebalak.debug.xcconfig */,
+				4944F9CA81F6A544353E14AF /* Pods-Yebalak.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7D77A6C7207CB837006D91B6 = {
 			isa = PBXGroup;
 			children = (
 				7D77A6D2207CB838006D91B6 /* Yebalak */,
 				7D77A6D1207CB837006D91B6 /* Products */,
+				28DEBFF1AE69267F129FF9E7 /* Pods */,
+				DA69CFBA266E3F8B57BEA554 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +82,10 @@
 		7D77A6D2207CB838006D91B6 /* Yebalak */ = {
 			isa = PBXGroup;
 			children = (
-				7D77A6E8207CBD64006D91B6 /* Controller */,
+				7D77A6EE207D03CB006D91B6 /* Model */,
 				7D77A6E5207CBD2A006D91B6 /* Views */,
+				7D77A6E8207CBD64006D91B6 /* Controller */,
+				7D77A6EB207D0332006D91B6 /* Network */,
 				7D77A6D3207CB838006D91B6 /* AppDelegate.swift */,
 				7D77A6D5207CB838006D91B6 /* ViewController.swift */,
 				7D77A6D7207CB838006D91B6 /* Main.storyboard */,
@@ -74,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				7D77A6E6207CBD49006D91B6 /* Register.storyboard */,
+				7D77A6F1207D0640006D91B6 /* Login.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -82,8 +109,33 @@
 			isa = PBXGroup;
 			children = (
 				7D77A6E9207CBDB0006D91B6 /* RegisterVC.swift */,
+				7D77A6F3207D1506006D91B6 /* LoginVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		7D77A6EB207D0332006D91B6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7D77A6EC207D0384006D91B6 /* serverManger.swift */,
+				7D77A6EF207D0496006D91B6 /* ApiRequests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7D77A6EE207D03CB006D91B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA69CFBA266E3F8B57BEA554 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9182668FEE11551F15EEE8D5 /* Pods_Yebalak.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,9 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D77A6E2207CB838006D91B6 /* Build configuration list for PBXNativeTarget "Yebalak" */;
 			buildPhases = (
+				FE4E4A38A9FBE8CD6151ED42 /* [CP] Check Pods Manifest.lock */,
 				7D77A6CC207CB837006D91B6 /* Sources */,
 				7D77A6CD207CB837006D91B6 /* Frameworks */,
 				7D77A6CE207CB837006D91B6 /* Resources */,
+				556D57BD28E0F7F3D1908AFE /* [CP] Embed Pods Frameworks */,
+				C0F1360DA18163E4F4295CB2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,11 +203,66 @@
 				7D77A6DE207CB838006D91B6 /* LaunchScreen.storyboard in Resources */,
 				7D77A6DB207CB838006D91B6 /* Assets.xcassets in Resources */,
 				7D77A6D9207CB838006D91B6 /* Main.storyboard in Resources */,
+				7D77A6F2207D0640006D91B6 /* Login.storyboard in Resources */,
 				7D77A6E7207CBD49006D91B6 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		556D57BD28E0F7F3D1908AFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Yebalak/Pods-Yebalak-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yebalak/Pods-Yebalak-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0F1360DA18163E4F4295CB2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yebalak/Pods-Yebalak-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE4E4A38A9FBE8CD6151ED42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yebalak-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7D77A6CC207CB837006D91B6 /* Sources */ = {
@@ -161,6 +271,9 @@
 			files = (
 				7D77A6EA207CBDB0006D91B6 /* RegisterVC.swift in Sources */,
 				7D77A6D6207CB838006D91B6 /* ViewController.swift in Sources */,
+				7D77A6F4207D1506006D91B6 /* LoginVC.swift in Sources */,
+				7D77A6F0207D0496006D91B6 /* ApiRequests.swift in Sources */,
+				7D77A6ED207D0384006D91B6 /* serverManger.swift in Sources */,
 				7D77A6D4207CB838006D91B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +409,7 @@
 		};
 		7D77A6E3207CB838006D91B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EEDD6E6D710D51E754B95F7 /* Pods-Yebalak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -310,6 +424,7 @@
 		};
 		7D77A6E4207CB838006D91B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4944F9CA81F6A544353E14AF /* Pods-Yebalak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
