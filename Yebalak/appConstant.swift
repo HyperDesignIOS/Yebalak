@@ -1,0 +1,15 @@
+//
+//  appConstant.swift
+//  Yebalak
+//
+//  Created by AmrObjection on 4/11/18.
+//  Copyright © 2018 AmrObjection. All rights reserved.
+//
+
+import Foundation
+
+let BaseURL = "http://hyper-design.com/yebalak/api"
+let RegisterURL = "\(BaseURL)/register"
+let LoginURL = "\(BaseURL)/login"
+let VerifyURL = "\(BaseURL)/checkCode"
+

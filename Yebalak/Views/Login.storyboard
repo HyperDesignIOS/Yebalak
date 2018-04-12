@@ -187,6 +187,9 @@
                                                         <integer key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginButton:" destination="hLx-g4-lQk" eventType="touchUpInside" id="ZLg-Mb-BLr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
