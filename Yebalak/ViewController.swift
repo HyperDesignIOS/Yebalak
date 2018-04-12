@@ -9,23 +9,39 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var balance : String!
+    var lastTransaction :String!
+    var date : String!
 
+    @IBOutlet weak var balanceLabel: UILabel!
+    @IBOutlet weak var lastTransactionLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UserDefaults.standard.isLoggedIn()
+        {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID")
+            balanceLabel.text = balance
+            lastTransactionLabel.text = lastTransaction
+            dateLabel.text = date
+            self.show(controller, sender: self)
+        }
+        else {
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
+            self.show(controller, sender: self)
+        }
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func openRgister(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Register", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID")
-        //self.present(controller, animated: true, completion: nil)
-        self.show(controller, sender: self)
-        
     }
     
 }
