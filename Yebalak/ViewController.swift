@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
     @IBAction func openRgister(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Register", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "RegisterID")
+        let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID")
         //self.present(controller, animated: true, completion: nil)
         self.show(controller, sender: self)
         

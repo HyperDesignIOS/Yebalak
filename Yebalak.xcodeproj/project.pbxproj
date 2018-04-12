@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		67BD943F2A1299584C58DF7F /* Pods_Yebalak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9182668FEE11551F15EEE8D5 /* Pods_Yebalak.framework */; };
+		7D5585B2207F5BC9009AFF1B /* BalanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5585B1207F5BC9009AFF1B /* BalanceVC.swift */; };
 		7D63DAA9207E14CB00BF54E1 /* appConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAA8207E14CB00BF54E1 /* appConstant.swift */; };
 		7D63DAAB207E195200BF54E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAAA207E195200BF54E1 /* User.swift */; };
 		7D63DAAD207E2A2700BF54E1 /* GeneralMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAAC207E2A2700BF54E1 /* GeneralMethod.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		4944F9CA81F6A544353E14AF /* Pods-Yebalak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yebalak.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yebalak/Pods-Yebalak.release.xcconfig"; sourceTree = "<group>"; };
 		4EEDD6E6D710D51E754B95F7 /* Pods-Yebalak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yebalak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yebalak/Pods-Yebalak.debug.xcconfig"; sourceTree = "<group>"; };
+		7D5585B1207F5BC9009AFF1B /* BalanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceVC.swift; sourceTree = "<group>"; };
 		7D63DAA8207E14CB00BF54E1 /* appConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appConstant.swift; sourceTree = "<group>"; };
 		7D63DAAA207E195200BF54E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7D63DAAC207E2A2700BF54E1 /* GeneralMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMethod.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				7D77A6E9207CBDB0006D91B6 /* RegisterVC.swift */,
 				7D77A6F3207D1506006D91B6 /* LoginVC.swift */,
 				7D63DAB4207E4C0800BF54E1 /* VerifyVC.swift */,
+				7D5585B1207F5BC9009AFF1B /* BalanceVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5585B2207F5BC9009AFF1B /* BalanceVC.swift in Sources */,
 				7D63DAAD207E2A2700BF54E1 /* GeneralMethod.swift in Sources */,
 				7D77A6EA207CBDB0006D91B6 /* RegisterVC.swift in Sources */,
 				7D77A6D6207CB838006D91B6 /* ViewController.swift in Sources */,
