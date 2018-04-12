@@ -47,7 +47,7 @@ class VerifyVC: UIViewController {
                 UserDefaults.standard.setUserID(value: self.user.id)
                 UserDefaults.standard.setLoggedIn(value: true)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID") as! ViewController
+                let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID") as! BalanceViewController
                 controller.balance = self.balance
                 controller.date = self.date
                 controller.lastTransaction = self.last

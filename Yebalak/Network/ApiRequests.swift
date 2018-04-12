@@ -19,7 +19,7 @@ class apiRequests {
     var balance : String!
     var date : String!
     var last : String!
-    
+    var active : String!
     
     
     func  register(userName:String,userPassword:String,userPhone:String,userMail:String,didDataReady : @escaping(User,String,String)->())->(){
@@ -45,7 +45,7 @@ class apiRequests {
                     let msg = dictionaryOfJson!["msg"] as! String
                     self.msg = msg
                     print("login failed check ")
-                    self.user = nil
+                    self.user = User()
                     self.done = done
                     
                 }
@@ -57,7 +57,7 @@ class apiRequests {
         })
     }
     
-    func login(userMail:String,userPassword:String,didDataReady : @escaping(User,String,String)->())->(){
+    func login(userMail:String,userPassword:String,didDataReady : @escaping(User,String,String,String)->())->(){
         
         sm.connectForApiWith(url: LoginURL  , mType: HTTPServerMethod.post, params: ["email":userMail,"password":userPassword], complation: { (json) in
             
@@ -67,6 +67,8 @@ class apiRequests {
                 var dictionaryOfJson = JSON(json!).dictionaryObject
                 
                 let done = dictionaryOfJson!["done"] as! String
+                let active = dictionaryOfJson!["active"] as! String
+                self.active = active
                 
                 if done == "1"{
                     print(dictionaryOfJson)
@@ -83,15 +85,14 @@ class apiRequests {
                     let msg = dictionaryOfJson!["msg"] as! String
                     self.msg = msg
                     print("login failed check ")
-                    self.user = nil
+                    self.user = User()
                     self.done = done
-                    
                 }
             }
-            didDataReady(self.user,self.msg,self.done)
+            didDataReady(self.user,self.msg,self.done,self.active)
         }, errorHandler: { (error, msg) in
             print("\(String(describing: msg))")
-            didDataReady(self.user, msg as! String,self.done)
+            didDataReady(self.user, msg as! String,self.done,self.active)
         })
     }
     
@@ -123,7 +124,7 @@ class apiRequests {
                     let msg = dictionaryOfJson!["msg"] as! String
                     self.msg = msg
                     print("login failed check ")
-                    self.user = nil
+                    self.user = User()
                     self.done = done
                     
                 }

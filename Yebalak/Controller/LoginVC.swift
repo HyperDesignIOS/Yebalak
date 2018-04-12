@@ -16,6 +16,7 @@ class LoginVC: UIViewController {
     var msg : String!
     var done : String!
     var user : User!
+    var active : String!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -44,10 +45,11 @@ class LoginVC: UIViewController {
             
         }
         
-        apiRequests.apisInstance.login( userMail:mail , userPassword:password) { (user,msg,done) in
+        apiRequests.apisInstance.login( userMail:mail , userPassword:password) { (user,msg,done,active) in
             
             self.msg = msg
             self.done = done
+            self.active = active
             //  print(self.user.name)
             if self.done == "1"{
 //                let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -60,7 +62,17 @@ class LoginVC: UIViewController {
             }
             else if self.done == "0"
             {
-                self.generalMethod.showAlert(title: "", message: self.msg, vc: self, closure: nil)
+                if active == "0"{
+                    self.generalMethod.showAlert(title: "", message: msg, vc: self, closure: {
+                        let storyboard = UIStoryboard(name: "Register", bundle: nil)
+                        let controller = storyboard.instantiateViewController(withIdentifier: "VerifyID")
+                        self.show(controller, sender: self)
+                    })
+
+                }
+                else {
+                    self.generalMethod.showAlert(title: "", message: self.msg, vc: self, closure: nil)
+                }
             }
         }
     }

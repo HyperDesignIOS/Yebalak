@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1El-ds-H8m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1El-ds-H8m">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -318,7 +318,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tok-dp-4kj">
-                                                <rect key="frame" x="15" y="219" width="340" height="340"/>
+                                                <rect key="frame" x="15" y="219" width="340" height="200"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="389-NP-oXg">
                                                         <rect key="frame" x="0.0" y="0.0" width="340" height="50"/>
@@ -377,8 +377,7 @@
                                                     <constraint firstItem="8zI-t4-vdw" firstAttribute="top" secondItem="389-NP-oXg" secondAttribute="bottom" id="Dzv-wj-b3B"/>
                                                     <constraint firstAttribute="trailing" secondItem="pSR-Ff-zpD" secondAttribute="trailing" constant="15" id="PYW-nZ-zYo"/>
                                                     <constraint firstItem="8zI-t4-vdw" firstAttribute="leading" secondItem="Tok-dp-4kj" secondAttribute="leading" id="f6a-hJ-g9q"/>
-                                                    <constraint firstAttribute="height" constant="340" id="hP2-ae-5mL"/>
-                                                    <constraint firstAttribute="bottom" secondItem="pSR-Ff-zpD" secondAttribute="bottom" constant="228" id="j9t-dJ-My1"/>
+                                                    <constraint firstAttribute="height" constant="200" id="hP2-ae-5mL"/>
                                                     <constraint firstItem="389-NP-oXg" firstAttribute="top" secondItem="Tok-dp-4kj" secondAttribute="top" id="oG1-2U-uqR"/>
                                                     <constraint firstItem="389-NP-oXg" firstAttribute="leading" secondItem="Tok-dp-4kj" secondAttribute="leading" id="pXu-5W-CIS"/>
                                                 </constraints>
@@ -389,10 +388,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYU-3d-Ds4">
-                                                <rect key="frame" x="62" y="604" width="250" height="43"/>
+                                                <rect key="frame" x="62" y="464" width="250" height="43"/>
                                                 <color key="backgroundColor" red="0.090196078430000007" green="0.48627450979999998" blue="0.29803922770000002" alpha="0.97934503419999996" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
-                                                <state key="normal" title="Sign Up ">
+                                                <state key="normal" title="Verify">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>

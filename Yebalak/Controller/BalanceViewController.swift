@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BalanceViewController: UIViewController {
     
     var balance : String!
     var lastTransaction :String!
@@ -21,20 +21,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if UserDefaults.standard.isLoggedIn()
-        {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID")
-            balanceLabel.text = balance
-            lastTransactionLabel.text = lastTransaction
-            dateLabel.text = date
-            self.show(controller, sender: self)
-        }
-        else {
-            let storyboard = UIStoryboard(name: "Login", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
-            self.show(controller, sender: self)
-        }
+//        if UserDefaults.standard.isLoggedIn()
+//        {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID")
+//            balanceLabel.text = balance
+//            lastTransactionLabel.text = lastTransaction
+//            dateLabel.text = date
+//            self.show(controller, sender: self)
+//        }
+//        else {
+//            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+//            let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
+//            self.show(controller, sender: self)
+//        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }
