@@ -34,13 +34,13 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XxV-C6-qBV">
                                                 <rect key="frame" x="20" y="30" width="335" height="120"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sf7-VS-2iv">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Balance :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sf7-VS-2iv">
                                                         <rect key="frame" x="8" y="8" width="80" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" red="0.054901960780000002" green="0.98431372549999996" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Transaction :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fts-4J-oIp">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Last Transaction :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fts-4J-oIp">
                                                         <rect key="frame" x="8" y="39" width="153" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" red="0.054901960780000002" green="0.98431372549999996" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,13 +58,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idC-op-U7T">
-                                                        <rect key="frame" x="130" y="79.5" width="42" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vig-jf-53o">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vig-jf-53o">
                                                         <rect key="frame" x="8" y="70.5" width="56" height="29.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" red="0.054901960780000002" green="0.98431372549999996" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -76,19 +70,15 @@
                                                     <constraint firstItem="Vig-jf-53o" firstAttribute="top" secondItem="fts-4J-oIp" secondAttribute="bottom" constant="7" id="0TN-bd-sv4"/>
                                                     <constraint firstItem="RAl-Sa-UJ8" firstAttribute="leading" secondItem="sf7-VS-2iv" secondAttribute="trailing" constant="152.5" id="0sz-CW-DUC"/>
                                                     <constraint firstItem="Vig-jf-53o" firstAttribute="leading" secondItem="XxV-C6-qBV" secondAttribute="leading" constant="8" id="3Kx-UC-0XM"/>
-                                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="idC-op-U7T" secondAttribute="trailing" constant="163" id="4VU-b5-v4P"/>
                                                     <constraint firstItem="AbD-sP-1i3" firstAttribute="leading" secondItem="fts-4J-oIp" secondAttribute="trailing" constant="32.5" id="9y6-mQ-N34"/>
-                                                    <constraint firstAttribute="bottom" secondItem="idC-op-U7T" secondAttribute="bottom" constant="20" id="CBd-28-o6B"/>
                                                     <constraint firstAttribute="bottom" secondItem="Vig-jf-53o" secondAttribute="bottom" constant="20" id="Fta-tF-AtQ"/>
                                                     <constraint firstItem="AbD-sP-1i3" firstAttribute="top" secondItem="XxV-C6-qBV" secondAttribute="top" constant="43.5" id="Hgm-xp-42a"/>
                                                     <constraint firstItem="sf7-VS-2iv" firstAttribute="top" secondItem="XxV-C6-qBV" secondAttribute="top" constant="8" id="I54-0n-s8C"/>
                                                     <constraint firstItem="sf7-VS-2iv" firstAttribute="leading" secondItem="XxV-C6-qBV" secondAttribute="leading" constant="8" id="J4Q-te-N5i"/>
                                                     <constraint firstAttribute="height" constant="120" id="Ru5-d4-A3W"/>
-                                                    <constraint firstItem="idC-op-U7T" firstAttribute="leading" secondItem="Vig-jf-53o" secondAttribute="trailing" constant="66.5" id="TsG-tE-nzN"/>
-                                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="RAl-Sa-UJ8" secondAttribute="trailing" constant="53" id="elS-C3-v6W"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RAl-Sa-UJ8" secondAttribute="trailing" constant="10" id="elS-C3-v6W"/>
                                                     <constraint firstAttribute="bottom" secondItem="AbD-sP-1i3" secondAttribute="bottom" constant="56" id="hl2-qu-KBi"/>
-                                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="AbD-sP-1i3" secondAttribute="trailing" constant="100" id="iEK-3j-slf"/>
-                                                    <constraint firstItem="idC-op-U7T" firstAttribute="top" secondItem="fts-4J-oIp" secondAttribute="bottom" constant="16" id="p7A-rN-Tvh"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AbD-sP-1i3" secondAttribute="trailing" constant="10" id="iEK-3j-slf"/>
                                                     <constraint firstItem="fts-4J-oIp" firstAttribute="leading" secondItem="XxV-C6-qBV" secondAttribute="leading" constant="8" id="pVu-XM-Cjc"/>
                                                     <constraint firstItem="RAl-Sa-UJ8" firstAttribute="top" secondItem="XxV-C6-qBV" secondAttribute="top" constant="8" id="uye-MJ-mhb"/>
                                                     <constraint firstItem="fts-4J-oIp" firstAttribute="top" secondItem="sf7-VS-2iv" secondAttribute="bottom" constant="7" id="ygQ-6w-Hlv"/>
@@ -312,7 +302,6 @@
                     </view>
                     <connections>
                         <outlet property="balanceLabel" destination="RAl-Sa-UJ8" id="tKh-Um-SJt"/>
-                        <outlet property="dateLabel" destination="idC-op-U7T" id="4rz-KV-Ohj"/>
                         <outlet property="lastTransactionLabel" destination="AbD-sP-1i3" id="NGF-5b-VJF"/>
                     </connections>
                 </viewController>
