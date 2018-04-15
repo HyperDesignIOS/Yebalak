@@ -32,7 +32,7 @@ class apiRequests {
                 var dictionaryOfJson = JSON(json!).dictionaryObject
                 let done = dictionaryOfJson!["done"] as! String
                 if done == "1"{
-                    print(dictionaryOfJson)
+                    print(dictionaryOfJson )
                     let items = dictionaryOfJson!["user"] as! [String : Any]
                     let item = User.init(fromDictionary: items)
                     self.user = item
@@ -47,7 +47,7 @@ class apiRequests {
                     print("login failed check ")
                     self.user = User()
                     self.done = done
-                    
+                  
                 }
             }
             didDataReady(self.user,self.msg,self.done)
@@ -57,7 +57,7 @@ class apiRequests {
         })
     }
     
-    func login(userMail:String,userPassword:String,didDataReady : @escaping(User,String,String,String)->())->(){
+    func login(userMail:String,userPassword:String,didDataReady : @escaping(User,String,String,String,String,String)->())->(){
         
         sm.connectForApiWith(url: LoginURL  , mType: HTTPServerMethod.post, params: ["email":userMail,"password":userPassword], complation: { (json) in
             
@@ -68,6 +68,7 @@ class apiRequests {
                 
                 let done = dictionaryOfJson!["done"] as! String
                 let active = dictionaryOfJson!["active"] as! String
+                let msg = dictionaryOfJson!["msg"] as! String
                 self.active = active
                 
                 if done == "1"{
@@ -75,24 +76,48 @@ class apiRequests {
                     let items = dictionaryOfJson!["user"] as! [String : Any]
                     let item = User.init(fromDictionary: items)
                     self.user = item
-                    let msg = dictionaryOfJson!["msg"] as! String
+                    let date = dictionaryOfJson!["date"] as! String
+                    self.date = date
+                    let lastTransaction = dictionaryOfJson!["last"] as! String
+                    self.last = lastTransaction
                     self.msg = msg
                     self.done = done
                     
                 }
                 else if done == "0"
+                    
                 {
-                    let msg = dictionaryOfJson!["msg"] as! String
+                    if active == "0"
+                    {
                     self.msg = msg
-                    print("login failed check ")
-                    self.user = User()
-                    self.done = done
+                    let items = dictionaryOfJson!["user"] as! [String : Any]
+                    let item = User.init(fromDictionary: items)
+                    self.user = item
+                     self.done = done
+                        
+                    print("login failed enter acivation code ")
+                    
+                    }
+                    else
+                    {
+                        self.active = active
+                        self.done = done
+                        self.msg = msg
+                        self.user = User()
+                        let date = dictionaryOfJson!["date"] as! String
+                        self.date = date
+                        let lastTransaction = dictionaryOfJson!["last"] as! String
+                        self.last = lastTransaction
+                    
+                         print("login failed enter valid account")
+                    }
                 }
+                
             }
-            didDataReady(self.user,self.msg,self.done,self.active)
+            didDataReady(self.user,self.msg,self.done,self.active,self.date ?? "",self.last ?? "")
         }, errorHandler: { (error, msg) in
             print("\(String(describing: msg))")
-            didDataReady(self.user, msg as! String,self.done,self.active)
+            didDataReady(User(),"","","","","")
         })
     }
     
@@ -126,7 +151,9 @@ class apiRequests {
                     print("login failed check ")
                     self.user = User()
                     self.done = done
-                    
+                    self.balance = ""
+                    self.date = ""
+                    self.last = ""
                 }
             }
             didDataReady(self.user,self.msg,self.done,self.balance,self.date,self.last)
@@ -136,5 +163,18 @@ class apiRequests {
         })
     }
     
+    
+    func  ResendCode(userId:Int,didDataReady : @escaping(String)->())->(){
+        
+        sm.connectForApiWith(url: ResendCodeURL , mType: HTTPServerMethod.post, params: ["id":userId], complation: { (json) in
+            
+           didDataReady("")
+           
+        }, errorHandler: { (error, msg) in
+            self.msg = msg as! String
+            print("\(String(describing: msg))")
+            didDataReady(self.msg)
+        })
+    }
 }
 

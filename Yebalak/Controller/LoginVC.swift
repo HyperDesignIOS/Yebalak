@@ -19,6 +19,13 @@ class LoginVC: UIViewController {
     var active : String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UserDefaults.standard.isLoggedIn(){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID")
+            //self.present(controller, animated: true, completion: nil)
+            self.show(controller, sender: self)
+        }
     }
     
     @IBAction func forgetPassword(_ sender: Any) {
@@ -45,24 +52,29 @@ class LoginVC: UIViewController {
             
         }
         
-        apiRequests.apisInstance.login( userMail:mail , userPassword:password) { (user,msg,done,active) in
+        apiRequests.apisInstance.login( userMail:mail , userPassword:password) { (user,msg,done,active,date,last) in
             
             self.msg = msg
             self.done = done
             self.active = active
+            self.user = user
             //  print(self.user.name)
             if self.done == "1"{
-//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                let controller = storyboard.instantiateViewController(withIdentifier: "homeVC")
-//                //self.present(controller, animated: true, completion: nil)
-//                self.show(controller, sender: self)
-                self.user = user
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID") as! BalanceViewController
+                controller.balance = self.user.balance
+                controller.date = date
+                controller.lastTransaction = last
+                //self.present(controller, animated: true, completion: nil)
+                self.show(controller, sender: self)
                 UserDefaults.standard.setUserID(value: self.user.id)
                 UserDefaults.standard.setLoggedIn(value: true)
             }
             else if self.done == "0"
             {
                 if active == "0"{
+                    UserDefaults.standard.setUserID(value: self.user.id)
+                    UserDefaults.standard.setLoggedIn(value: true)
                     self.generalMethod.showAlert(title: "", message: msg, vc: self, closure: {
                         let storyboard = UIStoryboard(name: "Register", bundle: nil)
                         let controller = storyboard.instantiateViewController(withIdentifier: "VerifyID")

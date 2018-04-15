@@ -12,4 +12,6 @@ let BaseURL = "http://hyper-design.com/yebalak/api"
 let RegisterURL = "\(BaseURL)/register"
 let LoginURL = "\(BaseURL)/login"
 let VerifyURL = "\(BaseURL)/checkCode"
+let ResendCodeURL = "\(BaseURL)/sendCode"
+
 

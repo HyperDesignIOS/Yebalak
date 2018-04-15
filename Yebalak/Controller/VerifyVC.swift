@@ -24,14 +24,30 @@ class VerifyVC: UIViewController {
 
     }
     
+   
+    @IBAction func ResendCode(_ sender: Any) {
+        let id = UserDefaults.standard.getUserID()
+        apiRequests.apisInstance.ResendCode(userId: id) { (msg) in
+            if msg != ""
+            {
+                self.generalMethod.showAlert(title: "", message:msg , vc: self, closure: nil)
+            }
+            
+        }
+        
+        
+    }
+    
+    
     
     @IBAction func verifyButton(_ sender: Any) {
+      
         
         
         
         let code = self.codeTF.text!
         if code.isEmpty || code.containsWhiteSpace(){
-            generalMethod.showAlert(title: "", message: "please enter your mail", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: "please enter verification code ", vc: self, closure: nil)
             return
         }
         let id = UserDefaults.standard.getUserID()
@@ -44,8 +60,6 @@ class VerifyVC: UIViewController {
                 self.date = date
                 self.last = last
                 print(self.user.name)
-                UserDefaults.standard.setUserID(value: self.user.id)
-                UserDefaults.standard.setLoggedIn(value: true)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID") as! BalanceViewController
                 controller.balance = self.balance

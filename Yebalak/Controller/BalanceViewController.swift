@@ -18,8 +18,13 @@ class BalanceViewController: UIViewController {
     @IBOutlet weak var lastTransactionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var balanceImageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        balanceLabel.text = balance
+        lastTransactionLabel.text = lastTransaction
+        dateLabel.text = date
+        balanceImageLabel.text = balance
         
 //        if UserDefaults.standard.isLoggedIn()
 //        {
@@ -37,11 +42,6 @@ class BalanceViewController: UIViewController {
 //        }
         
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }
