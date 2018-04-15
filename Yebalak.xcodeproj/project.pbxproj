@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40F86FE920839AE800576EBE /* WithdrawCompaniesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F86FE820839AE800576EBE /* WithdrawCompaniesTableViewController.swift */; };
+		40F86FEB20839B0E00576EBE /* WithdrawCompaniesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F86FEA20839B0E00576EBE /* WithdrawCompaniesTableViewCell.swift */; };
+		40F86FED20839FCB00576EBE /* WithdrawCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F86FEC20839FCB00576EBE /* WithdrawCompany.swift */; };
 		67BD943F2A1299584C58DF7F /* Pods_Yebalak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9182668FEE11551F15EEE8D5 /* Pods_Yebalak.framework */; };
 		7D63DAA9207E14CB00BF54E1 /* appConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAA8207E14CB00BF54E1 /* appConstant.swift */; };
 		7D63DAAB207E195200BF54E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAAA207E195200BF54E1 /* User.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40F86FE820839AE800576EBE /* WithdrawCompaniesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawCompaniesTableViewController.swift; sourceTree = "<group>"; };
+		40F86FEA20839B0E00576EBE /* WithdrawCompaniesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawCompaniesTableViewCell.swift; sourceTree = "<group>"; };
+		40F86FEC20839FCB00576EBE /* WithdrawCompany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawCompany.swift; sourceTree = "<group>"; };
 		4944F9CA81F6A544353E14AF /* Pods-Yebalak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yebalak.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yebalak/Pods-Yebalak.release.xcconfig"; sourceTree = "<group>"; };
 		4EEDD6E6D710D51E754B95F7 /* Pods-Yebalak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yebalak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yebalak/Pods-Yebalak.debug.xcconfig"; sourceTree = "<group>"; };
 		7D63DAA8207E14CB00BF54E1 /* appConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appConstant.swift; sourceTree = "<group>"; };
@@ -127,6 +133,8 @@
 				7D77A6F3207D1506006D91B6 /* LoginVC.swift */,
 				7D63DAB4207E4C0800BF54E1 /* VerifyVC.swift */,
 				7D77A6D5207CB838006D91B6 /* BalanceViewController.swift */,
+				40F86FE820839AE800576EBE /* WithdrawCompaniesTableViewController.swift */,
+				40F86FEA20839B0E00576EBE /* WithdrawCompaniesTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -144,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				7D63DAAA207E195200BF54E1 /* User.swift */,
+				40F86FEC20839FCB00576EBE /* WithdrawCompany.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,11 +246,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Yebalak/Pods-Yebalak-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,10 +305,13 @@
 				7D77A6D6207CB838006D91B6 /* BalanceViewController.swift in Sources */,
 				7D77A6F4207D1506006D91B6 /* LoginVC.swift in Sources */,
 				7D77A6F0207D0496006D91B6 /* ApiRequests.swift in Sources */,
+				40F86FE920839AE800576EBE /* WithdrawCompaniesTableViewController.swift in Sources */,
 				7D63DAAF207E2BE700BF54E1 /* Extensions.swift in Sources */,
+				40F86FEB20839B0E00576EBE /* WithdrawCompaniesTableViewCell.swift in Sources */,
 				7D63DAAB207E195200BF54E1 /* User.swift in Sources */,
 				7D63DAB5207E4C0800BF54E1 /* VerifyVC.swift in Sources */,
 				7D63DAA9207E14CB00BF54E1 /* appConstant.swift in Sources */,
+				40F86FED20839FCB00576EBE /* WithdrawCompany.swift in Sources */,
 				7D63DAB1207E2ED700BF54E1 /* Enumeration.swift in Sources */,
 				7D77A6ED207D0384006D91B6 /* serverManger.swift in Sources */,
 				7D77A6D4207CB838006D91B6 /* AppDelegate.swift in Sources */,
