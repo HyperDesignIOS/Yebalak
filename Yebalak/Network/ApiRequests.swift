@@ -20,6 +20,7 @@ class apiRequests {
     var date : String!
     var last : String!
     var active : String!
+    var status : String!
     
     
     func  register(userName:String,userPassword:String,userPhone:String,userMail:String,didDataReady : @escaping(User,String,String)->())->(){
@@ -174,6 +175,30 @@ class apiRequests {
             self.msg = msg as! String
             print("\(String(describing: msg))")
             didDataReady(self.msg)
+        })
+    }
+    
+    func WithdrawForm(userPhone:String,userID:String,valval:String,paymentID:String,didDataReady : @escaping(String,String)->())->(){
+        
+        sm.connectForApiWith(url: WithdrawFormURL  , mType: HTTPServerMethod.post, params: ["phone":userPhone,"id":userID,"valal":valval,"payment":paymentID], complation: { (json) in
+            
+            if let obj = json {
+                print (obj)
+                
+                var dictionaryOfJson = JSON(json!).dictionaryObject
+                
+                let msg = dictionaryOfJson!["msg"] as! String
+                 self.msg = msg
+                
+                let status = dictionaryOfJson!["status"] as! String
+                self.status = status
+            
+                
+            }
+            didDataReady(self.msg,self.status)
+        }, errorHandler: { (error, msg) in
+            print("\(String(describing: msg))")
+            didDataReady("","")
         })
     }
 }
