@@ -138,12 +138,9 @@
 				7D77A6F3207D1506006D91B6 /* LoginVC.swift */,
 				7D63DAB4207E4C0800BF54E1 /* VerifyVC.swift */,
 				7D77A6D5207CB838006D91B6 /* BalanceViewController.swift */,
-<<<<<<< HEAD
 				7D11848420839BE100874D0E /* WithdrawVC.swift */,
-=======
 				40F86FE820839AE800576EBE /* WithdrawCompaniesTableViewController.swift */,
 				40F86FEA20839B0E00576EBE /* WithdrawCompaniesTableViewCell.swift */,
->>>>>>> 57bf9961322224850e7b5bae4d205a13f42d9f7d
 			);
 			path = Controller;
 			sourceTree = "<group>";
