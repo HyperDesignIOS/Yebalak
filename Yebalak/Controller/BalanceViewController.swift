@@ -15,6 +15,7 @@ class BalanceViewController: UIViewController {
     var date : String!
 
     
+    
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var lastTransactionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -49,6 +50,12 @@ class BalanceViewController: UIViewController {
     {
         let storyboard = UIStoryboard(name: "Withdraw", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "WithdrawImagesID")
+        self.show(controller, sender: self)
+    }
+    
+    @IBAction func historyButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "History", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "HistoryID")
         self.show(controller, sender: self)
     }
     

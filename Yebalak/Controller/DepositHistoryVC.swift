@@ -38,15 +38,7 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
 
     }
     
-  
 
-  
-
-
-    
-
-   
- 
     func getDepositHistory (){
         let id = UserDefaults.standard.getUserID()
         apiRequests.apisInstance.depositeHistory(userID: "\(id)") { (deposites) in

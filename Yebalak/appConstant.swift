@@ -16,7 +16,8 @@ let VerifyURL = "\(BaseURL)/checkCode"
 let ResendCodeURL = "\(BaseURL)/sendCode"
 let WithdrawFormURL = "\(BaseURL)/Withdrawform"
 let WithdrawCompaniesURL = "\(BaseURL)/withdraw"
+let DepositeHistoryURL = "\(BaseURL)/depositHistory"
 
 let WithdrawImagesURL = "\(ImageBaseURL)/withdraw/resize200/"
-let DepositeHistoryURL = "\(ImageBaseURL)/depositHistory"
+
 

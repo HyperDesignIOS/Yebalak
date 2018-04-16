@@ -190,6 +190,9 @@
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVQ-LV-qfH">
                                                                         <rect key="frame" x="0.0" y="0.0" width="133" height="130"/>
+                                                                        <connections>
+                                                                            <action selector="historyButton:" destination="dvW-A5-t8J" eventType="touchUpInside" id="jGv-NT-wqr"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>

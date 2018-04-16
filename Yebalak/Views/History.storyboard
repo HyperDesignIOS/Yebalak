@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -59,7 +59,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcU-aL-u5U">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="50"/>
+                                                                <rect key="frame" x="10" y="0.0" width="40.5" height="50"/>
                                                                 <color key="backgroundColor" red="0.36862745099999999" green="0.36862745099999999" blue="0.36862745099999999" alpha="0.31145654969999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
                                                                 <color key="textColor" red="0.047058823530000002" green="0.47843137250000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -83,7 +83,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRY-Pm-YIw">
-                                                                <rect key="frame" x="268" y="0.0" width="67" height="50"/>
+                                                                <rect key="frame" x="254.5" y="0.0" width="70.5" height="50"/>
                                                                 <color key="backgroundColor" red="0.36862745099999999" green="0.36862745099999999" blue="0.36862745099999999" alpha="0.31145654969999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
                                                                 <color key="textColor" red="0.047058823530000002" green="0.47843137250000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -99,13 +99,13 @@
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="Fcj-fp-f18" secondAttribute="bottom" id="B8H-eM-rpA"/>
                                                             <constraint firstAttribute="bottom" secondItem="qRY-Pm-YIw" secondAttribute="bottom" id="IrH-Ub-Q9t"/>
-                                                            <constraint firstAttribute="trailing" secondItem="qRY-Pm-YIw" secondAttribute="trailing" id="NMF-RR-Xjk"/>
-                                                            <constraint firstItem="qRY-Pm-YIw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Fcj-fp-f18" secondAttribute="trailing" constant="70" id="Oru-6y-8h5"/>
+                                                            <constraint firstAttribute="trailing" secondItem="qRY-Pm-YIw" secondAttribute="trailing" constant="10" id="NMF-RR-Xjk"/>
+                                                            <constraint firstItem="qRY-Pm-YIw" firstAttribute="leading" secondItem="Fcj-fp-f18" secondAttribute="trailing" constant="60" id="Oru-6y-8h5"/>
                                                             <constraint firstItem="Fcj-fp-f18" firstAttribute="centerX" secondItem="oYe-qR-Jer" secondAttribute="centerX" id="P6H-ui-1jH"/>
                                                             <constraint firstItem="rcU-aL-u5U" firstAttribute="top" secondItem="oYe-qR-Jer" secondAttribute="top" id="acU-gL-o4E"/>
                                                             <constraint firstAttribute="bottom" secondItem="rcU-aL-u5U" secondAttribute="bottom" id="dDl-7W-PDn"/>
-                                                            <constraint firstItem="Fcj-fp-f18" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rcU-aL-u5U" secondAttribute="trailing" constant="80" id="mab-Is-6ZV"/>
-                                                            <constraint firstItem="rcU-aL-u5U" firstAttribute="leading" secondItem="oYe-qR-Jer" secondAttribute="leading" id="mfJ-9S-pHk"/>
+                                                            <constraint firstItem="Fcj-fp-f18" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rcU-aL-u5U" secondAttribute="trailing" constant="60" id="mab-Is-6ZV"/>
+                                                            <constraint firstItem="rcU-aL-u5U" firstAttribute="leading" secondItem="oYe-qR-Jer" secondAttribute="leading" constant="10" id="mfJ-9S-pHk"/>
                                                             <constraint firstAttribute="height" constant="50" id="o60-rv-MZY"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="rWP-Vk-Vbt"/>
                                                             <constraint firstItem="Fcj-fp-f18" firstAttribute="top" secondItem="oYe-qR-Jer" secondAttribute="top" id="scs-Wp-KFI"/>
@@ -128,7 +128,7 @@
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6FV-fc-XMt">
                                                 <rect key="frame" x="20" y="144" width="335" height="500"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="depositCell" rowHeight="56" id="1nP-mY-Rx5" customClass="DepositHistoryTableViewCell" customModule="Yebalak" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="335" height="56"/>
@@ -190,6 +190,7 @@
                                                                 <constraint firstItem="mCd-AP-D9O" firstAttribute="leading" secondItem="abs-EE-1ch" secondAttribute="trailing" constant="10" id="zJY-Zg-7pP"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <connections>
                                                             <outlet property="amountLabel" destination="VVm-Pt-6lB" id="EtP-Xw-gBw"/>
                                                             <outlet property="dateLabel" destination="tyM-sn-By4" id="ckY-DI-TP7"/>
