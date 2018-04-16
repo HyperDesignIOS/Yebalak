@@ -18,6 +18,8 @@
 		7D20A84A2084F6A6001CC099 /* MerchantDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20A8492084F6A6001CC099 /* MerchantDevice.swift */; };
 		7D20A84C2084F6DC001CC099 /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20A84B2084F6DC001CC099 /* Deposit.swift */; };
 		7D20A84E2084F88C001CC099 /* DepositHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20A84D2084F88C001CC099 /* DepositHistoryVC.swift */; };
+		7D20A8502085068B001CC099 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D20A84F2085068B001CC099 /* History.storyboard */; };
+		7D20A8522085075C001CC099 /* DepositHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20A8512085075C001CC099 /* DepositHistoryTableViewCell.swift */; };
 		7D63DAA9207E14CB00BF54E1 /* appConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAA8207E14CB00BF54E1 /* appConstant.swift */; };
 		7D63DAAB207E195200BF54E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAAA207E195200BF54E1 /* User.swift */; };
 		7D63DAAD207E2A2700BF54E1 /* GeneralMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAAC207E2A2700BF54E1 /* GeneralMethod.swift */; };
@@ -50,6 +52,8 @@
 		7D20A8492084F6A6001CC099 /* MerchantDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantDevice.swift; sourceTree = "<group>"; };
 		7D20A84B2084F6DC001CC099 /* Deposit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deposit.swift; sourceTree = "<group>"; };
 		7D20A84D2084F88C001CC099 /* DepositHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositHistoryVC.swift; sourceTree = "<group>"; };
+		7D20A84F2085068B001CC099 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		7D20A8512085075C001CC099 /* DepositHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		7D63DAA8207E14CB00BF54E1 /* appConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appConstant.swift; sourceTree = "<group>"; };
 		7D63DAAA207E195200BF54E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7D63DAAC207E2A2700BF54E1 /* GeneralMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMethod.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 				7D77A6E6207CBD49006D91B6 /* Register.storyboard */,
 				7D77A6F1207D0640006D91B6 /* Login.storyboard */,
 				7D1184822083998C00874D0E /* Withdraw.storyboard */,
+				7D20A84F2085068B001CC099 /* History.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				40F86FE820839AE800576EBE /* WithdrawCompaniesTableViewController.swift */,
 				40F86FEA20839B0E00576EBE /* WithdrawCompaniesTableViewCell.swift */,
 				7D20A84D2084F88C001CC099 /* DepositHistoryVC.swift */,
+				7D20A8512085075C001CC099 /* DepositHistoryTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 			files = (
 				7D77A6DE207CB838006D91B6 /* LaunchScreen.storyboard in Resources */,
 				7D77A6DB207CB838006D91B6 /* Assets.xcassets in Resources */,
+				7D20A8502085068B001CC099 /* History.storyboard in Resources */,
 				7D1184832083998C00874D0E /* Withdraw.storyboard in Resources */,
 				7D77A6D9207CB838006D91B6 /* Main.storyboard in Resources */,
 				7D77A6F2207D0640006D91B6 /* Login.storyboard in Resources */,
@@ -335,6 +342,7 @@
 				7D63DAAB207E195200BF54E1 /* User.swift in Sources */,
 				7D63DAB5207E4C0800BF54E1 /* VerifyVC.swift in Sources */,
 				7D20A84C2084F6DC001CC099 /* Deposit.swift in Sources */,
+				7D20A8522085075C001CC099 /* DepositHistoryTableViewCell.swift in Sources */,
 				7D63DAA9207E14CB00BF54E1 /* appConstant.swift in Sources */,
 				7D20A84E2084F88C001CC099 /* DepositHistoryVC.swift in Sources */,
 				40F86FED20839FCB00576EBE /* WithdrawCompany.swift in Sources */,
