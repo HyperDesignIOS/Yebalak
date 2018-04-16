@@ -12,6 +12,8 @@ class WithdrawVC: UIViewController {
     
     var withdrawId : Int!
     let userId = UserDefaults.standard.getUserID()
+    let generalMethod = GeneralMethod()
+    
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var valueTF: UITextField!
     
@@ -23,9 +25,8 @@ class WithdrawVC: UIViewController {
     
     
     @IBAction func sendWithdrawButton(_ sender: Any) {
-        apiRequests.apisInstance.WithdrawForm(userPhone: phoneTF.text!, userID:"\(userId)" , valval: valueTF.text!, paymentID:"\(withdrawId)") { (msg, status) in
-            print (msg)
-            print (status)
+        apiRequests.apisInstance.WithdrawForm(userPhone: phoneTF.text!, userID:"\(userId)" , valval: valueTF.text!, paymentID:"\(withdrawId!)") { (msg, status) in
+            self.generalMethod.showAlert(title: "", message: msg, vc: self, closure: nil)
         }
         
         

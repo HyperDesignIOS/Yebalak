@@ -20,7 +20,7 @@ class apiRequests {
     var date : String!
     var last : String!
     var active : String!
-    var status : String!
+    var status : Int!
     var withdrawArray : [WithdrawCompany] = []
     
     
@@ -179,9 +179,9 @@ class apiRequests {
         })
     }
     
-    func WithdrawForm(userPhone:String,userID:String,valval:String,paymentID:String,didDataReady : @escaping(String,String)->())->(){
+    func WithdrawForm(userPhone:String,userID:String,valval:String,paymentID:String,didDataReady : @escaping(String,Int)->())->(){
         
-        sm.connectForApiWith(url: WithdrawFormURL  , mType: HTTPServerMethod.post, params: ["phone":userPhone,"id":userID,"valal":valval,"payment":paymentID], complation: { (json) in
+        sm.connectForApiWith(url: WithdrawFormURL  , mType: HTTPServerMethod.post, params: ["phone":userPhone,"id":userID,"valval":valval,"payment":paymentID], complation: { (json) in
             
             if let obj = json {
                 print (obj)
@@ -191,15 +191,15 @@ class apiRequests {
                 let msg = dictionaryOfJson!["msg"] as! String
                  self.msg = msg
                 
-                let status = dictionaryOfJson!["status"] as! String
+                let status = dictionaryOfJson!["status"] as! Int
                 self.status = status
             
                 
             }
             didDataReady(self.msg,self.status)
         }, errorHandler: { (error, msg) in
-            print("\(String(describing: msg))")
-            didDataReady("","")
+            print("\(String(describing: error))")
+            didDataReady("",0)
         })
     }
     
