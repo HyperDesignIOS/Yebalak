@@ -15,6 +15,5 @@ let LoginURL = "\(BaseURL)/login"
 let VerifyURL = "\(BaseURL)/checkCode"
 let ResendCodeURL = "\(BaseURL)/sendCode"
 
-let WithdrawFormURL = "\(BaseURL)/Withdrawform"
 let WithdrawImagesURL = "\(ImageBaseURL)/withdraw/resize200"
 
