@@ -11,7 +11,7 @@ import AlamofireImage
 
 class WithdrawCompaniesTableViewController: UITableViewController {
     
-    var withdrawCompanies : [WithdrawCompany]!
+    var withdrawCompanies : [WithdrawCompany] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,6 +99,11 @@ class WithdrawCompaniesTableViewController: UITableViewController {
     
     func getWithdrawCompaniesLogo(){
         // call api
+        let id = UserDefaults.standard.getUserID()
+        apiRequests.apisInstance.WithdrawImage(userID: "\(id)") { (withdrawCompanies) in
+            self.withdrawCompanies = withdrawCompanies
+            self.tableView.reloadData()
+        }
     }
 
 }

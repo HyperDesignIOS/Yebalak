@@ -21,6 +21,7 @@ class apiRequests {
     var last : String!
     var active : String!
     var status : String!
+    var withdrawArray : [WithdrawCompany] = []
     
     
     func  register(userName:String,userPassword:String,userPhone:String,userMail:String,didDataReady : @escaping(User,String,String)->())->(){
@@ -199,6 +200,31 @@ class apiRequests {
         }, errorHandler: { (error, msg) in
             print("\(String(describing: msg))")
             didDataReady("","")
+        })
+    }
+    
+    func WithdrawImage(userID:String,didDataReady : @escaping([WithdrawCompany])->())->(){
+        
+        sm.connectForApiWith(url: WithdrawCompaniesURL  , mType: HTTPServerMethod.post, params: ["id":userID], complation: { (json) in
+            
+            if let obj = json {
+                print (obj)
+                
+                var dictionaryOfJson = JSON(json!).dictionaryObject
+                
+                let items = dictionaryOfJson!["withdrawco"] as! [[String : Any]]
+                for item in items {
+                    let item = WithdrawCompany.init(fromJson: item)
+                    self.withdrawArray.append(item)
+                    print (item.nameEn)
+                    
+                }
+                
+            }
+            didDataReady(self.withdrawArray)
+        }, errorHandler: { (error, msg) in
+            print("\(String(describing: msg))")
+            didDataReady([])
         })
     }
 }

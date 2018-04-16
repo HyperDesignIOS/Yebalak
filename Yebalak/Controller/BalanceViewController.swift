@@ -14,6 +14,7 @@ class BalanceViewController: UIViewController {
     var lastTransaction :String!
     var date : String!
 
+    
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var lastTransactionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -42,6 +43,13 @@ class BalanceViewController: UIViewController {
 //        }
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    @IBAction func withdrawButton(_ sender: Any)
+    {
+        let storyboard = UIStoryboard(name: "Withdraw", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "WithdrawImagesID")
+        self.show(controller, sender: self)
     }
     
 }
