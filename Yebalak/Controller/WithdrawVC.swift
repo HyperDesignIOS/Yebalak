@@ -10,6 +10,8 @@ import UIKit
 
 class WithdrawVC: UIViewController {
     
+    var withdrawId : Int!
+    
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var valueTF: UITextField!
     

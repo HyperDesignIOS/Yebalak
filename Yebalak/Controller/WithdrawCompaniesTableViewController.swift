@@ -9,14 +9,19 @@
 import UIKit
 import AlamofireImage
 
-class WithdrawCompaniesTableViewController: UITableViewController {
+class WithdrawCompaniesTableViewController: UIViewController , UITableViewDelegate,UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var withdrawCompanies : [WithdrawCompany] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.delegate = self
+        tableView.dataSource = self
         getWithdrawCompaniesLogo()
+        tableView.reloadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,24 +36,33 @@ class WithdrawCompaniesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return withdrawCompanies.count
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WithdrawCompanyCell", for: indexPath) as! WithdrawCompaniesTableViewCell
 
-        cell.withdrawCompanyLogo.af_setImage(withURL: URL(fileURLWithPath: "\(WithdrawImagesURL)\(withdrawCompanies[indexPath.row].logo!)"))
+        cell.withdrawCompanyLogo.af_setImage(withURL: URL(string: "\(WithdrawImagesURL)\(withdrawCompanies[indexPath.row].logo!)")!)
+
         // Configure the cell...
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       let id = withdrawCompanies[indexPath.row].id
+        let storyboard = UIStoryboard(name: "Withdraw", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "withdrawID") as! WithdrawVC
+        controller.withdrawId = id
+        self.show(controller, sender: self)
     }
     
 
