@@ -13,6 +13,11 @@
 		67BD943F2A1299584C58DF7F /* Pods_Yebalak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9182668FEE11551F15EEE8D5 /* Pods_Yebalak.framework */; };
 		7D1184832083998C00874D0E /* Withdraw.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D1184822083998C00874D0E /* Withdraw.storyboard */; };
 		7D11848520839BE100874D0E /* WithdrawVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D11848420839BE100874D0E /* WithdrawVC.swift */; };
+		7D20A8462084F5A8001CC099 /* Branche.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20A8452084F5A7001CC099 /* Branche.swift */; };
+		7D20A8482084F66A001CC099 /* Merchant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20A8472084F66A001CC099 /* Merchant.swift */; };
+		7D20A84A2084F6A6001CC099 /* MerchantDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20A8492084F6A6001CC099 /* MerchantDevice.swift */; };
+		7D20A84C2084F6DC001CC099 /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20A84B2084F6DC001CC099 /* Deposit.swift */; };
+		7D20A84E2084F88C001CC099 /* DepositHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20A84D2084F88C001CC099 /* DepositHistoryVC.swift */; };
 		7D63DAA9207E14CB00BF54E1 /* appConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAA8207E14CB00BF54E1 /* appConstant.swift */; };
 		7D63DAAB207E195200BF54E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAAA207E195200BF54E1 /* User.swift */; };
 		7D63DAAD207E2A2700BF54E1 /* GeneralMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAAC207E2A2700BF54E1 /* GeneralMethod.swift */; };
@@ -40,6 +45,11 @@
 		4EEDD6E6D710D51E754B95F7 /* Pods-Yebalak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yebalak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yebalak/Pods-Yebalak.debug.xcconfig"; sourceTree = "<group>"; };
 		7D1184822083998C00874D0E /* Withdraw.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Withdraw.storyboard; sourceTree = "<group>"; };
 		7D11848420839BE100874D0E /* WithdrawVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawVC.swift; sourceTree = "<group>"; };
+		7D20A8452084F5A7001CC099 /* Branche.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branche.swift; sourceTree = "<group>"; };
+		7D20A8472084F66A001CC099 /* Merchant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Merchant.swift; sourceTree = "<group>"; };
+		7D20A8492084F6A6001CC099 /* MerchantDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantDevice.swift; sourceTree = "<group>"; };
+		7D20A84B2084F6DC001CC099 /* Deposit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deposit.swift; sourceTree = "<group>"; };
+		7D20A84D2084F88C001CC099 /* DepositHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositHistoryVC.swift; sourceTree = "<group>"; };
 		7D63DAA8207E14CB00BF54E1 /* appConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appConstant.swift; sourceTree = "<group>"; };
 		7D63DAAA207E195200BF54E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7D63DAAC207E2A2700BF54E1 /* GeneralMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMethod.swift; sourceTree = "<group>"; };
@@ -141,6 +151,7 @@
 				7D11848420839BE100874D0E /* WithdrawVC.swift */,
 				40F86FE820839AE800576EBE /* WithdrawCompaniesTableViewController.swift */,
 				40F86FEA20839B0E00576EBE /* WithdrawCompaniesTableViewCell.swift */,
+				7D20A84D2084F88C001CC099 /* DepositHistoryVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -159,6 +170,10 @@
 			children = (
 				7D63DAAA207E195200BF54E1 /* User.swift */,
 				40F86FEC20839FCB00576EBE /* WithdrawCompany.swift */,
+				7D20A8452084F5A7001CC099 /* Branche.swift */,
+				7D20A8472084F66A001CC099 /* Merchant.swift */,
+				7D20A8492084F6A6001CC099 /* MerchantDevice.swift */,
+				7D20A84B2084F6DC001CC099 /* Deposit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,16 +328,21 @@
 				7D11848520839BE100874D0E /* WithdrawVC.swift in Sources */,
 				7D77A6F4207D1506006D91B6 /* LoginVC.swift in Sources */,
 				7D77A6F0207D0496006D91B6 /* ApiRequests.swift in Sources */,
+				7D20A84A2084F6A6001CC099 /* MerchantDevice.swift in Sources */,
 				40F86FE920839AE800576EBE /* WithdrawCompaniesTableViewController.swift in Sources */,
 				7D63DAAF207E2BE700BF54E1 /* Extensions.swift in Sources */,
 				40F86FEB20839B0E00576EBE /* WithdrawCompaniesTableViewCell.swift in Sources */,
 				7D63DAAB207E195200BF54E1 /* User.swift in Sources */,
 				7D63DAB5207E4C0800BF54E1 /* VerifyVC.swift in Sources */,
+				7D20A84C2084F6DC001CC099 /* Deposit.swift in Sources */,
 				7D63DAA9207E14CB00BF54E1 /* appConstant.swift in Sources */,
+				7D20A84E2084F88C001CC099 /* DepositHistoryVC.swift in Sources */,
 				40F86FED20839FCB00576EBE /* WithdrawCompany.swift in Sources */,
 				7D63DAB1207E2ED700BF54E1 /* Enumeration.swift in Sources */,
+				7D20A8462084F5A8001CC099 /* Branche.swift in Sources */,
 				7D77A6ED207D0384006D91B6 /* serverManger.swift in Sources */,
 				7D77A6D4207CB838006D91B6 /* AppDelegate.swift in Sources */,
+				7D20A8482084F66A001CC099 /* Merchant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
