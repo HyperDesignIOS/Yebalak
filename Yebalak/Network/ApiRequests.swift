@@ -23,6 +23,7 @@ class apiRequests {
     var status : Int!
     var withdrawArray : [WithdrawCompany] = []
     var depositArray : [Deposit] = []
+    var withdrawUserArray : [Userwithdraw] = []
     
     
     func  register(userName:String,userPassword:String,userPhone:String,userMail:String,didDataReady : @escaping(User,String,String)->())->(){
@@ -247,6 +248,48 @@ class apiRequests {
         }, errorHandler: { (error, msg) in
             print("\(String(describing: msg))")
             didDataReady([])
+        })
+    }
+    func withdrawHistory(userID:String,didDataReady : @escaping([Userwithdraw])->())->(){
+        
+        sm.connectForApiWith(url: UserWithdrawHistoryURL  , mType: HTTPServerMethod.post, params: ["id":userID], complation: { (json) in
+            
+            if let obj = json {
+                print (obj)
+                var dictionaryOfJson = JSON(json!).dictionaryObject
+                let items = dictionaryOfJson!["userwithdraw"] as! [[String : Any]]
+                for item in items {
+                    let item = Userwithdraw.init(fromDictionary: item)
+                    self.withdrawUserArray.append(item)
+                }
+                
+            }
+            didDataReady(self.withdrawUserArray)
+        }, errorHandler: { (error, msg) in
+            print("\(String(describing: msg))")
+            didDataReady([])
+        })
+    }
+    func  editProfile(userId:String,userMail:String,userPhone:String,userName:String,userAddress:String,userPassword:String,didDataReady : @escaping(User,String)->())->(){
+        
+        sm.connectForApiWith(url: RegisterURL , mType: HTTPServerMethod.post, params: ["id":userId,"email":userMail,"phone":userPhone,"name":userName,"address":userAddress,"password":userPassword], complation: { (json) in
+            
+            if let obj = json {
+                print (obj)
+                
+                var dictionaryOfJson = JSON(json!).dictionaryObject
+                let userJson = dictionaryOfJson!["user"] as! [String : Any]
+                let user = User.init(fromDictionary: userJson )
+                self.user = user
+                let msg = dictionaryOfJson!["msg"] as! String
+                self.msg = msg
+              
+             
+            }
+            didDataReady(self.user,self.msg)
+        }, errorHandler: { (error, msg) in
+            print("\(String(describing: msg))")
+            didDataReady(self.user,self.msg)
         })
     }
 }
