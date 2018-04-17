@@ -244,7 +244,7 @@
         <!--depositHistory-->
         <scene sceneID="msV-AI-gJT">
             <objects>
-                <viewController id="C8y-Ym-N6q" userLabel="depositHistory" sceneMemberID="viewController">
+                <viewController id="C8y-Ym-N6q" userLabel="depositHistory" customClass="DepositHistoryVC" customModule="Yebalak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M5k-QC-F95">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -488,6 +488,9 @@
                         <viewLayoutGuide key="safeArea" id="J5J-Vp-TWr"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Deposite history" id="JBh-ZI-ywT"/>
+                    <connections>
+                        <outlet property="tableView" destination="atv-Vt-ZkO" id="0gX-En-SC3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ho8-xa-1zl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
