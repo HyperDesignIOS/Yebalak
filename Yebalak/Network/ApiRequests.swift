@@ -270,5 +270,27 @@ class apiRequests {
             didDataReady([])
         })
     }
+    func  editProfile(userId:String,userMail:String,userPhone:String,userName:String,userAddress:String,userPassword:String,didDataReady : @escaping(User,String)->())->(){
+        
+        sm.connectForApiWith(url: RegisterURL , mType: HTTPServerMethod.post, params: ["id":userId,"email":userMail,"phone":userPhone,"name":userName,"address":userAddress,"password":userPassword], complation: { (json) in
+            
+            if let obj = json {
+                print (obj)
+                
+                var dictionaryOfJson = JSON(json!).dictionaryObject
+                let userJson = dictionaryOfJson!["user"] as! [String : Any]
+                let user = User.init(fromDictionary: userJson )
+                self.user = user
+                let msg = dictionaryOfJson!["msg"] as! String
+                self.msg = msg
+              
+             
+            }
+            didDataReady(self.user,self.msg)
+        }, errorHandler: { (error, msg) in
+            print("\(String(describing: msg))")
+            didDataReady(self.user,self.msg)
+        })
+    }
 }
 

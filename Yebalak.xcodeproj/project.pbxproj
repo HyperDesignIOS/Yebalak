@@ -22,6 +22,7 @@
 		7D20A8522085075C001CC099 /* DepositHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20A8512085075C001CC099 /* DepositHistoryTableViewCell.swift */; };
 		7D5668CA20860D2900DC46F4 /* UserWithdraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5668C920860D2900DC46F4 /* UserWithdraw.swift */; };
 		7D5668CC20860FBA00DC46F4 /* UserWithdrawHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5668CB20860FBA00DC46F4 /* UserWithdrawHistoryVC.swift */; };
+		7D5668CF208618E700DC46F4 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5668CE208618E700DC46F4 /* EditProfileVC.swift */; };
 		7D63DAA9207E14CB00BF54E1 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAA8207E14CB00BF54E1 /* AppConstant.swift */; };
 		7D63DAAB207E195200BF54E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAAA207E195200BF54E1 /* User.swift */; };
 		7D63DAAD207E2A2700BF54E1 /* GeneralMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63DAAC207E2A2700BF54E1 /* GeneralMethod.swift */; };
@@ -57,6 +58,7 @@
 		7D20A8512085075C001CC099 /* DepositHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		7D5668C920860D2900DC46F4 /* UserWithdraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWithdraw.swift; sourceTree = "<group>"; };
 		7D5668CB20860FBA00DC46F4 /* UserWithdrawHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWithdrawHistoryVC.swift; sourceTree = "<group>"; };
+		7D5668CE208618E700DC46F4 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		7D63DAA8207E14CB00BF54E1 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		7D63DAAA207E195200BF54E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7D63DAAC207E2A2700BF54E1 /* GeneralMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMethod.swift; sourceTree = "<group>"; };
@@ -225,6 +227,14 @@
 			path = UserWithdraw;
 			sourceTree = "<group>";
 		};
+		7D5668CD208618AB00DC46F4 /* Edit Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7D5668CE208618E700DC46F4 /* EditProfileVC.swift */,
+			);
+			path = "Edit Profile";
+			sourceTree = "<group>";
+		};
 		7D77A6C7207CB837006D91B6 = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +280,7 @@
 		7D77A6E8207CBD64006D91B6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7D5668CD208618AB00DC46F4 /* Edit Profile */,
 				40CF8ABC2085FB4900339513 /* History */,
 				40CF8ABB2085FB3500339513 /* Withdraw */,
 				40CF8ABA2085FB1F00339513 /* Main */,
@@ -463,6 +474,7 @@
 				7D63DAB1207E2ED700BF54E1 /* Enumeration.swift in Sources */,
 				7D5668CC20860FBA00DC46F4 /* UserWithdrawHistoryVC.swift in Sources */,
 				7D20A8462084F5A8001CC099 /* Branche.swift in Sources */,
+				7D5668CF208618E700DC46F4 /* EditProfileVC.swift in Sources */,
 				7D5668CA20860D2900DC46F4 /* UserWithdraw.swift in Sources */,
 				7D77A6ED207D0384006D91B6 /* serverManger.swift in Sources */,
 				7D77A6D4207CB838006D91B6 /* AppDelegate.swift in Sources */,
