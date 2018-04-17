@@ -23,6 +23,7 @@ class apiRequests {
     var status : Int!
     var withdrawArray : [WithdrawCompany] = []
     var depositArray : [Deposit] = []
+    var withdrawUserArray : [Userwithdraw] = []
     
     
     func  register(userName:String,userPassword:String,userPhone:String,userMail:String,didDataReady : @escaping(User,String,String)->())->(){
@@ -244,6 +245,26 @@ class apiRequests {
                 
             }
             didDataReady(self.depositArray)
+        }, errorHandler: { (error, msg) in
+            print("\(String(describing: msg))")
+            didDataReady([])
+        })
+    }
+    func withdrawHistory(userID:String,didDataReady : @escaping([Userwithdraw])->())->(){
+        
+        sm.connectForApiWith(url: UserWithdrawHistoryURL  , mType: HTTPServerMethod.post, params: ["id":userID], complation: { (json) in
+            
+            if let obj = json {
+                print (obj)
+                var dictionaryOfJson = JSON(json!).dictionaryObject
+                let items = dictionaryOfJson!["userwithdraw"] as! [[String : Any]]
+                for item in items {
+                    let item = Userwithdraw.init(fromDictionary: item)
+                    self.withdrawUserArray.append(item)
+                }
+                
+            }
+            didDataReady(self.withdrawUserArray)
         }, errorHandler: { (error, msg) in
             print("\(String(describing: msg))")
             didDataReady([])
