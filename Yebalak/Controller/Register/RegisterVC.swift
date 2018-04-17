@@ -90,6 +90,10 @@ class RegisterVC: UIViewController {
                 self.msg = msg
                 print(self.user.name)
                 UserDefaults.standard.setUserID(value: self.user.id)
+                UserDefaults.standard.setUserName(value: self.user.name)
+                UserDefaults.standard.setUserPhone(value: self.user.phone)
+                UserDefaults.standard.setUserEmail(value: self.user.email)
+                UserDefaults.standard.setUserAddress(value: self.user.address)
                 UserDefaults.standard.setLoggedIn(value: true)
                let storyboard = UIStoryboard(name: "Register", bundle: nil)
                let controller = storyboard.instantiateViewController(withIdentifier: "VerifyID")
