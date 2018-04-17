@@ -34,20 +34,20 @@ class LoginVC: UIViewController {
 //        }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        if UserDefaults.standard.isLoggedIn(){
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID")
-            self.present(controller, animated: true, completion: nil)
-            //            self.show(controller, sender: self)
-        }
-        else{
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
-            //self.present(controller, animated: true, completion: nil)
-            self.show(controller, sender: self)
-        }
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        if UserDefaults.standard.isLoggedIn(){
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID")
+//            self.present(controller, animated: true, completion: nil)
+//            //            self.show(controller, sender: self)
+//        }
+//        else{
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
+//            //self.present(controller, animated: true, completion: nil)
+//            self.show(controller, sender: self)
+//        }
+//    }
     
     @IBAction func forgetPassword(_ sender: Any) {
     }
@@ -89,10 +89,10 @@ class LoginVC: UIViewController {
                 //self.present(controller, animated: true, completion: nil)
                 self.show(controller, sender: self)
                 UserDefaults.standard.setUserID(value: self.user.id)
-                UserDefaults.standard.setUserName(value: self.user.name)
-                UserDefaults.standard.setUserPhone(value: self.user.phone)
-                UserDefaults.standard.setUserEmail(value: self.user.email)
-                UserDefaults.standard.setUserAddress(value: self.user.address)
+//                UserDefaults.standard.setUserName(value: self.user.name)
+//                UserDefaults.standard.setUserPhone(value: self.user.phone)
+//                UserDefaults.standard.setUserEmail(value: self.user.email)
+//                UserDefaults.standard.setUserAddress(value: self.user.address)
                 UserDefaults.standard.setLoggedIn(value: true)
             }
             else if self.done == "0"

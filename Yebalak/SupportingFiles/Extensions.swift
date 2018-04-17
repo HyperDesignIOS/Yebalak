@@ -33,46 +33,46 @@ extension UserDefaults{
         return integer(forKey: UserDefaultsKeys.userID.rawValue)
     }
     
-    
-    //****** save user data  
-    func setUserName(value: String){
-        set(value, forKey: UserDefaultsKeys.userName.rawValue)
-        //synchronize()
-    }
-    
-    //MARK: Retrieve User Data
-    func getUserName() -> String{
-        return (forKey: UserDefaultsKeys.userName.rawValue) as! String
-    }
-    func setUserPhone(value: String){
-        set(value, forKey: UserDefaultsKeys.userPhone.rawValue)
-        //synchronize()
-    }
-    func getUserPhone() -> String{
-        return (forKey: UserDefaultsKeys.userPhone.rawValue) as! String
-    }
-    
-    func setUserEmail(value: String){
-        set(value, forKey: UserDefaultsKeys.userEmail.rawValue)
-        //synchronize()
-    }
-    func getUserEmail() -> String{
-        return (forKey: UserDefaultsKeys.userEmail.rawValue) as! String
-    }
-    func setUserAddress(value: String){
-        set(value, forKey: UserDefaultsKeys.userAddress.rawValue)
-        //synchronize()
-    }
-    func getUserAddress() -> String{
-        return (forKey: UserDefaultsKeys.userAddress.rawValue) as! String
-    }
-    func setUserPassword(value: String){
-        set(value, forKey: UserDefaultsKeys.userPassword.rawValue)
-        //synchronize()
-    }
-    func getUserPassword() -> String{
-        return (forKey: UserDefaultsKeys.userPassword.rawValue) as! String
-    }
+//    
+//    //****** save user data  
+//    func setUserName(value: String){
+//        set(value, forKey: UserDefaultsKeys.userName.rawValue)
+//        //synchronize()
+//    }
+//    
+//    //MARK: Retrieve User Data
+//    func getUserName() -> String{
+//        return (forKey: UserDefaultsKeys.userName.rawValue) as! String
+//    }
+//    func setUserPhone(value: String){
+//        set(value, forKey: UserDefaultsKeys.userPhone.rawValue)
+//        //synchronize()
+//    }
+//    func getUserPhone() -> String{
+//        return (forKey: UserDefaultsKeys.userPhone.rawValue) as! String
+//    }
+//    
+//    func setUserEmail(value: String){
+//        set(value, forKey: UserDefaultsKeys.userEmail.rawValue)
+//        //synchronize()
+//    }
+//    func getUserEmail() -> String{
+//        return (forKey: UserDefaultsKeys.userEmail.rawValue) as! String
+//    }
+//    func setUserAddress(value: String){
+//        set(value, forKey: UserDefaultsKeys.userAddress.rawValue)
+//        //synchronize()
+//    }
+//    func getUserAddress() -> String{
+//        return (forKey: UserDefaultsKeys.userAddress.rawValue) as! String
+//    }
+//    func setUserPassword(value: String){
+//        set(value, forKey: UserDefaultsKeys.userPassword.rawValue)
+//        //synchronize()
+//    }
+//    func getUserPassword() -> String{
+//        return (forKey: UserDefaultsKeys.userPassword.rawValue) as! String
+//    }
     
     
 }

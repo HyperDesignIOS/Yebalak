@@ -25,10 +25,10 @@ class EditProfileVC: UIViewController {
     let generalMethod = GeneralMethod()
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTF.text = UserDefaults.standard.getUserName()
-        phoneTF.text = UserDefaults.standard.getUserPhone()
-        emailTF.text = UserDefaults.standard.getUserEmail()
-        addressTF.text = UserDefaults.standard.getUserAddress()
+//        nameTF.text = UserDefaults.standard.getUserName()
+//        phoneTF.text = UserDefaults.standard.getUserPhone()
+//        emailTF.text = UserDefaults.standard.getUserEmail()
+//        addressTF.text = UserDefaults.standard.getUserAddress()
   
     }
     
@@ -68,10 +68,10 @@ class EditProfileVC: UIViewController {
       
         
         let id = UserDefaults.standard.getUserID()
-        apiRequests.apisInstance.editProfile(userId: "2", userMail: emailTF.text!, userPhone:  phoneTF.text!, userName: nameTF.text!, userAddress:addressTF.text!, userPassword: passwordTF.text!) { (user, msg) in
+        apiRequests.apisInstance.editProfile(userId: "\(id)", userMail: emailTF.text!, userPhone:  phoneTF.text!, userName: nameTF.text!, userAddress:addressTF.text!, userPassword: passwordTF.text!) { (user, msg) in
            self.msg = msg
             self.user = user
-              self.generalMethod.showAlert(title: "", message: msg, vc: self, closure: nil)
+              self.generalMethod.showAlert(title: "", message: self.msg, vc: self, closure: nil)
         }
         
     }

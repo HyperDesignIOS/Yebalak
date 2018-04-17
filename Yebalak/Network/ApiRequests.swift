@@ -272,7 +272,7 @@ class apiRequests {
     }
     func  editProfile(userId:String,userMail:String,userPhone:String,userName:String,userAddress:String,userPassword:String,didDataReady : @escaping(User,String)->())->(){
         
-        sm.connectForApiWith(url: RegisterURL , mType: HTTPServerMethod.post, params: ["id":userId,"email":userMail,"phone":userPhone,"name":userName,"address":userAddress,"password":userPassword], complation: { (json) in
+        sm.connectForApiWith(url: EditProfileURL , mType: HTTPServerMethod.post, params: ["id":userId,"email":userMail,"phone":userPhone,"name":userName,"address":userAddress,"password":userPassword], complation: { (json) in
             
             if let obj = json {
                 print (obj)
