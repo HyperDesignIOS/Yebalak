@@ -8,10 +8,11 @@
 
 import UIKit
 
-class DepositHistoryTableViewCell: UITableViewCell {
+class HistoryTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var middelViewDownLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!  
+    @IBOutlet weak var middelViewUpLabel: UILabel!  
     @IBOutlet weak var amountLabel: UILabel!
     
     override func awakeFromNib() {

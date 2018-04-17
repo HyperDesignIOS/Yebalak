@@ -55,7 +55,7 @@ class BalanceViewController: UIViewController {
     
     @IBAction func historyButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "History", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "HistoryID")
+        let controller = storyboard.instantiateViewController(withIdentifier: "DepositHistoryID")
         self.show(controller, sender: self)
     }
     

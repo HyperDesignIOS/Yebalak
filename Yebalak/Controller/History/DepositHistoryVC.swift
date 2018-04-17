@@ -28,10 +28,11 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "depositCell")
-        as! DepositHistoryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell")
+        as! HistoryTableViewCell
         cell.dateLabel.text = depositsArr[indexPath.row].date
-        cell.phoneLabel.text = depositsArr[indexPath.row].phone
+        cell.middelViewUpLabel.text = depositsArr[indexPath.row].merchant.nameEn
+        cell.middelViewDownLabel.text = depositsArr[indexPath.row].branche.nameEn
         cell.amountLabel.text = depositsArr[indexPath.row].value
         return cell
         
@@ -41,7 +42,7 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
 
     func getDepositHistory (){
         let id = UserDefaults.standard.getUserID()
-        apiRequests.apisInstance.depositeHistory(userID: "\(id)") { (deposites) in
+        apiRequests.apisInstance.depositeHistory(userID: "2") { (deposites) in
             self.depositsArr = deposites
             self.tableView.reloadData()
         }
