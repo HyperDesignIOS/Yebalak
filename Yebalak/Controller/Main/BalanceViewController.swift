@@ -59,5 +59,13 @@ class BalanceViewController: UIViewController {
         self.show(controller, sender: self)
     }
     
+    @IBAction func settingButton(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "EditProfile", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "EditProfileID")
+        self.show(controller, sender: self)
+    }
+    
+    
 }
 
