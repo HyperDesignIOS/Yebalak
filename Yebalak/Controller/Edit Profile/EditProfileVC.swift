@@ -33,7 +33,41 @@ class EditProfileVC: UIViewController {
     }
     
     @IBAction func editProfileButton(_ sender: Any) {
-       // let id = UserDefaults.standard.getUserID()
+        
+        let phone = self.phoneTF.text!
+        if phone.isEmpty || phone.containsWhiteSpace() {
+            generalMethod.showAlert(title: "", message: "please enter your phone ", vc: self, closure: nil)
+            return
+            
+        }
+        else if !phone.isValidPhone() {
+            generalMethod.showAlert(title: "", message: "invalid phone", vc: self, closure: nil)
+            return
+        }
+        
+        let name = self.nameTF.text!
+        if name.isEmpty || name.containsWhiteSpace() {
+            generalMethod.showAlert(title: "", message: "please enter your new user name ", vc: self, closure: nil)
+            return
+            
+        }
+        let mail = self.emailTF.text!
+        if mail.isEmpty || mail.containsWhiteSpace()  {
+            generalMethod.showAlert(title: "", message: "please enter your new e-mail", vc: self, closure: nil)
+            return
+        }
+        else if !mail.isValidEmail() {
+            generalMethod.showAlert(title: "", message: "invalid e-mail", vc: self, closure: nil)
+            return
+        }
+        let address = self.addressTF.text!
+        if mail.isEmpty || mail.containsWhiteSpace()  {
+            generalMethod.showAlert(title: "", message: "please enter your new address", vc: self, closure: nil)
+            return
+        }
+      
+        
+        let id = UserDefaults.standard.getUserID()
         apiRequests.apisInstance.editProfile(userId: "2", userMail: emailTF.text!, userPhone:  phoneTF.text!, userName: nameTF.text!, userAddress:addressTF.text!, userPassword: passwordTF.text!) { (user, msg) in
            self.msg = msg
             self.user = user
