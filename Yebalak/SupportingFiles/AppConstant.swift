@@ -18,7 +18,7 @@ let WithdrawFormURL = "\(BaseURL)/Withdrawform"
 let WithdrawCompaniesURL = "\(BaseURL)/withdraw"
 let DepositeHistoryURL = "\(BaseURL)/depositHistory"
 let WithdrawImagesURL = "\(ImageBaseURL)/withdraw/resize200/"
-let UserWithdrawHistoryURL = "\(BaseURL)/withdrawHistory "
+let UserWithdrawHistoryURL = "\(BaseURL)/withdrawHistory"
 let EditProfileURL = "\(BaseURL)/editProfile"
 
 

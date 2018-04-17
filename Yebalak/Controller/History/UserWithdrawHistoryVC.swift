@@ -12,13 +12,17 @@ class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewD
     
     
     var userWithdraws : [Userwithdraw] = []
-    
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        
-        
+        getUserWithdrawHistory()
+        tableView.delegate = self
+        tableView.dataSource = self
+    
     }
     
+
     
     
     
@@ -28,13 +32,19 @@ class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
+        cell.dateLabel.text = userWithdraws[indexPath.row].createdAt
+        cell.middelViewUpLabel.text = userWithdraws[indexPath.row].phone
+        cell.middelViewDownLabel.text = userWithdraws[indexPath.row].nameEn
+        cell.amountLabel.text = userWithdraws[indexPath.row].value
+        return cell
     }
 
     func getUserWithdrawHistory(){
         let id = UserDefaults.standard.getUserID()
-        apiRequests.apisInstance.withdrawHistory(userID:" \(id)") { (userWithdraws) in
+        apiRequests.apisInstance.withdrawHistory(userID:"2") { (userWithdraws) in
            self.userWithdraws = userWithdraws
+            self.tableView.reloadData()
             
         }
     }
