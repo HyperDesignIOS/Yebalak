@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HJA-F9-ZR8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yla-U0-zAe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -343,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SaA-DN-Xof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128.8" y="179.46026986506749"/>
+            <point key="canvasLocation" x="1906" y="179"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="hIw-T6-3JK">
@@ -357,10 +357,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kl6-D4-J8P" userLabel="container ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNe-WM-WRz">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8e-iU-2Pf">
                                                 <rect key="frame" x="20" y="20" width="335" height="43"/>
@@ -413,7 +413,7 @@
                                                             <constraint firstItem="nrD-n3-FRV" firstAttribute="top" secondItem="fT0-ub-TW5" secondAttribute="top" id="ml4-KM-iWK"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Phone,email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zZ0-WS-D1U">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone or Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zZ0-WS-D1U">
                                                         <rect key="frame" x="0.0" y="50" width="335" height="60"/>
                                                         <color key="backgroundColor" white="0.33333333329999998" alpha="0.28732341610000001" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -565,6 +565,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Byq-9f-jVH"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Login" id="QGT-PD-r1P"/>
                     <connections>
                         <outlet property="emailOrPHhone" destination="zZ0-WS-D1U" id="6Kt-yT-SN9"/>
                         <outlet property="passwordTF" destination="inq-Hb-ayR" id="HTN-uw-Fo0"/>
@@ -572,7 +573,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAa-Ra-J1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="303" y="181"/>
+            <point key="canvasLocation" x="1207" y="179"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fIZ-Vl-cOs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yla-U0-zAe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="94g-Wq-C9F">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HJA-F9-ZR8" kind="relationship" relationship="rootViewController" id="IpE-Gi-LXU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7UK-Sw-oOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302.39999999999998" y="180.80959520239881"/>
         </scene>
     </scenes>
     <resources>
