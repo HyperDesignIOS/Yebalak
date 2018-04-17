@@ -56,14 +56,11 @@
 		7D20A84B2084F6DC001CC099 /* Deposit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deposit.swift; sourceTree = "<group>"; };
 		7D20A84D2084F88C001CC099 /* DepositHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositHistoryVC.swift; sourceTree = "<group>"; };
 		7D20A84F2085068B001CC099 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		7D20A8512085075C001CC099 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
-=======
 		7D20A8512085075C001CC099 /* DepositHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		7D5668C920860D2900DC46F4 /* UserWithdraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWithdraw.swift; sourceTree = "<group>"; };
 		7D5668CB20860FBA00DC46F4 /* UserWithdrawHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWithdrawHistoryVC.swift; sourceTree = "<group>"; };
 		7D5668CE208618E700DC46F4 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
->>>>>>> 46ca08acc9d6085d075415719b914c878f6ab275
 		7D63DAA8207E14CB00BF54E1 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		7D63DAAA207E195200BF54E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7D63DAAC207E2A2700BF54E1 /* GeneralMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMethod.swift; sourceTree = "<group>"; };
