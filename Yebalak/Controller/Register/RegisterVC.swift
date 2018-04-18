@@ -19,6 +19,8 @@ class RegisterVC: UIViewController {
     var msg : String!
     var done : String!
     var user : User!
+    var spinner : UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
@@ -35,35 +37,42 @@ class RegisterVC: UIViewController {
     @IBAction func signUpButton(_ sender: Any) {
         
         
-        
+        spinner = self.displaySpinner(onView: self.view)
+
         let phone = self.phoneTF.text!
         if phone.isEmpty || phone.containsWhiteSpace() {
+            self.removeSpinner(spinner: self.spinner)
             generalMethod.showAlert(title: "", message: "please enter your phone ", vc: self, closure: nil)
             return
             
         }
         else if !phone.isValidPhone() {
+            self.removeSpinner(spinner: self.spinner)
             generalMethod.showAlert(title: "", message: "invalid phone", vc: self, closure: nil)
             return
         }
         
         let name = self.userNameTF.text!
         if name.isEmpty || name.containsWhiteSpace() {
+            self.removeSpinner(spinner: self.spinner)
             generalMethod.showAlert(title: "", message: "please enter your name ", vc: self, closure: nil)
             return
             
         }
         let mail = self.emailTF.text!
         if mail.isEmpty || mail.containsWhiteSpace()  {
+            self.removeSpinner(spinner: self.spinner)
             generalMethod.showAlert(title: "", message: "please enter your e-mail", vc: self, closure: nil)
             return
         }
         else if !mail.isValidEmail() {
+            self.removeSpinner(spinner: self.spinner)
             generalMethod.showAlert(title: "", message: "invalid e-mail", vc: self, closure: nil)
             return
         }
         let password = self.passwordTF.text!
         if password.isEmpty || password.containsWhiteSpace()  {
+            self.removeSpinner(spinner: self.spinner)
             generalMethod.showAlert(title: "", message: "please enter your password", vc: self, closure: nil)
             return
             
@@ -74,10 +83,12 @@ class RegisterVC: UIViewController {
         //        }
         let confirmpass = self.confirmPasswordTF.text!
         if confirmpass.isEmpty || confirmpass.containsWhiteSpace() {
+            self.removeSpinner(spinner: self.spinner)
             generalMethod.showAlert(title: "", message: "please enter your password confirmation", vc: self, closure: nil)
             return
         }
         else if password != confirmpass {
+            self.removeSpinner(spinner: self.spinner)
             generalMethod.showAlert(title: "", message: " password confirmation failed", vc: self, closure: nil)
             return
         }
@@ -98,11 +109,13 @@ class RegisterVC: UIViewController {
                let storyboard = UIStoryboard(name: "Register", bundle: nil)
                let controller = storyboard.instantiateViewController(withIdentifier: "VerifyID")
                 //self.present(controller, animated: true, completion: nil)
+                self.removeSpinner(spinner: self.spinner)
                 self.show(controller, sender: self)
             }
             else if self.done == "0"
             {
                 self.msg = msg
+                self.removeSpinner(spinner: self.spinner)
                 self.generalMethod.showAlert(title: "", message:self.msg, vc: self, closure: nil)
             }
         }

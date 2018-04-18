@@ -10,22 +10,18 @@ import UIKit
 
 class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
-    
+    var spinner : UIView!
     var userWithdraws : [Userwithdraw] = []
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        spinner = self.displaySpinner(onView: self.view)
         getUserWithdrawHistory()
         tableView.delegate = self
         tableView.dataSource = self
-    
+        
     }
-    
-
-    
-    
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userWithdraws.count
@@ -45,7 +41,7 @@ class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewD
         apiRequests.apisInstance.withdrawHistory(userID:"2") { (userWithdraws) in
            self.userWithdraws = userWithdraws
             self.tableView.reloadData()
-            
+            self.removeSpinner(spinner: self.spinner)
         }
     }
 

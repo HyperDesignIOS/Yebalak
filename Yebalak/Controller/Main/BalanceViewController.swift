@@ -13,6 +13,7 @@ class BalanceViewController: UIViewController {
     var balance : String!
     var lastTransaction :String!
     var date : String!
+    var spinner : UIView!
 
     
     
@@ -24,8 +25,10 @@ class BalanceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        spinner = self.displaySpinner(onView: self.view)
         var id = UserDefaults.standard.getUserID()
         apiRequests.apisInstance.getUserBalance(userId: "\(id)") { (user, balance, date, last) in
+            self.removeSpinner(spinner: self.spinner)
             self.balanceLabel.text = balance
             self.lastTransactionLabel.text = last
             self.dateLabel.text = date

@@ -13,6 +13,7 @@ class WithdrawVC: UIViewController {
     var withdrawId : Int!
     let userId = UserDefaults.standard.getUserID()
     let generalMethod = GeneralMethod()
+    var spinner : UIView!
     
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var valueTF: UITextField!
@@ -25,7 +26,10 @@ class WithdrawVC: UIViewController {
     
     
     @IBAction func sendWithdrawButton(_ sender: Any) {
+        
+        spinner = self.displaySpinner(onView: self.view)
         apiRequests.apisInstance.WithdrawForm(userPhone: phoneTF.text!, userID:"\(userId)" , valval: valueTF.text!, paymentID:"\(withdrawId!)") { (msg, status) in
+            self.removeSpinner(spinner: self.spinner)
             self.generalMethod.showAlert(title: "", message: msg, vc: self, closure: nil)
         }
         

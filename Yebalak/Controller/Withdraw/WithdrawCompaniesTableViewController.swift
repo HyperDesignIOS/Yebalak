@@ -14,9 +14,12 @@ class WithdrawCompaniesTableViewController: UIViewController , UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     
     var withdrawCompanies : [WithdrawCompany] = []
+    var spinner : UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        spinner = self.displaySpinner(onView: self.view)
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -117,6 +120,7 @@ class WithdrawCompaniesTableViewController: UIViewController , UITableViewDelega
         apiRequests.apisInstance.WithdrawImage(userID: "\(id)") { (withdrawCompanies) in
             self.withdrawCompanies = withdrawCompanies
             self.tableView.reloadData()
+            self.removeSpinner(spinner: self.spinner)
         }
     }
 

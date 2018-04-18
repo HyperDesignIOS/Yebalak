@@ -17,6 +17,8 @@ class LoginVC: UIViewController {
     var done : String!
     var user : User!
     var active : String!
+    var spinner : UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,8 +67,11 @@ class LoginVC: UIViewController {
 //            generalMethod.showAlert(title: "", message: "please enter your mail", vc: self, closure: nil)
 //            return
 //        }
+        spinner = self.displaySpinner(onView: self.view)
+
         let password = self.passwordTF.text!
         if password.isEmpty || password.containsWhiteSpace(){
+            self.removeSpinner(spinner: self.spinner)
             generalMethod.showAlert(title: "", message: "please enter your password", vc: self, closure: nil)
             return
             
@@ -83,6 +88,7 @@ class LoginVC: UIViewController {
                 if active == "0"{
                     UserDefaults.standard.setUserID(value: self.user.id)
                     UserDefaults.standard.setLoggedIn(value: true)
+                    self.removeSpinner(spinner: self.spinner)
                     self.generalMethod.showAlert(title: "", message: msg, vc: self, closure: {
                         let storyboard = UIStoryboard(name: "Register", bundle: nil)
                         let controller = storyboard.instantiateViewController(withIdentifier: "VerifyID")
@@ -106,6 +112,7 @@ class LoginVC: UIViewController {
                     controller.date = date
                     controller.lastTransaction = last
                     //self.present(controller, animated: true, completion: nil)
+                    self.removeSpinner(spinner: self.spinner)
                     self.show(controller, sender: self)
                     UserDefaults.standard.setUserID(value: self.user.id)
                     //                UserDefaults.standard.setUserName(value: self.user.name)
@@ -117,6 +124,7 @@ class LoginVC: UIViewController {
             }
             else if self.done == "0"
             {
+                self.removeSpinner(spinner: self.spinner)
                 self.generalMethod.showAlert(title: "", message: self.msg, vc: self, closure: nil)
             }
         }

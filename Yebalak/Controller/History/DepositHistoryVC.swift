@@ -10,7 +10,7 @@ import UIKit
 
 class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
-    
+    var spinner : UIView!
     var depositsArr : [Deposit] = []
     
     override func viewDidLoad() {
@@ -18,7 +18,7 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
         getDepositHistory ()
         tableView.delegate = self
         tableView.dataSource = self
-        
+        spinner = self.displaySpinner(onView: self.view)
     }
     
     
@@ -45,6 +45,7 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
         apiRequests.apisInstance.depositeHistory(userID: "2") { (deposites) in
             self.depositsArr = deposites
             self.tableView.reloadData()
+            self.removeSpinner(spinner: self.spinner)
         }
         
     }

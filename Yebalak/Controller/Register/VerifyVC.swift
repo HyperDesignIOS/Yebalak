@@ -17,6 +17,8 @@ class VerifyVC: UIViewController {
     var balance : String!
     var date : String!
     var last : String!
+    var spinner : UIView!
+    
     @IBOutlet weak var codeTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,27 +28,25 @@ class VerifyVC: UIViewController {
     
    
     @IBAction func ResendCode(_ sender: Any) {
+        spinner = self.displaySpinner(onView: self.view)
+
         let id = UserDefaults.standard.getUserID()
         apiRequests.apisInstance.ResendCode(userId: id) { (msg) in
             if msg != ""
             {
+                self.removeSpinner(spinner: self.spinner)
                 self.generalMethod.showAlert(title: "", message:msg , vc: self, closure: nil)
             }
-            
         }
-        
-        
     }
-    
     
     
     @IBAction func verifyButton(_ sender: Any) {
       
-        
-        
-        
+        spinner = self.displaySpinner(onView: self.view)
         let code = self.codeTF.text!
         if code.isEmpty || code.containsWhiteSpace(){
+            self.removeSpinner(spinner: self.spinner)
             generalMethod.showAlert(title: "", message: "please enter verification code ", vc: self, closure: nil)
             return
         }
@@ -65,16 +65,18 @@ class VerifyVC: UIViewController {
                 controller.balance = self.balance
                 controller.date = self.date
                 controller.lastTransaction = self.last
+                self.removeSpinner(spinner: self.spinner)
                 self.show(controller, sender: self)
             }
             else if self.done == "0"
             {
                 self.msg = msg
+                self.removeSpinner(spinner: self.spinner)
                 self.generalMethod.showAlert(title: "", message:self.msg, vc: self, closure: nil)
             }
            
         }
     }
-    }
+}
     
 
