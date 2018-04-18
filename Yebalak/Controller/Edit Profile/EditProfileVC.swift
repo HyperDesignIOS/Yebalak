@@ -20,6 +20,9 @@ class EditProfileVC: UIViewController {
     
     @IBOutlet weak var passwordTF: UITextField!
     
+    
+    
+    
     var user: User!
     var msg: String!
     let generalMethod = GeneralMethod()
