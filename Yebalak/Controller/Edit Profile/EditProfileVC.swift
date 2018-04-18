@@ -20,7 +20,9 @@ class EditProfileVC: UIViewController {
     
     @IBOutlet weak var passwordTF: UITextField!
     
+    @IBOutlet weak var firstImage: UIImageView!
     
+    @IBOutlet weak var secondImage: UIImageView!
     
     
     var user: User!
@@ -76,6 +78,30 @@ class EditProfileVC: UIViewController {
             self.user = user
               self.generalMethod.showAlert(title: "", message: self.msg, vc: self, closure: nil)
         }
+        
+    }
+    
+    @IBAction func changeImage(_ sender: UIButton) {
+        
+        switch sender.tag{
+        case 1:
+            imageSwap(forfirstimage: firstImage, andSecondImage: secondImage)
+//            statusOfVehicle = "new"
+            
+        case 2:
+            imageSwap(forfirstimage: secondImage, andSecondImage: firstImage)
+//            statusOfVehicle = "used"
+            
+            
+        default:
+            break
+        }
+    }
+    
+    func imageSwap(forfirstimage firstImageView: UIImageView,andSecondImage secondImageView: UIImageView)
+    {
+        firstImageView.image = UIImage(named: "radio-on-button-2")
+        secondImageView.image = UIImage(named: "circle")
         
     }
     

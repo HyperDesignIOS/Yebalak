@@ -231,6 +231,7 @@ class apiRequests {
         
         sm.connectForApiWith(url: DepositeHistoryURL  , mType: HTTPServerMethod.post, params: ["id":userID], complation: { (json) in
             
+            self.depositArray.removeAll()
             if let obj = json {
                 print (obj)
                 var dictionaryOfJson = JSON(json!).dictionaryObject
@@ -250,6 +251,8 @@ class apiRequests {
     func withdrawHistory(userID:String,didDataReady : @escaping([Userwithdraw])->())->(){
         
         sm.connectForApiWith(url: UserWithdrawHistoryURL  , mType: HTTPServerMethod.post, params: ["id":userID], complation: { (json) in
+            
+            self.withdrawArray.removeAll()
             
             if let obj = json {
                 print (obj)
@@ -287,6 +290,33 @@ class apiRequests {
         }, errorHandler: { (error, msg) in
             print("\(String(describing: msg))")
             didDataReady(self.user,self.msg)
+        })
+    }
+    
+    func  getUserBalance(userId:String,didDataReady : @escaping(User,String,String,String)->())->(){
+        
+        sm.connectForApiWith(url: BaseURL , mType: HTTPServerMethod.post, params: ["id":userId], complation: { (json) in
+            
+            if let obj = json {
+                print (obj)
+                
+                var dictionaryOfJson = JSON(json!).dictionaryObject
+                let userJson = dictionaryOfJson!["user"] as! [String : Any]
+                let user = User.init(fromDictionary: userJson )
+                self.user = user
+                let balance = dictionaryOfJson!["balance"] as! String
+                self.balance = balance
+                
+                let last = dictionaryOfJson!["last"] as! String
+                self.last = last
+                
+                let date = dictionaryOfJson!["date"] as! String
+                self.date = date
+            }
+            didDataReady(self.user,self.balance,self.date,self.last)
+        }, errorHandler: { (error, msg) in
+            print("\(String(describing: msg))")
+            didDataReady(User(),"","","")
         })
     }
 }

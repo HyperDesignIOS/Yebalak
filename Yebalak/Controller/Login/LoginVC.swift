@@ -20,18 +20,18 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if UserDefaults.standard.isLoggedIn(){
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID")
-//            self.present(controller, animated: true, completion: nil)
-////            self.show(controller, sender: self)
-//        }
-//        else{
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
-//            //self.present(controller, animated: true, completion: nil)
+        if UserDefaults.standard.isLoggedIn(){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID")
+            self.present(controller, animated: true, completion: nil)
 //            self.show(controller, sender: self)
-//        }
+        }
+        else{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
+            //self.present(controller, animated: true, completion: nil)
+            self.show(controller, sender: self)
+        }
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
@@ -55,8 +55,8 @@ class LoginVC: UIViewController {
     @IBAction func dontHaveAccountButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Register", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "RegisterID")
-        //self.present(controller, animated: true, completion: nil)
-        self.show(controller, sender: self)
+        self.present(controller, animated: true, completion: nil)
+//        self.show(controller, sender: self)
     }
     
     @IBAction func loginButton(_ sender: Any) {

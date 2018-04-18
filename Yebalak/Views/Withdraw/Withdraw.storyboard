@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0GV-KW-YOo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -204,6 +204,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gcx-vO-Brl"/>
                     </view>
+                    <navigationItem key="navigationItem" id="E9F-z2-PEt"/>
                     <connections>
                         <outlet property="phoneTF" destination="ea2-Dd-ZFR" id="h8j-MJ-UyS"/>
                         <outlet property="valueTF" destination="hyH-Wb-ZgK" id="FWp-1p-8b9"/>
@@ -211,9 +212,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dJ-DZ-bLh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-270" y="105"/>
+            <point key="canvasLocation" x="3400.8000000000002" y="89.505247376311857"/>
         </scene>
-        <!--Withdraw Companies Table View Controller-->
+        <!--Withdraw companies-->
         <scene sceneID="nw3-W5-Pd1">
             <objects>
                 <viewController storyboardIdentifier="WithdrawImagesID" id="rHq-FO-5y1" customClass="WithdrawCompaniesTableViewController" customModule="Yebalak" customModuleProvider="target" sceneMemberID="viewController">
@@ -222,22 +223,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banknote_currency_money_numbers_50323_3840x2160" translatesAutoresizingMaskIntoConstraints="NO" id="U0V-Wp-duT">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oP1-gM-MiB">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mZl-d9-Rrs">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mZl-d9-Rrs">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WithdrawCompanyCell" rowHeight="192" id="a7C-bN-DpE" customClass="WithdrawCompaniesTableViewCell" customModule="Yebalak" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WithdrawCompanyCell" rowHeight="192" id="a7C-bN-DpE" customClass="WithdrawCompaniesTableViewCell" customModule="Yebalak" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="192"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a7C-bN-DpE" id="NYL-qK-8oG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="191.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="192"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9DI-6l-evV">
@@ -280,13 +281,32 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L9g-yl-R7w"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Withdraw companies" id="xwd-pB-Hxd"/>
                     <connections>
                         <outlet property="tableView" destination="mZl-d9-Rrs" id="hTE-JF-CCi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSL-7T-Zqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500" y="90"/>
+            <point key="canvasLocation" x="2517.5999999999999" y="89.505247376311857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="B8e-ni-tBV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LQk-4E-hKk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y30-8g-lF0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rHq-FO-5y1" kind="relationship" relationship="rootViewController" id="VG1-W8-Ecg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yty-rC-I9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1679" y="90"/>
         </scene>
     </scenes>
     <resources>

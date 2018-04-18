@@ -23,10 +23,15 @@ class BalanceViewController: UIViewController {
     @IBOutlet weak var balanceImageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        balanceLabel.text = balance
-        lastTransactionLabel.text = lastTransaction
-        dateLabel.text = date
-        balanceImageLabel.text = balance
+        
+        var id = UserDefaults.standard.getUserID()
+        apiRequests.apisInstance.getUserBalance(userId: "\(id)") { (user, balance, date, last) in
+            self.balanceLabel.text = balance
+            self.lastTransactionLabel.text = last
+            self.dateLabel.text = date
+            self.balanceImageLabel.text = balance
+        }
+        
         
 //        if UserDefaults.standard.isLoggedIn()
 //        {

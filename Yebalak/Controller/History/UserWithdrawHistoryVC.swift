@@ -33,7 +33,7 @@ class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
-        cell.dateLabel.text = userWithdraws[indexPath.row].createdAt
+        cell.dateLabel.text = userWithdraws[indexPath.row].date
         cell.middelViewUpLabel.text = userWithdraws[indexPath.row].phone
         cell.middelViewDownLabel.text = userWithdraws[indexPath.row].nameEn
         cell.amountLabel.text = userWithdraws[indexPath.row].value

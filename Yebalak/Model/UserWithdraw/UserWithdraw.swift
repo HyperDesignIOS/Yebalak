@@ -11,7 +11,7 @@ import Foundation
 
 class Userwithdraw : NSObject, NSCoding{
     
-    var createdAt : String!
+    var date : String!
     var nameAr : String!
     var nameEn : String!
     var phone : String!
@@ -24,7 +24,7 @@ class Userwithdraw : NSObject, NSCoding{
      * Instantiate the instance using the passed dictionary values to set the properties values
      */
     init(fromDictionary dictionary: [String:Any]){
-        createdAt = dictionary["created_at"] as? String
+        date = dictionary["date"] as? String
         nameAr = dictionary["name_ar"] as? String
         nameEn = dictionary["name_en"] as? String
         phone = dictionary["phone"] as? String
@@ -39,8 +39,8 @@ class Userwithdraw : NSObject, NSCoding{
     func toDictionary() -> [String:Any]
     {
         var dictionary = [String:Any]()
-        if createdAt != nil{
-            dictionary["created_at"] = createdAt
+        if date != nil{
+            dictionary["date"] = date
         }
         if nameAr != nil{
             dictionary["name_ar"] = nameAr
@@ -69,7 +69,7 @@ class Userwithdraw : NSObject, NSCoding{
      */
     @objc required init(coder aDecoder: NSCoder)
     {
-        createdAt = aDecoder.decodeObject(forKey: "created_at") as? String
+        date = aDecoder.decodeObject(forKey: "date") as? String
         nameAr = aDecoder.decodeObject(forKey: "name_ar") as? String
         nameEn = aDecoder.decodeObject(forKey: "name_en") as? String
         phone = aDecoder.decodeObject(forKey: "phone") as? String
@@ -85,8 +85,8 @@ class Userwithdraw : NSObject, NSCoding{
      */
     @objc func encode(with aCoder: NSCoder)
     {
-        if createdAt != nil{
-            aCoder.encode(createdAt, forKey: "created_at")
+        if date != nil{
+            aCoder.encode(date, forKey: "created_at")
         }
         if nameAr != nil{
             aCoder.encode(nameAr, forKey: "name_ar")
