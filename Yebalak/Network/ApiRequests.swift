@@ -71,54 +71,51 @@ class apiRequests {
                 var dictionaryOfJson = JSON(json!).dictionaryObject
                 
                 let done = dictionaryOfJson!["done"] as! String
-                let active = dictionaryOfJson!["active"] as! String
+               
                 let msg = dictionaryOfJson!["msg"] as! String
-                self.active = active
+              
                 
                 if done == "1"{
+                    let active = dictionaryOfJson!["active"] as! String
+                    self.active = active
                     print(dictionaryOfJson)
-                    let items = dictionaryOfJson!["user"] as! [String : Any]
-                    let item = User.init(fromDictionary: items)
-                    self.user = item
-                    let date = dictionaryOfJson!["date"] as! String
-                    self.date = date
-                    let lastTransaction = dictionaryOfJson!["last"] as! String
-                    self.last = lastTransaction
-                    self.msg = msg
-                    self.done = done
-                    
-                }
-                else if done == "0"
-                    
-                {
-                    if active == "0"
-                    {
-                    self.msg = msg
-                    let items = dictionaryOfJson!["user"] as! [String : Any]
-                    let item = User.init(fromDictionary: items)
-                    self.user = item
-                     self.done = done
-                        
-                    print("login failed enter acivation code ")
-                    
-                    }
-                    else
-                    {
-                        self.active = active
-                        self.done = done
-                        self.msg = msg
-                        self.user = User()
+                    if active == "1"{
+                        let items = dictionaryOfJson!["user"] as! [String : Any]
+                        let item = User.init(fromDictionary: items)
+                        self.user = item
                         let date = dictionaryOfJson!["date"] as! String
                         self.date = date
                         let lastTransaction = dictionaryOfJson!["last"] as! String
                         self.last = lastTransaction
-                    
-                         print("login failed enter valid account")
+                        self.msg = msg
+                        self.done = done
                     }
+                    else{
+                        let items = dictionaryOfJson!["user"] as! [String : Any]
+                        let item = User.init(fromDictionary: items)
+                        self.user = item
+                        self.msg = msg
+                        self.done = done
+                        self.date = ""
+                        self.last = ""
+                        self.balance = ""
+                    }
+                    
+                }
+                else
+                    
+                {
+                    self.done = done
+                    self.msg = msg
+                    self.active = "0"
+                    self.date = ""
+                    self.last = ""
+                    self.balance = ""
+                    self.user = User()
                 }
                 
             }
-            didDataReady(self.user,self.msg,self.done,self.active,self.date ?? "",self.last ?? "")
+            didDataReady(self.user,self.msg,self.done,self.active,self.date ,self.last )
         }, errorHandler: { (error, msg) in
             print("\(String(describing: msg))")
             didDataReady(User(),"","","","","")
