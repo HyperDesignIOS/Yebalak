@@ -61,11 +61,10 @@ class LoginVC: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
         let mail = self.emailOrPHhone.text!
-        if mail.isEmpty || mail.containsWhiteSpace(){
-            generalMethod.showAlert(title: "", message: "please enter your mail", vc: self, closure: nil)
-            return
-        }
-        
+//        if mail.isEmpty || mail.containsWhiteSpace(){
+//            generalMethod.showAlert(title: "", message: "please enter your mail", vc: self, closure: nil)
+//            return
+//        }
         let password = self.passwordTF.text!
         if password.isEmpty || password.containsWhiteSpace(){
             generalMethod.showAlert(title: "", message: "please enter your password", vc: self, closure: nil)
@@ -91,11 +90,10 @@ class LoginVC: UIViewController {
                         
                         let id = UserDefaults.standard.getUserID()
                         apiRequests.apisInstance.ResendCode(userId: id) { (msg) in
-                            if msg != ""
-                            {
-                                self.generalMethod.showAlert(title: "", message:msg , vc: self, closure: nil)
-                                self.show(controller, sender: self)
-                            }
+                            
+//                                self.generalMethod.showAlert(title: "", message:msg , vc: self, closure: nil)
+                            self.show(controller, sender: self)
+                            
                             
                         }
                     })
