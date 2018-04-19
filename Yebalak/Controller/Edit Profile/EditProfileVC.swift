@@ -31,13 +31,15 @@ class EditProfileVC: UIViewController {
     let generalMethod = GeneralMethod()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         SwiftSpinner.show("loading...")
         self.user = NSKeyedUnarchiver.unarchiveObject(with: UserDefaults.standard.getUser() as! Data) as? User
         nameTF.text = user.name
         phoneTF.text = user.phone
         emailTF.text = user.email
         addressTF.text = user.address
-         SwiftSpinner.hide()
+        SwiftSpinner.hide()
+        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func editProfileButton(_ sender: Any) {

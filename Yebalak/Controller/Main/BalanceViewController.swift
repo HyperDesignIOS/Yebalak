@@ -25,9 +25,10 @@ class BalanceViewController: UIViewController {
     @IBOutlet weak var balanceImageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-          SwiftSpinner.show("loading...")
+        
+        SwiftSpinner.show("loading...")
        // spinner = self.displaySpinner(onView: self.view)
-        var id = UserDefaults.standard.getUserID()
+        let id = UserDefaults.standard.getUserID()
         apiRequests.apisInstance.getUserBalance(userId: "\(id)") { (user, balance, date, last) in
             //self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
@@ -63,6 +64,7 @@ class BalanceViewController: UIViewController {
     {
         let storyboard = UIStoryboard(name: "Withdraw", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "WithdrawImagesID")
+//        self.navigationController!.pushViewController(controller, animated: true)
         self.show(controller, sender: self)
     }
     

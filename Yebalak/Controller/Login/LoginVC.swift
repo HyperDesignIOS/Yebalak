@@ -26,8 +26,9 @@ class LoginVC: UIViewController {
         if UserDefaults.standard.isLoggedIn(){
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID")
-            self.present(controller, animated: true, completion: nil)
-//            self.show(controller, sender: self)
+//            self.navigationController!.pushViewController(controller, animated: true)
+//            self.present(controller, animated: true, completion: nil)
+            self.show(controller, sender: self)
         }
         else{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

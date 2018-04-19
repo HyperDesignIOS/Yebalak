@@ -12,7 +12,9 @@ class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewD
     
     var spinner : UIView!
     var userWithdraws : [Userwithdraw] = []
+    let generalMethod = GeneralMethod()
     
+    @IBOutlet weak var noResultLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +41,19 @@ class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewD
 
     func getUserWithdrawHistory(){
         let id = UserDefaults.standard.getUserID()
-        apiRequests.apisInstance.withdrawHistory(userID:"2") { (userWithdraws) in
+        apiRequests.apisInstance.withdrawHistory(userID:"\(id)") { (userWithdraws) in
+            if userWithdraws.count != 0 {
            self.userWithdraws = userWithdraws
             self.tableView.reloadData()
             //self.removeSpinner(spinner: self.spinner)
+            self.NoResultLabel.isHidden = true
             SwiftSpinner.hide()
+            }
+            else {
+//                self.generalMethod.showAlert(title: "", message: "No data", vc:self, closure: nil)
+                self.noResultLabel.isHidden = false
+                SwiftSpinner.hide()
+            }
         }
     }
 

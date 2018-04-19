@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -52,7 +52,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C38-Zw-El5">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C38-Zw-El5" userLabel="withdrawHistoryDataView">
                                                 <rect key="frame" x="20" y="94" width="335" height="550"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75K-Jo-Wzh">
@@ -112,13 +112,24 @@
                                                             <constraint firstItem="qsK-wc-HWk" firstAttribute="top" secondItem="75K-Jo-Wzh" secondAttribute="top" id="wPi-OT-zfD"/>
                                                         </constraints>
                                                     </view>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwZ-RB-yVW">
+                                                        <rect key="frame" x="0.0" y="50" width="335" height="500"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.89720676369999997" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="pwZ-RB-yVW" secondAttribute="trailing" id="1Tm-fE-iIj"/>
+                                                    <constraint firstItem="pwZ-RB-yVW" firstAttribute="leading" secondItem="C38-Zw-El5" secondAttribute="leading" id="7Kn-5S-bUo"/>
+                                                    <constraint firstAttribute="bottom" secondItem="pwZ-RB-yVW" secondAttribute="bottom" id="LYo-iw-meS"/>
                                                     <constraint firstAttribute="height" constant="550" id="MzC-sV-cSA"/>
+                                                    <constraint firstItem="pwZ-RB-yVW" firstAttribute="centerX" secondItem="C38-Zw-El5" secondAttribute="centerX" id="aR7-cd-2BT"/>
                                                     <constraint firstAttribute="trailing" secondItem="75K-Jo-Wzh" secondAttribute="trailing" id="lRE-Pw-2Yo"/>
                                                     <constraint firstItem="75K-Jo-Wzh" firstAttribute="leading" secondItem="C38-Zw-El5" secondAttribute="leading" id="qIm-rb-Who"/>
                                                     <constraint firstItem="75K-Jo-Wzh" firstAttribute="top" secondItem="C38-Zw-El5" secondAttribute="top" id="sR8-XV-bcS"/>
+                                                    <constraint firstItem="pwZ-RB-yVW" firstAttribute="top" secondItem="75K-Jo-Wzh" secondAttribute="bottom" id="soc-G4-Tjb"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -246,6 +257,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ImP-hQ-QDI"/>
                     <connections>
+                        <outlet property="noResultLabel" destination="pwZ-RB-yVW" id="KkA-Vf-xjF"/>
                         <outlet property="tableView" destination="wcp-7t-Va5" id="XGj-vg-ET8"/>
                     </connections>
                 </viewController>
@@ -297,6 +309,12 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fa2-Cn-Au8">
                                                 <rect key="frame" x="20" y="94" width="335" height="550"/>
                                                 <subviews>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llb-tA-DrB">
+                                                        <rect key="frame" x="0.0" y="50" width="335" height="500"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YsQ-w5-Tfa">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
                                                         <subviews>
@@ -358,7 +376,12 @@
                                                 <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.89720676369999997" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="YsQ-w5-Tfa" firstAttribute="leading" secondItem="fa2-Cn-Au8" secondAttribute="leading" id="GEo-Nf-mDT"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Llb-tA-DrB" secondAttribute="bottom" id="HPe-Mo-5BR"/>
+                                                    <constraint firstItem="Llb-tA-DrB" firstAttribute="top" secondItem="YsQ-w5-Tfa" secondAttribute="bottom" id="Hsj-Gn-nos"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Llb-tA-DrB" secondAttribute="trailing" id="Pp8-yb-96U"/>
                                                     <constraint firstItem="YsQ-w5-Tfa" firstAttribute="top" secondItem="fa2-Cn-Au8" secondAttribute="top" id="UHP-pJ-eUu"/>
+                                                    <constraint firstItem="Llb-tA-DrB" firstAttribute="leading" secondItem="fa2-Cn-Au8" secondAttribute="leading" id="ZuY-ed-Gvf"/>
+                                                    <constraint firstItem="Llb-tA-DrB" firstAttribute="centerX" secondItem="fa2-Cn-Au8" secondAttribute="centerX" id="rNz-Zf-ZnF"/>
                                                     <constraint firstAttribute="trailing" secondItem="YsQ-w5-Tfa" secondAttribute="trailing" id="tnC-ac-YRR"/>
                                                     <constraint firstAttribute="height" constant="550" id="vTi-9E-K2c"/>
                                                 </constraints>
@@ -488,6 +511,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2si-uM-npp"/>
                     <connections>
+                        <outlet property="NoResultLabel" destination="Llb-tA-DrB" id="r7N-H6-mlx"/>
                         <outlet property="tableView" destination="atv-Vt-ZkO" id="0gX-En-SC3"/>
                     </connections>
                 </viewController>
@@ -515,10 +539,10 @@
             </objects>
             <point key="canvasLocation" x="-1668" y="-140"/>
         </scene>
-        <!--Deposite history-->
+        <!--Deposit history-->
         <scene sceneID="yxu-OG-c7b">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TMj-4H-Odc" sceneMemberID="viewController">
+                <navigationController title="Deposit history" automaticallyAdjustsScrollViewInsets="NO" id="TMj-4H-Odc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Deposite history" id="JBh-ZI-ywT">
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-20"/>
@@ -543,8 +567,7 @@
         <!--Withdraw history-->
         <scene sceneID="PeF-PD-Ajx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g4S-jA-HA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DLw-Uy-ubp" sceneMemberID="viewController">
+                <navigationController title="Withdraw history" automaticallyAdjustsScrollViewInsets="NO" id="DLw-Uy-ubp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Withdraw history" id="oXS-Tg-yki">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-20"/>
                     </tabBarItem>
@@ -558,6 +581,7 @@
                         <segue destination="NPr-Sv-Wus" kind="relationship" relationship="rootViewController" id="qlE-v8-J9j"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4S-jA-HA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-715.20000000000005" y="194.30284857571215"/>
         </scene>

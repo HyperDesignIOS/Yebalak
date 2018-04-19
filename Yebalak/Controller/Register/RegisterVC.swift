@@ -28,7 +28,7 @@ class RegisterVC: UIViewController {
     
     
     @IBAction func haveAccountButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
         //self.present(controller, animated: true, completion: nil)
         self.show(controller, sender: self)

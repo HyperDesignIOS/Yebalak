@@ -21,13 +21,14 @@ class WithdrawCompaniesTableViewController: UIViewController , UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       // spinner = self.displaySpinner(onView: self.view)
-     
+       //spinner = self.displaySpinner(onView: self.view)
+        
         tableView.delegate = self
         tableView.dataSource = self
-          SwiftSpinner.show("loading...")
+        SwiftSpinner.show("loading...")
         getWithdrawCompaniesLogo()
         tableView.reloadData()
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -124,7 +125,7 @@ class WithdrawCompaniesTableViewController: UIViewController , UITableViewDelega
         apiRequests.apisInstance.WithdrawImage(userID: "\(id)") { (withdrawCompanies) in
             self.withdrawCompanies = withdrawCompanies
             self.tableView.reloadData()
-           // self.removeSpinner(spinner: self.spinner)
+            //self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
         }
     }

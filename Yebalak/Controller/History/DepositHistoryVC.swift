@@ -12,7 +12,11 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
     
     var spinner : UIView!
     var depositsArr : [Deposit] = []
+    let generalMethod = GeneralMethod()
     
+    
+    
+    @IBOutlet weak var NoResultLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         getDepositHistory ()
@@ -43,13 +47,22 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
 
     func getDepositHistory (){
         let id = UserDefaults.standard.getUserID()
-        apiRequests.apisInstance.depositeHistory(userID: "2") { (deposites) in
+        apiRequests.apisInstance.depositeHistory(userID: "\(id)") { (deposites) in
+            if deposites.count != 0 {
             self.depositsArr = deposites
             self.tableView.reloadData()
           //  self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
+            self.NoResultLabel.isHidden = true
+            }
+            else
+            {
+               
+//               self.generalMethod.showAlert(title: "", message: "No data", vc:self, closure: nil)
+                self.NoResultLabel.isHidden = false 
+                   SwiftSpinner.hide()
+            }
         }
-        
     }
 
 }
