@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftSpinner
 
 class EditProfileVC: UIViewController {
     
@@ -30,11 +31,13 @@ class EditProfileVC: UIViewController {
     let generalMethod = GeneralMethod()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        nameTF.text = UserDefaults.standard.getUserName()
-//        phoneTF.text = UserDefaults.standard.getUserPhone()
-//        emailTF.text = UserDefaults.standard.getUserEmail()
-//        addressTF.text = UserDefaults.standard.getUserAddress()
-  
+        SwiftSpinner.show("loading...")
+        self.user = NSKeyedUnarchiver.unarchiveObject(with: UserDefaults.standard.getUser() as! Data) as? User
+        nameTF.text = user.name
+        phoneTF.text = user.phone
+        emailTF.text = user.email
+        addressTF.text = user.address
+         SwiftSpinner.hide()
     }
     
     @IBAction func editProfileButton(_ sender: Any) {

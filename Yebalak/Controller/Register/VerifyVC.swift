@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftSpinner
 
 class VerifyVC: UIViewController {
  
@@ -28,7 +29,8 @@ class VerifyVC: UIViewController {
     
    
     @IBAction func ResendCode(_ sender: Any) {
-        spinner = self.displaySpinner(onView: self.view)
+       // spinner = self.displaySpinner(onView: self.view)
+          SwiftSpinner.show("loading...")
 
         let id = UserDefaults.standard.getUserID()
         apiRequests.apisInstance.ResendCode(userId: id) { (msg) in

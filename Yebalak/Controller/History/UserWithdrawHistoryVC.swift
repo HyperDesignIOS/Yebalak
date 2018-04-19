@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftSpinner
 class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     var spinner : UIView!
@@ -16,7 +16,8 @@ class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewD
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        spinner = self.displaySpinner(onView: self.view)
+        //spinner = self.displaySpinner(onView: self.view)
+        SwiftSpinner.show("loading...")
         getUserWithdrawHistory()
         tableView.delegate = self
         tableView.dataSource = self
@@ -41,7 +42,8 @@ class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewD
         apiRequests.apisInstance.withdrawHistory(userID:"2") { (userWithdraws) in
            self.userWithdraws = userWithdraws
             self.tableView.reloadData()
-            self.removeSpinner(spinner: self.spinner)
+            //self.removeSpinner(spinner: self.spinner)
+            SwiftSpinner.hide()
         }
     }
 

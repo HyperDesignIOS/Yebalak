@@ -11,9 +11,6 @@ import Foundation
 enum UserDefaultsKeys : String {
     case isLoggedIn
     case userID
-    case userName
-    case userEmail
-    case userPhone
-    case userAddress
-    case userPassword
+    case user
+ 
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftSpinner
 
 class LoginVC: UIViewController {
     
@@ -67,11 +68,13 @@ class LoginVC: UIViewController {
 //            generalMethod.showAlert(title: "", message: "please enter your mail", vc: self, closure: nil)
 //            return
 //        }
-        spinner = self.displaySpinner(onView: self.view)
+      //  spinner = self.displaySpinner(onView: self.view)
+          SwiftSpinner.show("loading...")
 
         let password = self.passwordTF.text!
         if password.isEmpty || password.containsWhiteSpace(){
-            self.removeSpinner(spinner: self.spinner)
+           // self.removeSpinner(spinner: self.spinner)
+            SwiftSpinner.hide()
             generalMethod.showAlert(title: "", message: "please enter your password", vc: self, closure: nil)
             return
             
@@ -88,7 +91,8 @@ class LoginVC: UIViewController {
                 if active == "0"{
                     UserDefaults.standard.setUserID(value: self.user.id)
                     UserDefaults.standard.setLoggedIn(value: true)
-                    self.removeSpinner(spinner: self.spinner)
+                    //self.removeSpinner(spinner: self.spinner)
+                      SwiftSpinner.hide()
                     self.generalMethod.showAlert(title: "", message: msg, vc: self, closure: {
                         let storyboard = UIStoryboard(name: "Register", bundle: nil)
                         let controller = storyboard.instantiateViewController(withIdentifier: "VerifyID")
@@ -112,19 +116,20 @@ class LoginVC: UIViewController {
                     controller.date = date
                     controller.lastTransaction = last
                     //self.present(controller, animated: true, completion: nil)
-                    self.removeSpinner(spinner: self.spinner)
+                    //self.removeSpinner(spinner: self.spinner)
+                      SwiftSpinner.hide()
                     self.show(controller, sender: self)
-                    UserDefaults.standard.setUserID(value: self.user.id)
-                    //                UserDefaults.standard.setUserName(value: self.user.name)
-                    //                UserDefaults.standard.setUserPhone(value: self.user.phone)
-                    //                UserDefaults.standard.setUserEmail(value: self.user.email)
-                    //                UserDefaults.standard.setUserAddress(value: self.user.address)
+                    let encodedData = NSKeyedArchiver.archivedData(withRootObject: user)
+                    UserDefaults.standard.setUser(value: encodedData)
+                     UserDefaults.standard.setUserID(value: self.user.id)
+                
                     UserDefaults.standard.setLoggedIn(value: true)
                 }
             }
             else if self.done == "0"
             {
-                self.removeSpinner(spinner: self.spinner)
+               // self.removeSpinner(spinner: self.spinner)
+                  SwiftSpinner.hide()
                 self.generalMethod.showAlert(title: "", message: self.msg, vc: self, closure: nil)
             }
         }

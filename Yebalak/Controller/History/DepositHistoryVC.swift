@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftSpinner
 class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     var spinner : UIView!
@@ -18,7 +18,8 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
         getDepositHistory ()
         tableView.delegate = self
         tableView.dataSource = self
-        spinner = self.displaySpinner(onView: self.view)
+        //spinner = self.displaySpinner(onView: self.view)
+          SwiftSpinner.show("loading...")
     }
     
     
@@ -45,7 +46,8 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
         apiRequests.apisInstance.depositeHistory(userID: "2") { (deposites) in
             self.depositsArr = deposites
             self.tableView.reloadData()
-            self.removeSpinner(spinner: self.spinner)
+          //  self.removeSpinner(spinner: self.spinner)
+            SwiftSpinner.hide()
         }
         
     }

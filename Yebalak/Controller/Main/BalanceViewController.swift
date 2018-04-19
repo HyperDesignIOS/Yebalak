@@ -7,13 +7,14 @@
 //
 
 import UIKit
-
+import SwiftSpinner
 class BalanceViewController: UIViewController {
     
     var balance : String!
     var lastTransaction :String!
     var date : String!
     var spinner : UIView!
+    var user : User!
 
     
     
@@ -24,15 +25,19 @@ class BalanceViewController: UIViewController {
     @IBOutlet weak var balanceImageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        spinner = self.displaySpinner(onView: self.view)
+          SwiftSpinner.show("loading...")
+       // spinner = self.displaySpinner(onView: self.view)
         var id = UserDefaults.standard.getUserID()
         apiRequests.apisInstance.getUserBalance(userId: "\(id)") { (user, balance, date, last) in
-            self.removeSpinner(spinner: self.spinner)
+            //self.removeSpinner(spinner: self.spinner)
+            SwiftSpinner.hide()
             self.balanceLabel.text = balance
             self.lastTransactionLabel.text = last
             self.dateLabel.text = date
             self.balanceImageLabel.text = balance
+            self.user = user
+            let encodedData = NSKeyedArchiver.archivedData(withRootObject: user)
+            UserDefaults.standard.setUser(value: encodedData)
         }
         
         
