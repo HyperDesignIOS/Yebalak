@@ -25,13 +25,13 @@ class MerchantDevice : NSObject, NSCoding{
      * Instantiate the instance using the passed dictionary values to set the properties values
      */
     init(fromDictionary dictionary: [String:Any]){
-        createdAt = dictionary["created_at"] as? String
-        id = dictionary["id"] as? Int
-        macAddress = dictionary["mac_address"] as? String
-        merchantBrancheId = dictionary["merchant_branche_id"] as? String
-        merchantId = dictionary["merchant_id"] as? String
-        name = dictionary["name"] as? String
-        updatedAt = dictionary["updated_at"] as? String
+        createdAt = dictionary["created_at"] as? String ?? ""
+        id = dictionary["id"] as? Int ?? 0
+        macAddress = dictionary["mac_address"] as? String ?? ""
+        merchantBrancheId = dictionary["merchant_branche_id"] as? String ?? ""
+        merchantId = dictionary["merchant_id"] as? String ?? ""
+        name = dictionary["name"] as? String ?? ""
+        updatedAt = dictionary["updated_at"] as? String ?? ""
     }
     
     /**
@@ -70,13 +70,13 @@ class MerchantDevice : NSObject, NSCoding{
      */
     @objc required init(coder aDecoder: NSCoder)
     {
-        createdAt = aDecoder.decodeObject(forKey: "created_at") as? String
-        id = aDecoder.decodeObject(forKey: "id") as? Int
-        macAddress = aDecoder.decodeObject(forKey: "mac_address") as? String
-        merchantBrancheId = aDecoder.decodeObject(forKey: "merchant_branche_id") as? String
-        merchantId = aDecoder.decodeObject(forKey: "merchant_id") as? String
-        name = aDecoder.decodeObject(forKey: "name") as? String
-        updatedAt = aDecoder.decodeObject(forKey: "updated_at") as? String
+        createdAt = aDecoder.decodeObject(forKey: "created_at") as? String ?? ""
+        id = aDecoder.decodeObject(forKey: "id") as? Int ?? 0
+        macAddress = aDecoder.decodeObject(forKey: "mac_address") as? String ?? ""
+        merchantBrancheId = aDecoder.decodeObject(forKey: "merchant_branche_id") as? String ?? ""
+        merchantId = aDecoder.decodeObject(forKey: "merchant_id") as? String ?? ""
+        name = aDecoder.decodeObject(forKey: "name") as? String ?? ""
+        updatedAt = aDecoder.decodeObject(forKey: "updated_at") as? String ?? ""
         
     }
     

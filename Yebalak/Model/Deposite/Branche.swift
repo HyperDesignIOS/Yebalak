@@ -23,12 +23,12 @@ class Branche : NSObject, NSCoding{
      * Instantiate the instance using the passed dictionary values to set the properties values
      */
     init(fromDictionary dictionary: [String:Any]){
-        createdAt = dictionary["created_at"] as? String
-        id = dictionary["id"] as? Int
-        merchantId = dictionary["merchant_id"] as? String
-        nameAr = dictionary["name_ar"] as? String
-        nameEn = dictionary["name_en"] as? String
-        updatedAt = dictionary["updated_at"] as? String
+        createdAt = dictionary["created_at"] as? String ?? ""
+        id = dictionary["id"] as? Int ?? 0
+        merchantId = dictionary["merchant_id"] as? String ?? ""
+        nameAr = dictionary["name_ar"] as? String ?? ""
+        nameEn = dictionary["name_en"] as? String ?? ""
+        updatedAt = dictionary["updated_at"] as? String ?? ""
     }
     
     /**
@@ -64,12 +64,12 @@ class Branche : NSObject, NSCoding{
      */
     @objc required init(coder aDecoder: NSCoder)
     {
-        createdAt = aDecoder.decodeObject(forKey: "created_at") as? String
-        id = aDecoder.decodeObject(forKey: "id") as? Int
-        merchantId = aDecoder.decodeObject(forKey: "merchant_id") as? String
-        nameAr = aDecoder.decodeObject(forKey: "name_ar") as? String
-        nameEn = aDecoder.decodeObject(forKey: "name_en") as? String
-        updatedAt = aDecoder.decodeObject(forKey: "updated_at") as? String
+        createdAt = aDecoder.decodeObject(forKey: "created_at") as? String ?? ""
+        id = aDecoder.decodeObject(forKey: "id") as? Int ?? 0
+        merchantId = aDecoder.decodeObject(forKey: "merchant_id") as? String ?? ""
+        nameAr = aDecoder.decodeObject(forKey: "name_ar") as? String ?? ""
+        nameEn = aDecoder.decodeObject(forKey: "name_en") as? String ?? ""
+        updatedAt = aDecoder.decodeObject(forKey: "updated_at") as? String ?? ""
         
     }
     

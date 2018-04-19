@@ -69,13 +69,13 @@ class WithdrawCompany : NSObject, NSCoding{
      */
     @objc required init(coder aDecoder: NSCoder)
     {
-        balance = aDecoder.decodeObject(forKey: "balance") as? String
-        createdAt = aDecoder.decodeObject(forKey: "created_at") as? String
-        id = aDecoder.decodeObject(forKey: "id") as? Int
-        logo = aDecoder.decodeObject(forKey: "logo") as? String
-        nameAr = aDecoder.decodeObject(forKey: "name_ar") as? String
-        nameEn = aDecoder.decodeObject(forKey: "name_en") as? String
-        updatedAt = aDecoder.decodeObject(forKey: "updated_at") as? String
+        balance = aDecoder.decodeObject(forKey: "balance") as? String ?? ""
+        createdAt = aDecoder.decodeObject(forKey: "created_at") as? String ?? ""
+        id = aDecoder.decodeObject(forKey: "id") as? Int ?? 0
+        logo = aDecoder.decodeObject(forKey: "logo") as? String ?? ""
+        nameAr = aDecoder.decodeObject(forKey: "name_ar") as? String ?? ""
+        nameEn = aDecoder.decodeObject(forKey: "name_en") as? String ?? ""
+        updatedAt = aDecoder.decodeObject(forKey: "updated_at") as? String ?? ""
         
     }
     

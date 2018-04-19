@@ -24,13 +24,13 @@ class Userwithdraw : NSObject, NSCoding{
      * Instantiate the instance using the passed dictionary values to set the properties values
      */
     init(fromDictionary dictionary: [String:Any]){
-        date = dictionary["date"] as? String
-        nameAr = dictionary["name_ar"] as? String
-        nameEn = dictionary["name_en"] as? String
-        phone = dictionary["phone"] as? String
-        status = dictionary["status"] as? String
-        userId = dictionary["user_id"] as? String
-        value = dictionary["value"] as? String
+        date = dictionary["date"] as? String ?? ""
+        nameAr = dictionary["name_ar"] as? String ?? ""
+        nameEn = dictionary["name_en"] as? String ?? ""
+        phone = dictionary["phone"] as? String ?? ""
+        status = dictionary["status"] as? String ?? ""
+        userId = dictionary["user_id"] as? String ?? ""
+        value = dictionary["value"] as? String ?? ""
     }
     
     /**
@@ -69,13 +69,13 @@ class Userwithdraw : NSObject, NSCoding{
      */
     @objc required init(coder aDecoder: NSCoder)
     {
-        date = aDecoder.decodeObject(forKey: "date") as? String
-        nameAr = aDecoder.decodeObject(forKey: "name_ar") as? String
-        nameEn = aDecoder.decodeObject(forKey: "name_en") as? String
-        phone = aDecoder.decodeObject(forKey: "phone") as? String
-        status = aDecoder.decodeObject(forKey: "status") as? String
-        userId = aDecoder.decodeObject(forKey: "user_id") as? String
-        value = aDecoder.decodeObject(forKey: "value") as? String
+        date = aDecoder.decodeObject(forKey: "date") as? String ?? ""
+        nameAr = aDecoder.decodeObject(forKey: "name_ar") as? String ?? ""
+        nameEn = aDecoder.decodeObject(forKey: "name_en") as? String ?? ""
+        phone = aDecoder.decodeObject(forKey: "phone") as? String ?? ""
+        status = aDecoder.decodeObject(forKey: "status") as? String ?? ""
+        userId = aDecoder.decodeObject(forKey: "user_id") as? String ?? ""
+        value = aDecoder.decodeObject(forKey: "value") as? String ?? ""
         
     }
     

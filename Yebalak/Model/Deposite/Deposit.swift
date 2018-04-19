@@ -36,25 +36,25 @@ class Deposit : NSObject, NSCoding{
         if let brancheData = dictionary["branche"] as? [String:Any]{
             branche = Branche(fromDictionary: brancheData)
         }
-        createdAt = dictionary["created_at"] as? String
-        date = dictionary["date"] as? String
-        id = dictionary["id"] as? Int
-        macAddress = dictionary["mac_address"] as? String
+        createdAt = dictionary["created_at"] as? String ?? ""
+        date = dictionary["date"] as? String ?? ""
+        id = dictionary["id"] as? Int ?? 0
+        macAddress = dictionary["mac_address"] as? String ?? ""
         if let merchantData = dictionary["merchant"] as? [String:Any]{
             merchant = Merchant(fromDictionary: merchantData)
         }
-        merchantBrancheId = dictionary["merchant_branche_id"] as? String
-        merchantDeviceId = dictionary["merchant_device_id"] as? String
+        merchantBrancheId = dictionary["merchant_branche_id"] as? String ?? ""
+        merchantDeviceId = dictionary["merchant_device_id"] as? String ?? ""
         if let merchantDevicesData = dictionary["merchant_devices"] as? [String:Any]{
             merchantDevices = MerchantDevice(fromDictionary: merchantDevicesData)
         }
-        merchantId = dictionary["merchant_id"] as? String
-        phone = dictionary["phone"] as? String
-        status = dictionary["status"] as? String
-        updatedAt = dictionary["updated_at"] as? String
-        userId = dictionary["user_id"] as? String
-        value = dictionary["value"] as? String
-        vendorUserId = dictionary["vendor_user_id"] as? String
+        merchantId = dictionary["merchant_id"] as? String ?? ""
+        phone = dictionary["phone"] as? String ?? ""
+        status = dictionary["status"] as? String ?? ""
+        updatedAt = dictionary["updated_at"] as? String ?? ""
+        userId = dictionary["user_id"] as? String ?? ""
+        value = dictionary["value"] as? String ?? ""
+        vendorUserId = dictionary["vendor_user_id"] as? String ?? ""
     }
     
     /**
@@ -121,21 +121,21 @@ class Deposit : NSObject, NSCoding{
     @objc required init(coder aDecoder: NSCoder)
     {
         branche = aDecoder.decodeObject(forKey: "branche") as? Branche
-        createdAt = aDecoder.decodeObject(forKey: "created_at") as? String
-        date = aDecoder.decodeObject(forKey: "date") as? String
-        id = aDecoder.decodeObject(forKey: "id") as? Int
-        macAddress = aDecoder.decodeObject(forKey: "mac_address") as? String
+        createdAt = aDecoder.decodeObject(forKey: "created_at") as? String ?? ""
+        date = aDecoder.decodeObject(forKey: "date") as? String ?? ""
+        id = aDecoder.decodeObject(forKey: "id") as? Int ?? 0
+        macAddress = aDecoder.decodeObject(forKey: "mac_address") as? String ?? ""
         merchant = aDecoder.decodeObject(forKey: "merchant") as? Merchant
-        merchantBrancheId = aDecoder.decodeObject(forKey: "merchant_branche_id") as? String
-        merchantDeviceId = aDecoder.decodeObject(forKey: "merchant_device_id") as? String
+        merchantBrancheId = aDecoder.decodeObject(forKey: "merchant_branche_id") as? String ?? ""
+        merchantDeviceId = aDecoder.decodeObject(forKey: "merchant_device_id") as? String ?? ""
         merchantDevices = aDecoder.decodeObject(forKey: "merchant_devices") as? MerchantDevice
-        merchantId = aDecoder.decodeObject(forKey: "merchant_id") as? String
-        phone = aDecoder.decodeObject(forKey: "phone") as? String
-        status = aDecoder.decodeObject(forKey: "status") as? String
-        updatedAt = aDecoder.decodeObject(forKey: "updated_at") as? String
-        userId = aDecoder.decodeObject(forKey: "user_id") as? String
-        value = aDecoder.decodeObject(forKey: "value") as? String
-        vendorUserId = aDecoder.decodeObject(forKey: "vendor_user_id") as? String
+        merchantId = aDecoder.decodeObject(forKey: "merchant_id") as? String ?? ""
+        phone = aDecoder.decodeObject(forKey: "phone") as? String ?? ""
+        status = aDecoder.decodeObject(forKey: "status") as? String ?? ""
+        updatedAt = aDecoder.decodeObject(forKey: "updated_at") as? String ?? ""
+        userId = aDecoder.decodeObject(forKey: "user_id") as? String ?? ""
+        value = aDecoder.decodeObject(forKey: "value") as? String  ?? ""
+        vendorUserId = aDecoder.decodeObject(forKey: "vendor_user_id") as? String ?? ""
         
     }
     
