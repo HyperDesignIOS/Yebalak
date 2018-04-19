@@ -46,7 +46,7 @@ class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewD
            self.userWithdraws = userWithdraws
             self.tableView.reloadData()
             //self.removeSpinner(spinner: self.spinner)
-            self.NoResultLabel.isHidden = true
+            self.noResultLabel.isHidden = true
             SwiftSpinner.hide()
             }
             else {

@@ -8,10 +8,6 @@
 
 import Foundation
 
-
-import Foundation
-
-
 class User : NSObject, NSCoding{
     
     var address : String!
