@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import MOLH
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate , MOLHResetable {
+    
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        MOLH.shared.activate(true)
         return true
     }
 
@@ -41,6 +43,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func reset() {
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        let vc = story.instantiateViewController(withIdentifier: "BalanceID")
+        self.window?.rootViewController = vc
+    }
 }
 

@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banknote_currency_money_numbers_50323_3840x2160" translatesAutoresizingMaskIntoConstraints="NO" id="B0P-t9-eNC">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bR-xo-cxw">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-Eu-Vdn">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plC-FJ-AKD">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="678"/>
@@ -341,13 +341,20 @@
                     <connections>
                         <outlet property="balanceImageLabel" destination="Ng8-hZ-KEM" id="rDo-m8-tV5"/>
                         <outlet property="balanceLabel" destination="RAl-Sa-UJ8" id="tKh-Um-SJt"/>
+                        <outlet property="balanceLbl" destination="sf7-VS-2iv" id="ahH-ad-t5a"/>
+                        <outlet property="coinLbl" destination="Rx4-sW-3CX" id="eug-gX-vey"/>
                         <outlet property="dateLabel" destination="idC-op-U7T" id="4rz-KV-Ohj"/>
+                        <outlet property="dateLbl" destination="Vig-jf-53o" id="fis-iI-9ep"/>
+                        <outlet property="historyLbl" destination="xsc-Wh-QhJ" id="rht-mJ-Q28"/>
+                        <outlet property="last" destination="fts-4J-oIp" id="X86-cT-12L"/>
                         <outlet property="lastTransactionLabel" destination="AbD-sP-1i3" id="NGF-5b-VJF"/>
+                        <outlet property="settingLbl" destination="UeW-5n-dz7" id="LnA-3u-9gJ"/>
+                        <outlet property="withdrawLbl" destination="Ff1-bc-R5c" id="aDd-EN-n5q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SaA-DN-Xof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3012" y="178.56071964017991"/>
+            <point key="canvasLocation" x="3351.1999999999998" y="178.56071964017991"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="hIw-T6-3JK">
@@ -369,7 +376,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8e-iU-2Pf">
                                                 <rect key="frame" x="20" y="30" width="335" height="33"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="login to yeb2alak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qX0-aJ-IlU">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qX0-aJ-IlU">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="33"/>
                                                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="0.71246254279999999" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
@@ -396,7 +403,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fT0-ub-TW5">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrD-n3-FRV">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrD-n3-FRV">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
                                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -417,29 +424,7 @@
                                                             <constraint firstItem="nrD-n3-FRV" firstAttribute="top" secondItem="fT0-ub-TW5" secondAttribute="top" id="ml4-KM-iWK"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone or Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zZ0-WS-D1U">
-                                                        <rect key="frame" x="0.0" y="50" width="335" height="60"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="yRy-1J-Hgw"/>
-                                                        </constraints>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                                                <color key="value" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </textField>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUq-WC-kNo">
-                                                        <rect key="frame" x="15" y="110" width="305" height="2"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.4714596868" blue="0.38441872599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="2" id="AgM-Cf-n0R"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="inq-Hb-ayR">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="inq-Hb-ayR">
                                                         <rect key="frame" x="0.0" y="112" width="335" height="60"/>
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -450,10 +435,32 @@
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                                                <color key="value" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zZ0-WS-D1U">
+                                                        <rect key="frame" x="0.0" y="50" width="335" height="60"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="yRy-1J-Hgw"/>
+                                                        </constraints>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUq-WC-kNo">
+                                                        <rect key="frame" x="15" y="110" width="305" height="2"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.4714596868" blue="0.38441872599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="2" id="AgM-Cf-n0R"/>
+                                                        </constraints>
+                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbR-GS-niG">
                                                         <rect key="frame" x="15" y="172" width="305" height="2"/>
                                                         <color key="backgroundColor" red="0.0" green="0.4714596868" blue="0.38441872599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -464,7 +471,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B25-5k-pBa">
                                                         <rect key="frame" x="8" y="241" width="319" height="35"/>
                                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
-                                                        <state key="normal" title="You don't have an account yet? ">
+                                                        <state key="normal">
                                                             <color key="titleColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
@@ -558,8 +565,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="QGT-PD-r1P"/>
                     <connections>
+                        <outlet property="dontHaveAccountButton" destination="B25-5k-pBa" id="CWz-Tp-sE8"/>
                         <outlet property="emailOrPHhone" destination="zZ0-WS-D1U" id="6Kt-yT-SN9"/>
+                        <outlet property="headerLabel" destination="qX0-aJ-IlU" id="Hwa-P3-yt1"/>
+                        <outlet property="loginButton" destination="tkS-sG-jw8" id="Bny-Pk-1dZ"/>
                         <outlet property="passwordTF" destination="inq-Hb-ayR" id="HTN-uw-Fo0"/>
+                        <outlet property="titleLabel" destination="nrD-n3-FRV" id="aFX-FO-Dv3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAa-Ra-J1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -583,6 +594,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqe-DU-b9x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="799" y="179"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7u5-NF-KIv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vh6-ic-K65" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d3T-pX-LsT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dvW-A5-t8J" kind="relationship" relationship="rootViewController" id="l1h-on-DLK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E8b-QO-dMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2570" y="179"/>
         </scene>
     </scenes>
     <resources>

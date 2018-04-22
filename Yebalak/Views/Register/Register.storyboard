@@ -372,8 +372,13 @@
                     <connections>
                         <outlet property="confirmPasswordTF" destination="FOy-Af-MdS" id="dLr-nR-qnN"/>
                         <outlet property="emailTF" destination="c0j-oW-7Vt" id="V4S-iM-Jdi"/>
+                        <outlet property="enterActivationLabel" destination="fwa-h9-asZ" id="BGe-eL-FRc"/>
+                        <outlet property="enterInformation" destination="ru1-k7-Vn4" id="wnr-Qf-tui"/>
+                        <outlet property="haveAccount" destination="MHv-az-l86" id="23s-mP-0m9"/>
                         <outlet property="passwordTF" destination="nbl-Xm-LqI" id="eV1-ZL-ZSe"/>
                         <outlet property="phoneTF" destination="S9u-dK-cWb" id="IjM-R3-QPh"/>
+                        <outlet property="registerButton" destination="mRh-P5-40Z" id="o59-1K-9Hm"/>
+                        <outlet property="registerTitle" destination="iM3-6i-neF" id="C1D-Lh-mtb"/>
                         <outlet property="userNameTF" destination="uh2-Xc-gsg" id="IUT-8g-kyB"/>
                     </connections>
                 </viewController>
@@ -628,7 +633,12 @@
                         <viewLayoutGuide key="safeArea" id="skq-hV-C44"/>
                     </view>
                     <connections>
+                        <outlet property="activationTitle" destination="jwP-4P-p5g" id="XCG-jn-YBV"/>
                         <outlet property="codeTF" destination="8zI-t4-vdw" id="2oL-dP-6HP"/>
+                        <outlet property="enterActivation" destination="aTp-h5-vIv" id="q6U-eY-sp2"/>
+                        <outlet property="enterInformation" destination="loA-4w-3Ec" id="TTl-le-jUb"/>
+                        <outlet property="sendCodeButton" destination="i75-Fm-MAD" id="swU-qF-V1P"/>
+                        <outlet property="verifyButton" destination="pYU-3d-Ds4" id="fW4-Di-4Xg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CR6-GQ-Dwg" userLabel="First Responder" sceneMemberID="firstResponder"/>

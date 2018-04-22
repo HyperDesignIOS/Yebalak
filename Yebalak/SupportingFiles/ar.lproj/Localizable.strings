@@ -1,0 +1,52 @@
+/* 
+  Localizable.strings
+  Yebalak
+ 
+ رقم التليفوون
+ اسم المستخدم
+ البريد الالكترونى
+ كلمة السر
+ كلمة المرور
+
+  Created by AmrObjection on 4/22/18.
+  Copyright © 2018 AmrObjection. All rights reserved.
+*/
+"Enter Information " = "ادخل ابيانات";
+"Enter Activation Key" = "ادخل الكود";
+"Registration Title" = "من فضلك ادخل البيانات الصحيحة";
+"Phone Number" =  " رقم التليفوون";
+"User Name" = " اسم المستخدم";
+"Email" = " البريد الالكترونى";
+"Password" = " كلمة المرور";
+"Confirm Password" = "أكيد كلمة المرور";
+"You Have Account" = " لديك حساب ";
+"Sign Up" = "تسجيل";
+//login
+"Header" = "تسجيل الدخول للتطبيق";
+"Login Title" = "تسجيل الدخول";
+"Phone,Email" = "رقم التليفون أو البريد الالكترونى";
+"You Do Not Account ?" = "ليس لديك حساب ؟";
+"LOGIN" = "تسجيل الدخول";
+//activation code
+"Activation Title" = "من فضلك قم بادخال كودالتحقق";
+"VERIFY" = "تحقق من الكود";
+"Activation Code" = "كود التحقق";
+"SendCodeAgain" = "ارسال الكود مرة اخري ؟";
+//balance
+"BALANCE" = "الرصيد";
+"LAST TRANSACTION" = "اخر تحويل";
+"DATE" = "التاريخ";
+"COIN" = "جنية";
+"HISTORY" = "العمليات السابقة";
+"WITHDRAW" = "السحب";
+"SETTING" = "الاعدادات";
+// withdraw
+"WITHDRAW HEADER" = "السحب";
+"WITHDRAW TITLE" = "من فضلك قم بادخال البيانات الصحيحة";
+"PHONE" = "رقم الموبايل";
+"VALUE" = "القيمة";
+"SEND" = "ارسال";
+//history
+"HISTORY HEADER" = "العمليات السابقة";
+"AMOUNT" = "القيمة";
+

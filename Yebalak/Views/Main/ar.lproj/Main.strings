@@ -1,0 +1,57 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "AbD-sP-1i3"; */
+"AbD-sP-1i3.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "You don't have an account yet? "; ObjectID = "B25-5k-pBa"; */
+"B25-5k-pBa.normalTitle" = "You don't have an account yet? ";
+
+/* Class = "UILabel"; text = "Withdraw"; ObjectID = "Ff1-bc-R5c"; */
+"Ff1-bc-R5c.text" = "Withdraw";
+
+/* Class = "UINavigationItem"; title = "Balance"; ObjectID = "Kbs-5Z-sOL"; */
+"Kbs-5Z-sOL.title" = "Balance";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ng8-hZ-KEM"; */
+"Ng8-hZ-KEM.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Login"; ObjectID = "QGT-PD-r1P"; */
+"QGT-PD-r1P.title" = "Login";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RAl-Sa-UJ8"; */
+"RAl-Sa-UJ8.text" = "Label";
+
+/* Class = "UILabel"; text = "EGP"; ObjectID = "Rx4-sW-3CX"; */
+"Rx4-sW-3CX.text" = "EGP";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "UeW-5n-dz7"; */
+"UeW-5n-dz7.text" = "Settings";
+
+/* Class = "UILabel"; text = "Date : "; ObjectID = "Vig-jf-53o"; */
+"Vig-jf-53o.text" = "Date : ";
+
+/* Class = "UILabel"; text = "Last Transaction :"; ObjectID = "fts-4J-oIp"; */
+"fts-4J-oIp.text" = "Last Transaction :";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "idC-op-U7T"; */
+"idC-op-U7T.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "inq-Hb-ayR"; */
+"inq-Hb-ayR.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "nrD-n3-FRV"; */
+"nrD-n3-FRV.text" = "Login";
+
+/* Class = "UILabel"; text = "login to yeb2alak"; ObjectID = "qX0-aJ-IlU"; */
+"qX0-aJ-IlU.text" = "login to yeb2alak";
+
+/* Class = "UILabel"; text = "Balance :"; ObjectID = "sf7-VS-2iv"; */
+"sf7-VS-2iv.text" = "Balance :";
+
+/* Class = "UIButton"; normalTitle = "Login "; ObjectID = "tkS-sG-jw8"; */
+"tkS-sG-jw8.normalTitle" = "Login ";
+
+/* Class = "UILabel"; text = "History"; ObjectID = "xsc-Wh-QhJ"; */
+"xsc-Wh-QhJ.text" = "History";
+
+/* Class = "UITextField"; placeholder = "Phone or Email"; ObjectID = "zZ0-WS-D1U"; */
+"zZ0-WS-D1U.placeholder" = "Phone or Email";

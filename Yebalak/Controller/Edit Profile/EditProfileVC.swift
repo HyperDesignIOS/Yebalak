@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftSpinner
+import MOLH
 
 class EditProfileVC: UIViewController {
     
@@ -92,6 +93,8 @@ class EditProfileVC: UIViewController {
         case 1:
             imageSwap(forfirstimage: firstImage, andSecondImage: secondImage)
 //            statusOfVehicle = "new"
+            MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
+            MOLH.reset()
             
         case 2:
             imageSwap(forfirstimage: secondImage, andSecondImage: firstImage)

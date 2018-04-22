@@ -16,15 +16,28 @@ class BalanceViewController: UIViewController {
     var spinner : UIView!
     var user : User!
 
-    
-    
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var lastTransactionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var balanceImageLabel: UILabel!
+    @IBOutlet weak var balanceLbl: UILabel!
+    @IBOutlet weak var last: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet weak var coinLbl: UILabel!
+    @IBOutlet weak var historyLbl: UILabel!
+    @IBOutlet weak var settingLbl: UILabel!
+    @IBOutlet weak var withdrawLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        balanceLbl.text = NSLocalizedString("BALANCE", comment: "")
+         last.text = NSLocalizedString("LAST TRANSACTION", comment: "")
+          dateLbl.text = NSLocalizedString("DATE", comment: "")
+        coinLbl.text = NSLocalizedString("COIN", comment: "")
+          historyLbl.text = NSLocalizedString("HISTORY", comment: "")
+        withdrawLbl.text = NSLocalizedString("WITHDRAW", comment: "")
+         settingLbl.text = NSLocalizedString("SETTING", comment: "")
         
         SwiftSpinner.show("loading...")
        // spinner = self.displaySpinner(onView: self.view)

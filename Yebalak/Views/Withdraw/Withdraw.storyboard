@@ -207,7 +207,10 @@
                     <navigationItem key="navigationItem" id="E9F-z2-PEt"/>
                     <connections>
                         <outlet property="phoneTF" destination="ea2-Dd-ZFR" id="h8j-MJ-UyS"/>
+                        <outlet property="sendButton" destination="FLO-zj-Cke" id="TaI-Yz-ztD"/>
                         <outlet property="valueTF" destination="hyH-Wb-ZgK" id="FWp-1p-8b9"/>
+                        <outlet property="withdrawHeader" destination="rQV-0l-cKa" id="OxY-rD-zrU"/>
+                        <outlet property="withdrawTite" destination="H8y-Ek-kme" id="sqA-A6-lLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dJ-DZ-bLh" userLabel="First Responder" sceneMemberID="firstResponder"/>

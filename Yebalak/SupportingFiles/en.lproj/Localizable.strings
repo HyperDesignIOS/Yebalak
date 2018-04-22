@@ -1,0 +1,54 @@
+/* 
+  Localizable.strings
+  Yebalak
+
+  Created by AmrObjection on 4/22/18.
+  Copyright © 2018 AmrObjection. All rights reserved.
+*/
+
+
+// registeration
+"Enter Information " = "Enter Information";
+"Enter Activation Key" = "enter activation key";
+"Registration Title" = "please enter the correct informations ";
+"Phone Number" =  "Phone Number";
+"User Name" = "User Name";
+"Email" = "Email";
+"Password" = "Password";
+"Confirm Password" = "Confirm Password";
+"You Have Account" = " you have account ?";
+"Sign Up" = "Sign Up";
+//login
+"Header" = " login to yeb2alak";
+"Login Title" = "Login";
+"Phone,Email" = "Phone,Email";
+"You Do Not Account ?" = "You Do Have Not Account ?";
+"LOGIN" = "Login";
+//activation code
+"Activation Title" = "Please Enter The Activation Key You Have Just Recieved In SMS ";
+"VERIFY" = "Verify";
+"Activation Code" = "Activation code";
+"SendCodeAgain" = "Send activation code again ?";
+//balance
+"BALANCE" = "Balance :";
+"LAST TRANSACTION" = "Last transaction :";
+"DATE" = "Date :";
+"COIN" = "Egp";
+"HISTORY" = "History";
+"WITHDRAW" = "Withdraw";
+"SETTING" = "Setting";
+// withdraw
+"WITHDRAW HEADER" = "Withdraw";
+"WITHDRAW TITLE" = "Please Enter Valid Informations";
+"PHONE" = "Phone";
+"VALUE" = "Value";
+"SEND" = "Send";
+//history
+"HISTORY HEADER" = "History";
+"AMOUNT" = "Amount";
+
+
+
+
+
+

@@ -18,10 +18,19 @@ class WithdrawVC: UIViewController {
     
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var valueTF: UITextField!
+    @IBOutlet weak var withdrawHeader: UILabel!
+    @IBOutlet weak var withdrawTite: UILabel!
     
+    @IBOutlet weak var sendButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+         withdrawHeader.text = NSLocalizedString("WITHDRAW HEADER", comment: "")
+        withdrawTite.text = NSLocalizedString("WITHDRAW TITLE", comment: "")
+        phoneTF.text = NSLocalizedString("PHONE", comment: "")
+         valueTF.text = NSLocalizedString("VALUE", comment: "")
+        
+        sendButton.setTitle(NSLocalizedString("SEND", comment: ""), for: .normal)
+        
         // Do any additional setup after loading the view.
     }
     

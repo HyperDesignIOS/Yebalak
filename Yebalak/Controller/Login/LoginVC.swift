@@ -8,11 +8,19 @@
 
 import UIKit
 import SwiftSpinner
+import MOLH
 
 class LoginVC: UIViewController {
     
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emailOrPHhone: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var dontHaveAccountButton
+    : UIButton!
+    
+    @IBOutlet weak var loginButton: UIButton!
+    
     let generalMethod = GeneralMethod()
     var msg : String!
     var done : String!
@@ -22,6 +30,13 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        headerLabel.text = NSLocalizedString("Header", comment: "")
+        titleLabel.text = NSLocalizedString("Login Title",comment: "")
+        emailOrPHhone.placeholder = NSLocalizedString("Phone,Email", comment: "")
+        passwordTF.placeholder = NSLocalizedString("Password", comment: "")
+        dontHaveAccountButton.setTitle(NSLocalizedString("You Do Not Account ?", comment: ""), for: .normal)
+        loginButton.setTitle(NSLocalizedString("LOGIN", comment: ""), for: .normal)
         
         if UserDefaults.standard.isLoggedIn(){
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

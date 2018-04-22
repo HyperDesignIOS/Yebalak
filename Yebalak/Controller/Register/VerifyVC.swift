@@ -20,9 +20,23 @@ class VerifyVC: UIViewController {
     var last : String!
     var spinner : UIView!
     
+    @IBOutlet weak var enterInformation: UILabel!
+    @IBOutlet weak var enterActivation: UILabel!
+    @IBOutlet weak var activationTitle: UILabel!
     @IBOutlet weak var codeTF: UITextField!
+    
+    @IBOutlet weak var verifyButton: UIButton!
+    @IBOutlet weak var sendCodeButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        enterInformation.text = NSLocalizedString("Enter Information", comment: "")
+        enterActivation.text = NSLocalizedString("Enter Activation Key", comment: "")
+        activationTitle.text = NSLocalizedString("Activation Title", comment: "")
+        codeTF.placeholder = NSLocalizedString("Activation Code", comment: "")
+        verifyButton.setTitle(NSLocalizedString("VERIFY", comment: ""), for: .normal)
+        sendCodeButton.setTitle(NSLocalizedString("SendCodeAgain", comment: ""), for: .normal)
+        
         hideKeyboardWhenTappedAround()
 
     }

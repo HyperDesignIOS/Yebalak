@@ -15,6 +15,12 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var confirmPasswordTF: UITextField!
+    @IBOutlet weak var enterInformation: UILabel!
+    @IBOutlet weak var enterActivationLabel: UILabel!
+    @IBOutlet weak var haveAccount: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    
+    @IBOutlet weak var registerTitle: UILabel!
     var generalMethod = GeneralMethod()
     var msg : String!
     var done : String!
@@ -23,6 +29,16 @@ class RegisterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        enterInformation.text = NSLocalizedString("Enter Information", comment: "")
+        enterActivationLabel.text = NSLocalizedString("Enter Activation Key", comment:"")
+        registerTitle.text = NSLocalizedString("Registration Title", comment: "")
+        phoneTF.placeholder = NSLocalizedString("Phone Number", comment: "")
+        userNameTF.placeholder = NSLocalizedString("User Name", comment: "")
+        emailTF.placeholder = NSLocalizedString("Email", comment: "")
+        passwordTF.placeholder = NSLocalizedString("Password", comment: "")
+        confirmPasswordTF.placeholder = NSLocalizedString("Confirm Password", comment: "")
+        haveAccount.setTitle(NSLocalizedString("You Have Account", comment: ""), for: .normal)
+        registerButton.setTitle(NSLocalizedString("Sign Up", comment: ""), for:.normal)
         hideKeyboardWhenTappedAround()
     }
     
