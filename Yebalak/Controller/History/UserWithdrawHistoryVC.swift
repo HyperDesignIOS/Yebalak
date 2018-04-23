@@ -61,7 +61,7 @@ class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewD
 
     func getUserWithdrawHistory(){
         let id = UserDefaults.standard.getUserID()
-        apiRequests.apisInstance.withdrawHistory(userID:"2") { (userWithdraws) in
+        apiRequests.apisInstance.withdrawHistory(userID:"\(id)") { (userWithdraws) in
             if userWithdraws.count != 0 {
            self.userWithdraws = userWithdraws
             self.tableView.reloadData()

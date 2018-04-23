@@ -122,7 +122,7 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRh-P5-40Z">
                                                 <rect key="frame" x="62" y="641" width="250" height="35"/>
-                                                <color key="backgroundColor" red="0.090196078431372548" green="0.48627450980392156" blue="0.29803922770000002" alpha="0.97934503424657537" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.031372549019607843" green="0.5490196078431373" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                                 <state key="normal" title="Sign Up ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -144,8 +144,9 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the correct information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iM3-6i-neF">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                                <color key="backgroundColor" red="0.031372549019607843" green="0.5490196078431373" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
-                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -505,8 +506,9 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the activation key that you have just recieved via SMS " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwP-4P-p5g">
                                                                 <rect key="frame" x="0.0" y="0.0" width="357" height="45"/>
+                                                                <color key="backgroundColor" red="0.031372549019607843" green="0.5490196078431373" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
-                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -579,7 +581,7 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYU-3d-Ds4">
                                                 <rect key="frame" x="100" y="475" width="177" height="40"/>
-                                                <color key="backgroundColor" red="0.090196078430000007" green="0.48627450979999998" blue="0.29803922770000002" alpha="0.97934503419999996" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.031372549019607843" green="0.5490196078431373" blue="0.43529411764705883" alpha="0.97934503419999996" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="G9k-2t-2UC"/>
                                                 </constraints>

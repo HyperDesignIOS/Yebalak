@@ -60,8 +60,9 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter valid informations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8y-Ek-kme">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                                <color key="backgroundColor" red="0.031372549019607843" green="0.5490196078431373" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
-                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -151,7 +152,7 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLO-zj-Cke">
                                                 <rect key="frame" x="62" y="515" width="250" height="36"/>
-                                                <color key="backgroundColor" red="0.090196078430000007" green="0.48627450979999998" blue="0.29803922770000002" alpha="0.97934503419999996" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.031372549019607843" green="0.5490196078431373" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                                 <state key="normal" title="Send">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
