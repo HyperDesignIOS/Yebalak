@@ -14,11 +14,18 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
     var depositsArr : [Deposit] = []
     let generalMethod = GeneralMethod()
     
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var merchantLabel: UILabel!
     
     @IBOutlet weak var NoResultLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = NSLocalizedString("DEPOSITEHISTORY", comment: "")
+        dateLabel.text = NSLocalizedString("HISTORYDATE", comment:"")
+        merchantLabel.text = NSLocalizedString("MERCHANT", comment: "")
+        amountLabel.text = NSLocalizedString("AMOUNT", comment: "")
         getDepositHistory ()
         tableView.delegate = self
         tableView.dataSource = self

@@ -26,12 +26,38 @@ class EditProfileVC: UIViewController {
     
     @IBOutlet weak var secondImage: UIImageView!
     
+    @IBOutlet weak var editTitle: UILabel!
+
+    @IBOutlet weak var englishLabel: UILabel!
+    @IBOutlet weak var arabicLabel: UILabel!
+    @IBOutlet weak var editButton: UIButton!
     
     var user: User!
     var msg: String!
     let generalMethod = GeneralMethod()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = NSLocalizedString("SETTINGS", comment: "")
+        editTitle.text = NSLocalizedString("EDIT TITLE", comment: "")
+        //selectLanguageLbl.text = NSLocalizedString("SELECT LANGUAGE", comment: "")
+        
+        nameTF.placeholder = NSLocalizedString("USER NAME", comment: "")
+        emailTF.placeholder = NSLocalizedString("EMAIL", comment: "")
+        phoneTF.placeholder = NSLocalizedString("PHONE", comment: "")
+        addressTF.placeholder = NSLocalizedString("ADDRESS", comment: "")
+        passwordTF.placeholder = NSLocalizedString("PASSWORD", comment: "")
+        editButton.setTitle(NSLocalizedString("EDIT", comment: ""), for:.normal)
+        arabicLabel.text = NSLocalizedString("ARABIC", comment: "")
+        englishLabel.text = NSLocalizedString("ENGLISH", comment: "")
+        
+        if MOLHLanguage.currentAppleLanguage() == "ar"{
+            imageSwap(forfirstimage: firstImage, andSecondImage: secondImage)
+        }
+        else{
+            imageSwap(forfirstimage: secondImage, andSecondImage: firstImage)
+        }
+        
         
         SwiftSpinner.show("loading...")
         self.user = NSKeyedUnarchiver.unarchiveObject(with: UserDefaults.standard.getUser() as! Data) as? User
@@ -93,13 +119,20 @@ class EditProfileVC: UIViewController {
         case 1:
             imageSwap(forfirstimage: firstImage, andSecondImage: secondImage)
 //            statusOfVehicle = "new"
-            MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
-            MOLH.reset()
+            if MOLHLanguage.currentAppleLanguage() != "ar"{
+                MOLH.setLanguageTo("ar")
+                MOLH.reset()
+                
+            }
             
         case 2:
             imageSwap(forfirstimage: secondImage, andSecondImage: firstImage)
 //            statusOfVehicle = "used"
-            
+            if MOLHLanguage.currentAppleLanguage() !=  "en"{
+                MOLH.setLanguageTo("en")
+                MOLH.reset()
+                
+            }
             
         default:
             break

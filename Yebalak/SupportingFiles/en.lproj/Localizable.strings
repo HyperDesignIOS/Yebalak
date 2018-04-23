@@ -37,15 +37,34 @@
 "HISTORY" = "History";
 "WITHDRAW" = "Withdraw";
 "SETTING" = "Setting";
+"BALANCENAV" = "Balance";
 // withdraw
 "WITHDRAW HEADER" = "Withdraw";
 "WITHDRAW TITLE" = "Please Enter Valid Informations";
 "PHONE" = "Phone";
 "VALUE" = "Value";
 "SEND" = "Send";
+"WITHDRAWCOMPANIES" = "Withdraw companies";
 //history
 "HISTORY HEADER" = "History";
 "AMOUNT" = "Amount";
+"MERCHANT" = "Merchant";
+"HISTORYDATE" = "Date";
+"DEPOSITEHISTORY" = "Deposit history";
+"WITHDRAWHISTORY" = "Withdraw history";
+//edit
+"EDIT TITLE" = "Edit your profile";
+"SELECT LANGUAGE" = "Select Language";
+"USER NAME" = "User Name";
+"EMAIL" =  "Email";
+"ADDRESS" = "Address";
+"PASSWORD" = "Password";
+"EDIT" = "Edit";
+"ARABIC" = "Arabic";
+"ENGLISH" = "English";
+"SETTINGS" = "Settings";
+
+
 
 
 

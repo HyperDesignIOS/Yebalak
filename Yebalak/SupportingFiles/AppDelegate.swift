@@ -18,6 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate , MOLHResetable {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         MOLH.shared.activate(true)
+        if UserDefaults.standard.isLoggedIn(){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "BalanceNavigationID")
+            self.window?.rootViewController = controller
+        }
+        else{
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
+//            //self.present(controller, animated: true, completion: nil)
+//
+//            self.show(controller, sender: self)
+        }
         return true
     }
 
@@ -45,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate , MOLHResetable {
 
     func reset() {
         let story = UIStoryboard(name: "Main", bundle: nil)
-        let vc = story.instantiateViewController(withIdentifier: "BalanceID")
+        let vc = story.instantiateViewController(withIdentifier: "BalanceNavigationID")
         self.window?.rootViewController = vc
     }
 }

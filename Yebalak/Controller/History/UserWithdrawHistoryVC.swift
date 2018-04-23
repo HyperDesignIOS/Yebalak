@@ -8,17 +8,31 @@
 
 import UIKit
 import SwiftSpinner
+import MOLH
+
+
 class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     var spinner : UIView!
     var userWithdraws : [Userwithdraw] = []
     let generalMethod = GeneralMethod()
     
+    
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var noResultLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = NSLocalizedString("WITHDRAWHISTORY", comment: "")
         //spinner = self.displaySpinner(onView: self.view)
+        phoneLabel.text = NSLocalizedString("PHONE" , comment: "")
+         dateLabel.text = NSLocalizedString("HISTORYDATE" , comment: "")
+        amountLabel.text = NSLocalizedString("AMOUNT" , comment: "")
         SwiftSpinner.show("loading...")
         getUserWithdrawHistory()
         tableView.delegate = self
@@ -34,14 +48,20 @@ class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
         cell.dateLabel.text = userWithdraws[indexPath.row].date
         cell.middelViewUpLabel.text = userWithdraws[indexPath.row].phone
-        cell.middelViewDownLabel.text = userWithdraws[indexPath.row].nameEn
+//        MOLHLanguage.currentAppleLanguage() == "en" ? (cell.middelViewDownLabel.text = userWithdraws[indexPath.row].nameEn) : (cell.middelViewDownLabel.text = userWithdraws[indexPath.row].nameAr)
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            cell.middelViewDownLabel.text = userWithdraws[indexPath.row].nameEn
+        }
+        else{
+             cell.middelViewDownLabel.text = userWithdraws[indexPath.row].nameAr
+        }
         cell.amountLabel.text = userWithdraws[indexPath.row].value
         return cell
     }
 
     func getUserWithdrawHistory(){
         let id = UserDefaults.standard.getUserID()
-        apiRequests.apisInstance.withdrawHistory(userID:"\(id)") { (userWithdraws) in
+        apiRequests.apisInstance.withdrawHistory(userID:"2") { (userWithdraws) in
             if userWithdraws.count != 0 {
            self.userWithdraws = userWithdraws
             self.tableView.reloadData()

@@ -204,7 +204,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gcx-vO-Brl"/>
                     </view>
-                    <navigationItem key="navigationItem" id="E9F-z2-PEt"/>
+                    <navigationItem key="navigationItem" title="Withdraw" id="E9F-z2-PEt"/>
                     <connections>
                         <outlet property="phoneTF" destination="ea2-Dd-ZFR" id="h8j-MJ-UyS"/>
                         <outlet property="sendButton" destination="FLO-zj-Cke" id="TaI-Yz-ztD"/>
@@ -215,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dJ-DZ-bLh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3740" y="89.505247376311857"/>
+            <point key="canvasLocation" x="4322.3999999999996" y="89.505247376311857"/>
         </scene>
         <!--Withdraw companies-->
         <scene sceneID="nw3-W5-Pd1">
@@ -291,25 +291,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSL-7T-Zqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2856.8000000000002" y="89.505247376311857"/>
+            <point key="canvasLocation" x="3535.1999999999998" y="89.505247376311857"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ok9-qL-9Eg">
+        <scene sceneID="kNd-bN-wzO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tpV-2x-2PM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="WithdrawCompaniesNavigationID" automaticallyAdjustsScrollViewInsets="NO" id="THm-iz-AHg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E9F-5y-KGF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0M7-Rl-7p6">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="rHq-FO-5y1" kind="relationship" relationship="rootViewController" id="ErF-0T-bLH"/>
+                        <segue destination="rHq-FO-5y1" kind="relationship" relationship="rootViewController" id="gkj-BY-3nR"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cy0-PX-04i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qi8-JM-9iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2058" y="90"/>
+            <point key="canvasLocation" x="2495" y="90"/>
         </scene>
     </scenes>
     <resources>

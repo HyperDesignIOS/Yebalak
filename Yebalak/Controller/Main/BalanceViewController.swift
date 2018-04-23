@@ -31,6 +31,7 @@ class BalanceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         balanceLbl.text = NSLocalizedString("BALANCE", comment: "")
          last.text = NSLocalizedString("LAST TRANSACTION", comment: "")
           dateLbl.text = NSLocalizedString("DATE", comment: "")
@@ -38,6 +39,7 @@ class BalanceViewController: UIViewController {
           historyLbl.text = NSLocalizedString("HISTORY", comment: "")
         withdrawLbl.text = NSLocalizedString("WITHDRAW", comment: "")
          settingLbl.text = NSLocalizedString("SETTING", comment: "")
+        self.navigationItem.title = NSLocalizedString("BALANCENAV", comment: "")
         
         SwiftSpinner.show("loading...")
        // spinner = self.displaySpinner(onView: self.view)
@@ -54,22 +56,6 @@ class BalanceViewController: UIViewController {
             UserDefaults.standard.setUser(value: encodedData)
         }
         
-        
-//        if UserDefaults.standard.isLoggedIn()
-//        {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID")
-//            balanceLabel.text = balance
-//            lastTransactionLabel.text = lastTransaction
-//            dateLabel.text = date
-//            self.show(controller, sender: self)
-//        }
-//        else {
-//            let storyboard = UIStoryboard(name: "Login", bundle: nil)
-//            let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
-//            self.show(controller, sender: self)
-//        }
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -77,8 +63,9 @@ class BalanceViewController: UIViewController {
     {
         let storyboard = UIStoryboard(name: "Withdraw", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "WithdrawImagesID")
-//        self.navigationController!.pushViewController(controller, animated: true)
-        self.show(controller, sender: self)
+      //  self.navigationController?.pushViewController(controller, animated: true)
+       self.show(controller, sender: self)
+      
     }
     
     @IBAction func historyButton(_ sender: Any) {

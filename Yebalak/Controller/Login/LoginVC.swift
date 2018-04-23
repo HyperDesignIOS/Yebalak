@@ -37,36 +37,9 @@ class LoginVC: UIViewController {
         passwordTF.placeholder = NSLocalizedString("Password", comment: "")
         dontHaveAccountButton.setTitle(NSLocalizedString("You Do Not Account ?", comment: ""), for: .normal)
         loginButton.setTitle(NSLocalizedString("LOGIN", comment: ""), for: .normal)
-        
-        if UserDefaults.standard.isLoggedIn(){
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID")
-//            self.navigationController!.pushViewController(controller, animated: true)
-//            self.present(controller, animated: true, completion: nil)
-            self.show(controller, sender: self)
-        }
-        else{
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
-            //self.present(controller, animated: true, completion: nil)
-            self.show(controller, sender: self)
-        }
+
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        if UserDefaults.standard.isLoggedIn(){
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID")
-//            self.present(controller, animated: true, completion: nil)
-//            //            self.show(controller, sender: self)
-//        }
-//        else{
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
-//            //self.present(controller, animated: true, completion: nil)
-//            self.show(controller, sender: self)
-//        }
-//    }
     
     @IBAction func forgetPassword(_ sender: Any) {
     }
@@ -80,11 +53,6 @@ class LoginVC: UIViewController {
     
     @IBAction func loginButton(_ sender: Any) {
         let mail = self.emailOrPHhone.text!
-//        if mail.isEmpty || mail.containsWhiteSpace(){
-//            generalMethod.showAlert(title: "", message: "please enter your mail", vc: self, closure: nil)
-//            return
-//        }
-      //  spinner = self.displaySpinner(onView: self.view)
           SwiftSpinner.show("loading...")
 
         let password = self.passwordTF.text!

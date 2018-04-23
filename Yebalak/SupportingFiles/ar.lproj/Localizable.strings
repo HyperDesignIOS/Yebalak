@@ -33,20 +33,36 @@
 "Activation Code" = "كود التحقق";
 "SendCodeAgain" = "ارسال الكود مرة اخري ؟";
 //balance
-"BALANCE" = "الرصيد";
-"LAST TRANSACTION" = "اخر تحويل";
-"DATE" = "التاريخ";
+"BALANCE" = "الرصيد :";
+"LAST TRANSACTION" = "اخر تحويل :";
+"DATE" = "التاريخ :";
 "COIN" = "جنية";
 "HISTORY" = "العمليات السابقة";
 "WITHDRAW" = "السحب";
 "SETTING" = "الاعدادات";
+"BALANCENAV" = "الرصيد";
 // withdraw
 "WITHDRAW HEADER" = "السحب";
 "WITHDRAW TITLE" = "من فضلك قم بادخال البيانات الصحيحة";
 "PHONE" = "رقم الموبايل";
 "VALUE" = "القيمة";
 "SEND" = "ارسال";
+"WITHDRAWCOMPANIES" = "شركات السحب المتاحة";
 //history
-"HISTORY HEADER" = "العمليات السابقة";
+"HISTORY HEADER" = "عمليات سابقة";
 "AMOUNT" = "القيمة";
-
+"MERCHANT" =  "التاجر";
+"HISTORYDATE" = "التاريخ";
+"DEPOSITEHISTORY" = "عمليات الايداع السابقة";
+"WITHDRAWHISTORY" = "عمليات السحب السابقة";
+//edit
+"EDIT TITLE" = "تعديل حسابك";
+"SELECT LANGUAGE" = "اختر لغة";
+"USER NAME" = "اسم المستخدم";
+"EMAIL" =  " البريد الالكترونى";
+"ADDRESS" = "العنوان";
+"PASSWORD" = " كلمة المرور";
+"EDIT" = "تعديل";
+"ARABIC" = "عربي";
+"ENGLISH" = "انجليزي";
+"SETTINGS" = "الاعدادات";

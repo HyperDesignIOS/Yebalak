@@ -255,15 +255,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GyC-MZ-qjm"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ImP-hQ-QDI"/>
+                    <tabBarItem key="tabBarItem" title="Withdraw history" id="hcF-3g-gDG" userLabel="Withdraw History"/>
+                    <navigationItem key="navigationItem" title="Withdraw history" id="ImP-hQ-QDI"/>
                     <connections>
+                        <outlet property="amountLabel" destination="qsK-wc-HWk" id="vyq-7z-y2F"/>
+                        <outlet property="dateLabel" destination="Qss-uV-YCF" id="uqM-py-I4w"/>
                         <outlet property="noResultLabel" destination="pwZ-RB-yVW" id="KkA-Vf-xjF"/>
+                        <outlet property="phoneLabel" destination="wrR-mF-CAY" id="BJ0-pv-3CC"/>
                         <outlet property="tableView" destination="wcp-7t-Va5" id="XGj-vg-ET8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HI8-po-RL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="214" y="194"/>
+            <point key="canvasLocation" x="-594" y="286"/>
         </scene>
         <!--depositHistory-->
         <scene sceneID="msV-AI-gJT">
@@ -509,15 +513,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J5J-Vp-TWr"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2si-uM-npp"/>
+                    <tabBarItem key="tabBarItem" title="Deposit history" id="KrC-4T-GKy" userLabel="Deposit History"/>
+                    <navigationItem key="navigationItem" title="Deposite history" id="2si-uM-npp"/>
                     <connections>
                         <outlet property="NoResultLabel" destination="Llb-tA-DrB" id="r7N-H6-mlx"/>
+                        <outlet property="amountLabel" destination="0cX-ot-dJh" id="BlU-Yf-P2l"/>
+                        <outlet property="dateLabel" destination="tum-9q-byN" id="g8F-sq-BV0"/>
+                        <outlet property="merchantLabel" destination="tWY-zB-Oic" id="692-MZ-q0S"/>
                         <outlet property="tableView" destination="atv-Vt-ZkO" id="0gX-En-SC3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ho8-xa-1zl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="214" y="-472"/>
+            <point key="canvasLocation" x="-594" y="-424"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1eC-Rk-cls">
@@ -531,59 +539,13 @@
                         <color key="selectedImageTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="TMj-4H-Odc" kind="relationship" relationship="viewControllers" id="aqW-zP-902"/>
-                        <segue destination="DLw-Uy-ubp" kind="relationship" relationship="viewControllers" id="tKw-88-AQs"/>
+                        <segue destination="C8y-Ym-N6q" kind="relationship" relationship="viewControllers" id="U9T-2d-jYZ"/>
+                        <segue destination="NPr-Sv-Wus" kind="relationship" relationship="viewControllers" id="pVM-pj-Lz3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Rs-kj-9xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1668" y="-140"/>
-        </scene>
-        <!--Deposit history-->
-        <scene sceneID="yxu-OG-c7b">
-            <objects>
-                <navigationController title="Deposit history" automaticallyAdjustsScrollViewInsets="NO" id="TMj-4H-Odc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Deposite history" id="JBh-ZI-ywT">
-                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-20"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UaR-9J-llg">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qPV-Fb-SeT">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="C8y-Ym-N6q" kind="relationship" relationship="rootViewController" id="8Yr-bQ-VEb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pYW-67-Yay" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-715.20000000000005" y="-471.36431784107947"/>
-        </scene>
-        <!--Withdraw history-->
-        <scene sceneID="PeF-PD-Ajx">
-            <objects>
-                <navigationController title="Withdraw history" automaticallyAdjustsScrollViewInsets="NO" id="DLw-Uy-ubp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Withdraw history" id="oXS-Tg-yki">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-20"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yrc-AE-Sjt">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="NPr-Sv-Wus" kind="relationship" relationship="rootViewController" id="qlE-v8-J9j"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g4S-jA-HA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-715.20000000000005" y="194.30284857571215"/>
         </scene>
     </scenes>
     <resources>

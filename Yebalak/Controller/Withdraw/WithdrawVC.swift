@@ -24,7 +24,9 @@ class WithdrawVC: UIViewController {
     @IBOutlet weak var sendButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-         withdrawHeader.text = NSLocalizedString("WITHDRAW HEADER", comment: "")
+        
+        self.navigationItem.title = NSLocalizedString("WITHDRAW HEADER", comment: "")
+        withdrawHeader.text = NSLocalizedString("WITHDRAW HEADER", comment: "")
         withdrawTite.text = NSLocalizedString("WITHDRAW TITLE", comment: "")
         phoneTF.text = NSLocalizedString("PHONE", comment: "")
          valueTF.text = NSLocalizedString("VALUE", comment: "")
