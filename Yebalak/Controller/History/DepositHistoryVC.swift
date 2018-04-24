@@ -14,12 +14,14 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
     var depositsArr : [Deposit] = []
     let generalMethod = GeneralMethod()
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var merchantLabel: UILabel!
     
     @IBOutlet weak var NoResultLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = NSLocalizedString("DEPOSITEHISTORY", comment: "")
@@ -33,8 +35,12 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
           SwiftSpinner.show("loading...")
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.title = NSLocalizedString("DEPOSITEHISTORY", comment: "")
+    }
     
-    @IBOutlet weak var tableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return depositsArr.count
     }

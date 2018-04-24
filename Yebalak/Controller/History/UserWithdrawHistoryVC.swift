@@ -40,6 +40,12 @@ class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewD
         
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.title = NSLocalizedString("WITHDRAWHISTORY", comment: "")
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userWithdraws.count
     }
