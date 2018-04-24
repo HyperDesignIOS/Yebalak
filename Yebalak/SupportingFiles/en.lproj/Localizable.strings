@@ -45,6 +45,7 @@
 "VALUE" = "Value";
 "SEND" = "Send";
 "WITHDRAWCOMPANIES" = "Withdraw companies";
+"NOVALUEENTERED" = "please enter a value ";
 //history
 "HISTORY HEADER" = "History";
 "AMOUNT" = "Amount";
@@ -52,6 +53,7 @@
 "HISTORYDATE" = "Date";
 "DEPOSITEHISTORY" = "Deposit history";
 "WITHDRAWHISTORY" = "Withdraw history";
+"NO DATA" = "No data" ; 
 //edit
 "EDIT TITLE" = "Edit your profile";
 "SELECT LANGUAGE" = "Select Language";
@@ -64,6 +66,27 @@
 "ENGLISH" = "English";
 "SETTINGS" = "Settings";
 "LOGOUT" = "Log out";
+
+// alerts
+
+"NOPHONEENTERED" = "please enter your phone";
+"INVALIDPHONE" = "Invalid phone number";
+"NONAMEENTERED" = "please enter your new user name";
+"NOEMAILENTERED" = "please enter your e-mail";
+"INVAILDEMAIL" = "Invalid e-mail";
+"NOADDRESSENTERED" = "please enter your new address";
+"NOPASSWORDENTERED" = "please enter your password";
+"NOCONFIRMATIONPASSWORDENTERED" = "please enter your password confirmation";
+"PASSWORDCONFIRMATIONFAILD" = "password confirmation failed";
+
+
+// loading
+"LOADING" = "Loading...";
+
+
+
+
+
 
 
 

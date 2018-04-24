@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftSpinner
+import MOLH
+
 class RegisterVC: UIViewController {
     
     @IBOutlet weak var phoneTF: UITextField!
@@ -29,17 +31,7 @@ class RegisterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        enterInformation.text = NSLocalizedString("Enter Information", comment: "")
-        enterActivationLabel.text = NSLocalizedString("Enter Activation Key", comment:"")
-        registerTitle.text = NSLocalizedString("Registration Title", comment: "")
-        phoneTF.placeholder = NSLocalizedString("Phone Number", comment: "")
-        userNameTF.placeholder = NSLocalizedString("User Name", comment: "")
-        emailTF.placeholder = NSLocalizedString("Email", comment: "")
-        passwordTF.placeholder = NSLocalizedString("Password", comment: "")
-        confirmPasswordTF.placeholder = NSLocalizedString("Confirm Password", comment: "")
-        haveAccount.setTitle(NSLocalizedString("You Have Account", comment: ""), for: .normal)
-        registerButton.setTitle(NSLocalizedString("Sign Up", comment: ""), for:.normal)
-        hideKeyboardWhenTappedAround()
+       didLoad()
     }
     
     
@@ -54,20 +46,26 @@ class RegisterVC: UIViewController {
         
         
        // spinner = self.displaySpinner(onView: self.view)
-          SwiftSpinner.show("loading...")
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        else
+        {
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
 
         let phone = self.phoneTF.text!
         if phone.isEmpty || phone.containsWhiteSpace() {
             //self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
-            generalMethod.showAlert(title: "", message: "please enter your phone ", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: NSLocalizedString("NOPHONEENTERED", comment: ""), vc: self, closure: nil)
             return
             
         }
         else if !phone.isValidPhone() {
            // self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
-            generalMethod.showAlert(title: "", message: "invalid phone", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: NSLocalizedString("INVALIDPHONE", comment: ""), vc: self, closure: nil)
             return
         }
         
@@ -75,7 +73,7 @@ class RegisterVC: UIViewController {
         if name.isEmpty || name.containsWhiteSpace() {
            // self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
-            generalMethod.showAlert(title: "", message: "please enter your name ", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: NSLocalizedString("NONAMEENTERED", comment: ""), vc: self, closure: nil)
             return
             
         }
@@ -83,20 +81,20 @@ class RegisterVC: UIViewController {
         if mail.isEmpty || mail.containsWhiteSpace()  {
            // self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
-            generalMethod.showAlert(title: "", message: "please enter your e-mail", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: NSLocalizedString("NOEMAILENTERED", comment: ""), vc: self, closure: nil)
             return
         }
         else if !mail.isValidEmail() {
             //self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
-            generalMethod.showAlert(title: "", message: "invalid e-mail", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: NSLocalizedString("INVAILDEMAIL", comment: ""), vc: self, closure: nil)
             return
         }
         let password = self.passwordTF.text!
         if password.isEmpty || password.containsWhiteSpace()  {
             //self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
-            generalMethod.showAlert(title: "", message: "please enter your password", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: NSLocalizedString("NOPASSWORDENTERED", comment: ""), vc: self, closure: nil)
             return
             
         }
@@ -108,13 +106,13 @@ class RegisterVC: UIViewController {
         if confirmpass.isEmpty || confirmpass.containsWhiteSpace() {
             //self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
-            generalMethod.showAlert(title: "", message: "please enter your password confirmation", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: NSLocalizedString("NOCONFIRMATIONPASSWORDENTERED", comment: ""), vc: self, closure: nil)
             return
         }
         else if password != confirmpass {
             //self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
-            generalMethod.showAlert(title: "", message: " password confirmation failed", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: NSLocalizedString("PASSWORDCONFIRMATIONFAILD", comment: ""), vc: self, closure: nil)
             return
         }
         
@@ -145,6 +143,19 @@ class RegisterVC: UIViewController {
             }
         }
         
+    }
+    func didLoad(){
+        enterInformation.text = NSLocalizedString("Enter Information", comment: "")
+        enterActivationLabel.text = NSLocalizedString("Enter Activation Key", comment:"")
+        registerTitle.text = NSLocalizedString("Registration Title", comment: "")
+        phoneTF.placeholder = NSLocalizedString("Phone Number", comment: "")
+        userNameTF.placeholder = NSLocalizedString("User Name", comment: "")
+        emailTF.placeholder = NSLocalizedString("Email", comment: "")
+        passwordTF.placeholder = NSLocalizedString("Password", comment: "")
+        confirmPasswordTF.placeholder = NSLocalizedString("Confirm Password", comment: "")
+        haveAccount.setTitle(NSLocalizedString("You Have Account", comment: ""), for: .normal)
+        registerButton.setTitle(NSLocalizedString("Sign Up", comment: ""), for:.normal)
+        hideKeyboardWhenTappedAround()
     }
     
 }

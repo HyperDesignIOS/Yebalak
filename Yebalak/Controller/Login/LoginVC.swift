@@ -30,14 +30,7 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        headerLabel.text = NSLocalizedString("Header", comment: "")
-        titleLabel.text = NSLocalizedString("Login Title",comment: "")
-        emailOrPHhone.placeholder = NSLocalizedString("Phone,Email", comment: "")
-        passwordTF.placeholder = NSLocalizedString("Password", comment: "")
-        dontHaveAccountButton.setTitle(NSLocalizedString("You Do Not Account ?", comment: ""), for: .normal)
-        loginButton.setTitle(NSLocalizedString("LOGIN", comment: ""), for: .normal)
-
+        didLoad()
     }
     
     
@@ -52,14 +45,26 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: Any) {
+        
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        else
+        {
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
         let mail = self.emailOrPHhone.text!
-          SwiftSpinner.show("loading...")
-
+        if mail.isEmpty || mail.containsWhiteSpace()  {
+            // self.removeSpinner(spinner: self.spinner)
+            SwiftSpinner.hide()
+            generalMethod.showAlert(title: "", message: NSLocalizedString("NOEMAILENTERED", comment: ""), vc: self, closure: nil)
+            return
+        }
         let password = self.passwordTF.text!
         if password.isEmpty || password.containsWhiteSpace(){
            // self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
-            generalMethod.showAlert(title: "", message: "please enter your password", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: NSLocalizedString("NOPASSWORDENTERED", comment: ""), vc: self, closure: nil)
             return
             
         }
@@ -121,7 +126,14 @@ class LoginVC: UIViewController {
             }
         }
     }
-        
+    func didLoad(){
+        headerLabel.text = NSLocalizedString("Header", comment: "")
+        titleLabel.text = NSLocalizedString("Login Title",comment: "")
+        emailOrPHhone.placeholder = NSLocalizedString("Phone,Email", comment: "")
+        passwordTF.placeholder = NSLocalizedString("Password", comment: "")
+        dontHaveAccountButton.setTitle(NSLocalizedString("You Do Not Account ?", comment: ""), for: .normal)
+        loginButton.setTitle(NSLocalizedString("LOGIN", comment: ""), for: .normal)
+    }
         
     }
     

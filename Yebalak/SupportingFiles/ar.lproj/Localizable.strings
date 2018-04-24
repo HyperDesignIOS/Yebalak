@@ -48,6 +48,7 @@
 "VALUE" = "القيمة";
 "SEND" = "ارسال";
 "WITHDRAWCOMPANIES" = "شركات السحب المتاحة";
+"NOVALUEENTERED" = "من فضلك ادخل القيمة ";
 //history
 "HISTORY HEADER" = "عمليات سابقة";
 "AMOUNT" = "القيمة";
@@ -55,6 +56,7 @@
 "HISTORYDATE" = "التاريخ";
 "DEPOSITEHISTORY" = "عمليات الايداع السابقة";
 "WITHDRAWHISTORY" = "عمليات السحب السابقة";
+"NO DATA" = "لا توجد عمليات سابقة" ;
 //edit
 "EDIT TITLE" = "تعديل حسابك";
 "SELECT LANGUAGE" = "اختر لغة";
@@ -67,3 +69,18 @@
 "ENGLISH" = "انجليزي";
 "SETTINGS" = "الاعدادات";
 "LOGOUT" = "تسجيل الخروج";
+
+//alerts
+
+"NOPHONEENTERED" = "من فضلك قم بادخال رقم الموبايل";
+"INVALIDPHONE" = "رقم موبايل غير صحيح";
+"NONAMEENTERED" = "من فضلك قم بادخال اسم المستخدم";
+"NOEMAILENTERED" = "من فضلك قم بادخال البريد الالكتروني";
+"INVAILDEMAIL" = "بريد الكتروني غير صحيح";
+"NOADDRESSENTERED" = "من فضلك قم بادخال العنوان";
+"NOPASSWORDENTERED" = "من فضلك قم بادخال كلمة المرور";
+"NOCONFIRMATIONPASSWORDENTERED" = "من فضلك قم بادخال تاكيد كلمة المرور";
+"PASSWORDCONFIRMATIONFAILD" = "كلمتا مرور غير متماثلتين";
+
+// loading
+"LOADING" = "جاري التحميل ...";

@@ -9,6 +9,7 @@
 import UIKit
 import AlamofireImage
 import SwiftSpinner
+import MOLH
 
 
 class WithdrawCompaniesTableViewController: UIViewController , UITableViewDelegate,UITableViewDataSource {
@@ -20,16 +21,7 @@ class WithdrawCompaniesTableViewController: UIViewController , UITableViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       //spinner = self.displaySpinner(onView: self.view)
-        self.navigationItem.title = NSLocalizedString("WITHDRAWCOMPANIES", comment: "")
-
-        tableView.delegate = self
-        tableView.dataSource = self
-        SwiftSpinner.show("loading...")
-        getWithdrawCompaniesLogo()
-        tableView.reloadData()
- 
+        didLoad()
     }
 
 
@@ -47,6 +39,7 @@ class WithdrawCompaniesTableViewController: UIViewController , UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WithdrawCompanyCell", for: indexPath) as! WithdrawCompaniesTableViewCell
 
+        cell.withdrawCompanyLogo.layer.cornerRadius = (cell.withdrawCompanyLogo.frame.size.width) / 2
         cell.withdrawCompanyLogo.af_setImage(withURL: URL(string: "\(WithdrawImagesURL)\(withdrawCompanies[indexPath.row].logo!)")!)
 
         // Configure the cell...
@@ -73,6 +66,22 @@ class WithdrawCompaniesTableViewController: UIViewController , UITableViewDelega
             //self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
         }
+    }
+    func didLoad(){
+        //spinner = self.displaySpinner(onView: self.view)
+        self.navigationItem.title = NSLocalizedString("WITHDRAWCOMPANIES", comment: "")
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        else
+        {
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        getWithdrawCompaniesLogo()
+        tableView.reloadData()
     }
 
 }

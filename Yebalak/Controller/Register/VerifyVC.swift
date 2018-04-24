@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftSpinner
+import MOLH
 
 class VerifyVC: UIViewController {
  
@@ -29,28 +30,24 @@ class VerifyVC: UIViewController {
     @IBOutlet weak var sendCodeButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        enterInformation.text = NSLocalizedString("Enter Information", comment: "")
-        enterActivation.text = NSLocalizedString("Enter Activation Key", comment: "")
-        activationTitle.text = NSLocalizedString("Activation Title", comment: "")
-        codeTF.placeholder = NSLocalizedString("Activation Code", comment: "")
-        verifyButton.setTitle(NSLocalizedString("VERIFY", comment: ""), for: .normal)
-        sendCodeButton.setTitle(NSLocalizedString("SendCodeAgain", comment: ""), for: .normal)
-        
-        hideKeyboardWhenTappedAround()
-
+        viewDidLoad()
     }
     
    
     @IBAction func ResendCode(_ sender: Any) {
        // spinner = self.displaySpinner(onView: self.view)
-          SwiftSpinner.show("loading...")
-
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        else
+        {
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
         let id = UserDefaults.standard.getUserID()
         apiRequests.apisInstance.ResendCode(userId: id) { (msg) in
             if msg != ""
             {
-                self.removeSpinner(spinner: self.spinner)
+                SwiftSpinner.hide()
                 self.generalMethod.showAlert(title: "", message:msg , vc: self, closure: nil)
             }
         }
@@ -59,10 +56,16 @@ class VerifyVC: UIViewController {
     
     @IBAction func verifyButton(_ sender: Any) {
       
-        spinner = self.displaySpinner(onView: self.view)
+        if MOLHLanguage.currentAppleLanguage() != "EN"{
+            SwiftSpinner.show("loading...")
+        }
+        else
+        {
+            SwiftSpinner.show("جاري التحميل ... ")
+        }
         let code = self.codeTF.text!
         if code.isEmpty || code.containsWhiteSpace(){
-            self.removeSpinner(spinner: self.spinner)
+           SwiftSpinner.hide()
             generalMethod.showAlert(title: "", message: "please enter verification code ", vc: self, closure: nil)
             return
         }
@@ -81,16 +84,26 @@ class VerifyVC: UIViewController {
                 controller.balance = self.balance
                 controller.date = self.date
                 controller.lastTransaction = self.last
-                self.removeSpinner(spinner: self.spinner)
+                SwiftSpinner.hide()
                 self.show(controller, sender: self)
             }
             else if self.done == "0"
             {
                 self.msg = msg
-                self.removeSpinner(spinner: self.spinner)
+                SwiftSpinner.hide()
                 self.generalMethod.showAlert(title: "", message:self.msg, vc: self, closure: nil)
             }
            
+        }
+        func didLoad(){
+            enterInformation.text = NSLocalizedString("Enter Information", comment: "")
+            enterActivation.text = NSLocalizedString("Enter Activation Key", comment: "")
+            activationTitle.text = NSLocalizedString("Activation Title", comment: "")
+            codeTF.placeholder = NSLocalizedString("Activation Code", comment: "")
+            verifyButton.setTitle(NSLocalizedString("VERIFY", comment: ""), for: .normal)
+            sendCodeButton.setTitle(NSLocalizedString("SendCodeAgain", comment: ""), for: .normal)
+            
+            hideKeyboardWhenTappedAround()
         }
     }
 }

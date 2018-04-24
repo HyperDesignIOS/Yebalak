@@ -206,6 +206,7 @@ class apiRequests {
         
         sm.connectForApiWith(url: WithdrawCompaniesURL  , mType: HTTPServerMethod.post, params: ["id":userID], complation: { (json) in
             
+            self.withdrawArray.removeAll()
             if let obj = json {
                 print (obj)
                 

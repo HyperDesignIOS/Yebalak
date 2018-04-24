@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftSpinner
+import MOLH
+
 class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     var spinner : UIView!
@@ -24,15 +26,7 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = NSLocalizedString("DEPOSITEHISTORY", comment: "")
-        dateLabel.text = NSLocalizedString("HISTORYDATE", comment:"")
-        merchantLabel.text = NSLocalizedString("MERCHANT", comment: "")
-        amountLabel.text = NSLocalizedString("AMOUNT", comment: "")
-        getDepositHistory ()
-        tableView.delegate = self
-        tableView.dataSource = self
-        //spinner = self.displaySpinner(onView: self.view)
-          SwiftSpinner.show("loading...")
+        
     }
     
     override func awakeFromNib() {
@@ -76,6 +70,24 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
                    SwiftSpinner.hide()
             }
         }
+    }
+    func didLoad(){
+        self.navigationItem.title = NSLocalizedString("DEPOSITEHISTORY", comment: "")
+        dateLabel.text = NSLocalizedString("HISTORYDATE", comment:"")
+        merchantLabel.text = NSLocalizedString("MERCHANT", comment: "")
+        amountLabel.text = NSLocalizedString("AMOUNT", comment: "")
+        NoResultLabel.text = NSLocalizedString("NO DATA", comment: "")
+        tableView.delegate = self
+        tableView.dataSource = self
+        //spinner = self.displaySpinner(onView: self.view)
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        else
+        {
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        getDepositHistory()
     }
 
 }

@@ -29,65 +29,42 @@ class EditProfileVC: UIViewController {
     let generalMethod = GeneralMethod()
     override func viewDidLoad() {
         super.viewDidLoad()
+        didLoad()
         
-        self.navigationItem.title = NSLocalizedString("SETTINGS", comment: "")
-        editTitle.text = NSLocalizedString("EDIT TITLE", comment: "")
-        nameTF.placeholder = NSLocalizedString("USER NAME", comment: "")
-        emailTF.placeholder = NSLocalizedString("EMAIL", comment: "")
-        phoneTF.placeholder = NSLocalizedString("PHONE", comment: "")
-        addressTF.placeholder = NSLocalizedString("ADDRESS", comment: "")
-        passwordTF.placeholder = NSLocalizedString("PASSWORD", comment: "")
-        editButton.setTitle(NSLocalizedString("EDIT", comment: ""), for:.normal)
-        arabicLabel.text = NSLocalizedString("ARABIC", comment: "")
-        englishLabel.text = NSLocalizedString("ENGLISH", comment: "")
-        logoutLabel.text = NSLocalizedString("LOGOUT", comment: "")
-        if MOLHLanguage.currentAppleLanguage() == "ar"{
-            imageSwap(forfirstimage: firstImage, andSecondImage: secondImage)
-        }
-        else{
-            imageSwap(forfirstimage: secondImage, andSecondImage: firstImage)
-        }
-        SwiftSpinner.show("loading...")
-        self.user = NSKeyedUnarchiver.unarchiveObject(with: UserDefaults.standard.getUser() as! Data) as? User
-        nameTF.text = user.name
-        phoneTF.text = user.phone
-        emailTF.text = user.email
-        addressTF.text = user.address
-        SwiftSpinner.hide()
-        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func editProfileButton(_ sender: Any) {
         
         let phone = self.phoneTF.text!
         if phone.isEmpty || phone.containsWhiteSpace() {
-            generalMethod.showAlert(title: "", message: "please enter your phone ", vc: self, closure: nil)
+            
+            generalMethod.showAlert(title: "", message: NSLocalizedString("NOPHONEENTERED", comment: ""), vc: self, closure: nil)
             return
             
         }
         else if !phone.isValidPhone() {
-            generalMethod.showAlert(title: "", message: "invalid phone", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: NSLocalizedString("INVALIDPHONE", comment: ""), vc: self, closure: nil)
             return
         }
         
         let name = self.nameTF.text!
         if name.isEmpty || name.containsWhiteSpace() {
-            generalMethod.showAlert(title: "", message: "please enter your new user name ", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: NSLocalizedString("NONAMEENTERED", comment: ""), vc: self, closure: nil)
             return
             
         }
         let mail = self.emailTF.text!
         if mail.isEmpty || mail.containsWhiteSpace()  {
-            generalMethod.showAlert(title: "", message: "please enter your new e-mail", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: NSLocalizedString("NOEMAILENTERED", comment: ""), vc: self, closure: nil)
             return
         }
         else if !mail.isValidEmail() {
-            generalMethod.showAlert(title: "", message: "invalid e-mail", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: NSLocalizedString("INVAILDEMAIL", comment: ""), vc: self, closure: nil)
             return
         }
         let address = self.addressTF.text!
         if address.isEmpty || mail.containsWhiteSpace()  {
-            generalMethod.showAlert(title: "", message: "please enter your new address", vc: self, closure: nil)
+            generalMethod.showAlert(title: "", message: NSLocalizedString("NOADDRESSENTERED", comment: ""), vc: self, closure: nil)
             return
         }
         let id = UserDefaults.standard.getUserID()
@@ -139,6 +116,39 @@ class EditProfileVC: UIViewController {
         firstImageView.image = UIImage(named: "radio-on-button-2")
         secondImageView.image = UIImage(named: "circle")
         
+    }
+    func didLoad(){
+        self.navigationItem.title = NSLocalizedString("SETTINGS", comment: "")
+        editTitle.text = NSLocalizedString("EDIT TITLE", comment: "")
+        nameTF.placeholder = NSLocalizedString("USER NAME", comment: "")
+        emailTF.placeholder = NSLocalizedString("EMAIL", comment: "")
+        phoneTF.placeholder = NSLocalizedString("PHONE", comment: "")
+        addressTF.placeholder = NSLocalizedString("ADDRESS", comment: "")
+        passwordTF.placeholder = NSLocalizedString("PASSWORD", comment: "")
+        editButton.setTitle(NSLocalizedString("EDIT", comment: ""), for:.normal)
+        arabicLabel.text = NSLocalizedString("ARABIC", comment: "")
+        englishLabel.text = NSLocalizedString("ENGLISH", comment: "")
+        logoutLabel.text = NSLocalizedString("LOGOUT", comment: "")
+        if MOLHLanguage.currentAppleLanguage() == "ar"{
+            imageSwap(forfirstimage: firstImage, andSecondImage: secondImage)
+        }
+        else{
+            imageSwap(forfirstimage: secondImage, andSecondImage: firstImage)
+        }
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        else
+        {
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        self.user = NSKeyedUnarchiver.unarchiveObject(with: UserDefaults.standard.getUser() as! Data) as? User
+        nameTF.text = user.name
+        phoneTF.text = user.phone
+        emailTF.text = user.email
+        addressTF.text = user.address
+        SwiftSpinner.hide()
+        hideKeyboardWhenTappedAround()
     }
     
 }

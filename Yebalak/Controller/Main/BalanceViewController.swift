@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftSpinner
+import MOLH
+
 class BalanceViewController: UIViewController {
     
     var balance : String!
@@ -31,32 +33,7 @@ class BalanceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        balanceLbl.text = NSLocalizedString("BALANCE", comment: "")
-         last.text = NSLocalizedString("LAST TRANSACTION", comment: "")
-          dateLbl.text = NSLocalizedString("DATE", comment: "")
-        coinLbl.text = NSLocalizedString("COIN", comment: "")
-          historyLbl.text = NSLocalizedString("HISTORY", comment: "")
-        withdrawLbl.text = NSLocalizedString("WITHDRAW", comment: "")
-         settingLbl.text = NSLocalizedString("SETTING", comment: "")
-        self.navigationItem.title = NSLocalizedString("BALANCENAV", comment: "")
-        
-        SwiftSpinner.show("loading...")
-       // spinner = self.displaySpinner(onView: self.view)
-        let id = UserDefaults.standard.getUserID()
-        apiRequests.apisInstance.getUserBalance(userId: "\(id)") { (user, balance, date, last) in
-            //self.removeSpinner(spinner: self.spinner)
-            SwiftSpinner.hide()
-            self.balanceLabel.text = balance
-            self.lastTransactionLabel.text = last
-            self.dateLabel.text = date
-            self.balanceImageLabel.text = balance
-            self.user = user
-            let encodedData = NSKeyedArchiver.archivedData(withRootObject: user)
-            UserDefaults.standard.setUser(value: encodedData)
-        }
-        
-        // Do any additional setup after loading the view, typically from a nib.
+      didLoad()
     }
     
     @IBAction func withdrawButton(_ sender: Any)
@@ -81,6 +58,70 @@ class BalanceViewController: UIViewController {
         self.show(controller, sender: self)
     }
     
+    @IBAction func refrehButton(_ sender: Any) {
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        else
+        {
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        getBalance()
+       
+    }
+    
+    lazy var refreshControl: UIRefreshControl = {
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(self.handleRefresh(_:)),
+                                 for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.green
+        
+        return refreshControl
+    }()
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+         self.view.addSubview(self.refreshControl)
+        getBalance()
+        
+        refreshControl.endRefreshing()
+    }
+    
+   func  getBalance(){
+    let id = UserDefaults.standard.getUserID()
+    apiRequests.apisInstance.getUserBalance(userId: "\(id)") { (user, balance, date, last) in
+    //self.removeSpinner(spinner: self.spinner)
+    SwiftSpinner.hide()
+    self.balanceLabel.text = balance
+    self.lastTransactionLabel.text = last
+    self.dateLabel.text = date
+    self.balanceImageLabel.text = balance
+    self.user = user
+    let encodedData = NSKeyedArchiver.archivedData(withRootObject: user)
+    UserDefaults.standard.setUser(value: encodedData)
+    }
+    }
+    func didLoad(){
+        balanceLbl.text = NSLocalizedString("BALANCE", comment: "")
+        last.text = NSLocalizedString("LAST TRANSACTION", comment: "")
+        dateLbl.text = NSLocalizedString("DATE", comment: "")
+        coinLbl.text = NSLocalizedString("COIN", comment: "")
+        historyLbl.text = NSLocalizedString("HISTORY", comment: "")
+        withdrawLbl.text = NSLocalizedString("WITHDRAW", comment: "")
+        settingLbl.text = NSLocalizedString("SETTING", comment: "")
+        self.navigationItem.title = NSLocalizedString("BALANCENAV", comment: "")
+        
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        else
+        {
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        // spinner = self.displaySpinner(onView: self.view)
+        getBalance()
+    }
     
 }
 

@@ -28,16 +28,7 @@ class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = NSLocalizedString("WITHDRAWHISTORY", comment: "")
-        //spinner = self.displaySpinner(onView: self.view)
-        phoneLabel.text = NSLocalizedString("PHONE" , comment: "")
-         dateLabel.text = NSLocalizedString("HISTORYDATE" , comment: "")
-        amountLabel.text = NSLocalizedString("AMOUNT" , comment: "")
-        SwiftSpinner.show("loading...")
-        getUserWithdrawHistory()
-        tableView.delegate = self
-        tableView.dataSource = self
-        
+        didLoad()
     }
     
     override func awakeFromNib() {
@@ -81,6 +72,26 @@ class UserWithdrawHistoryVC: UIViewController,UITableViewDataSource,UITableViewD
                 SwiftSpinner.hide()
             }
         }
+    }
+    func didLoad()
+    {
+        self.navigationItem.title = NSLocalizedString("WITHDRAWHISTORY", comment: "")
+        //spinner = self.displaySpinner(onView: self.view)
+        phoneLabel.text = NSLocalizedString("PHONE" , comment: "")
+        dateLabel.text = NSLocalizedString("HISTORYDATE" , comment: "")
+        amountLabel.text = NSLocalizedString("AMOUNT" , comment: "")
+        noResultLabel.text = NSLocalizedString("NO DATA", comment: "")
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        else
+        {
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        getUserWithdrawHistory()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
     }
 
 }
