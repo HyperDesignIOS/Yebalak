@@ -63,7 +63,7 @@ class BalanceViewController: UIViewController {
     {
         let storyboard = UIStoryboard(name: "Withdraw", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "WithdrawImagesID")
-      //  self.navigationController?.pushViewController(controller, animated: true)
+       // self.navigationController?.pushViewController(controller, animated: true)
        self.show(controller, sender: self)
       
     }

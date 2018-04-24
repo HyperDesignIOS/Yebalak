@@ -4,6 +4,7 @@
 //  Created by AmrObjection on 4/17/18.
 //  Copyright © 2018 AmrObjection. All rights reserved.
 
+
 import UIKit
 import SwiftSpinner
 import MOLH
@@ -21,6 +22,7 @@ class EditProfileVC: UIViewController {
     @IBOutlet weak var englishLabel: UILabel!
     @IBOutlet weak var arabicLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var logoutLabel: UILabel!
     
     var user: User!
     var msg: String!
@@ -38,6 +40,7 @@ class EditProfileVC: UIViewController {
         editButton.setTitle(NSLocalizedString("EDIT", comment: ""), for:.normal)
         arabicLabel.text = NSLocalizedString("ARABIC", comment: "")
         englishLabel.text = NSLocalizedString("ENGLISH", comment: "")
+        logoutLabel.text = NSLocalizedString("LOGOUT", comment: "")
         if MOLHLanguage.currentAppleLanguage() == "ar"{
             imageSwap(forfirstimage: firstImage, andSecondImage: secondImage)
         }
@@ -116,6 +119,20 @@ class EditProfileVC: UIViewController {
             break
         }
     }
+    
+    
+    @IBAction func logoutButton(_ sender: Any) {
+        
+        UserDefaults.standard.setLoggedIn(value: false)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
+     //   show(controller, sender: self)
+        self.navigationController?.present(controller, animated:true, completion: {
+     
+        })
+    }
+    
     
     func imageSwap(forfirstimage firstImageView: UIImageView,andSecondImage secondImageView: UIImageView)
     {

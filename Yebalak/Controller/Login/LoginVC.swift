@@ -95,14 +95,17 @@ class LoginVC: UIViewController {
                 }
                 else{
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let controller = storyboard.instantiateViewController(withIdentifier: "BalanceID") as! BalanceViewController
+                    let navController = storyboard.instantiateViewController(withIdentifier: "BalanceNavigationID") as! UINavigationController
+                    let controller = navController.viewControllers.first as! BalanceViewController
                     controller.balance = self.user.balance
                     controller.date = date
                     controller.lastTransaction = last
                     //self.present(controller, animated: true, completion: nil)
                     //self.removeSpinner(spinner: self.spinner)
                       SwiftSpinner.hide()
-                    self.show(controller, sender: self)
+//                    self.present(controller, animated: true, completion: {
+//                    })
+                    self.show(navController, sender: self)
                     let encodedData = NSKeyedArchiver.archivedData(withRootObject: user)
                     UserDefaults.standard.setUser(value: encodedData)
                      UserDefaults.standard.setUserID(value: self.user.id)
