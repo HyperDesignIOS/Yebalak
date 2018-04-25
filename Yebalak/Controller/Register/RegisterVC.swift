@@ -10,7 +10,7 @@ import UIKit
 import SwiftSpinner
 import MOLH
 
-class RegisterVC: UIViewController {
+class RegisterVC: UIViewController,UITextFieldDelegate ,UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var userNameTF: UITextField!
@@ -32,6 +32,7 @@ class RegisterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        didLoad()
+        phoneTF.delegate = self
     }
     
     
@@ -58,6 +59,9 @@ class RegisterVC: UIViewController {
         if phone.isEmpty || phone.containsWhiteSpace() {
             //self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
+            
+//            phoneTF.attributedPlaceholder = NSAttributedString(string: "Please enter Email ID", attributes: [NSAttributedStringKey.foregroundColor: UIColor.red])
+            
             generalMethod.showAlert(title: "", message: NSLocalizedString("NOPHONEENTERED", comment: ""), vc: self, closure: nil)
             return
             
@@ -97,6 +101,11 @@ class RegisterVC: UIViewController {
             generalMethod.showAlert(title: "", message: NSLocalizedString("NOPASSWORDENTERED", comment: ""), vc: self, closure: nil)
             return
             
+        }
+        else if password.count < 6 {
+            SwiftSpinner.hide()
+            generalMethod.showAlert(title: "", message: NSLocalizedString("SHORTPASSWORD", comment: ""), vc: self, closure: nil)
+            return
         }
         //        else if !password.isValidPassword() {
         //            generalMethod.showAlert(title: "", message: "invalid password", vc: self, closure: nil)
@@ -148,7 +157,7 @@ class RegisterVC: UIViewController {
         enterInformation.text = NSLocalizedString("Enter Information", comment: "")
         enterActivationLabel.text = NSLocalizedString("Enter Activation Key", comment:"")
         registerTitle.text = NSLocalizedString("Registration Title", comment: "")
-        phoneTF.placeholder = NSLocalizedString("Phone Number", comment: "")
+        phoneTF.placeholder = NSLocalizedString("PHONE", comment: "")
         userNameTF.placeholder = NSLocalizedString("User Name", comment: "")
         emailTF.placeholder = NSLocalizedString("Email", comment: "")
         passwordTF.placeholder = NSLocalizedString("Password", comment: "")

@@ -25,7 +25,7 @@ class WithdrawVC: UIViewController {
     @IBOutlet weak var sendButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewDidLoad()
+      didLoad()
     }
     
     
@@ -37,6 +37,12 @@ class WithdrawVC: UIViewController {
         if phone.isEmpty || phone.containsWhiteSpace() {
             
             generalMethod.showAlert(title: "", message: NSLocalizedString("NOPHONEENTERED", comment: ""), vc: self, closure: nil)
+            return
+        }
+        else if !phone.isValidPhone() {
+            // self.removeSpinner(spinner: self.spinner)
+            SwiftSpinner.hide()
+            generalMethod.showAlert(title: "", message: NSLocalizedString("INVALIDPHONE", comment: ""), vc: self, closure: nil)
             return
         }
         let value = valueTF.text!
@@ -56,19 +62,19 @@ class WithdrawVC: UIViewController {
             SwiftSpinner.hide()
             self.generalMethod.showAlert(title: "", message: msg, vc: self, closure: nil)
         }
-        func didLoad(){
-            self.navigationItem.title = NSLocalizedString("WITHDRAW HEADER", comment: "")
-            withdrawHeader.text = NSLocalizedString("WITHDRAW HEADER", comment: "")
-            withdrawTite.text = NSLocalizedString("WITHDRAW TITLE", comment: "")
-            phoneTF.placeholder = NSLocalizedString("PHONE", comment: "")
-            valueTF.placeholder = NSLocalizedString("VALUE", comment: "")
-            
-            sendButton.setTitle(NSLocalizedString("SEND", comment: ""), for: .normal)
-        }
-        
+      
     }
     
 
-  
+    func didLoad(){
+        self.navigationItem.title = NSLocalizedString("WITHDRAW HEADER", comment: "")
+        withdrawHeader.text = NSLocalizedString("WITHDRAW HEADER", comment: "")
+        withdrawTite.text = NSLocalizedString("WITHDRAW TITLE", comment: "")
+        phoneTF.placeholder = NSLocalizedString("PHONE", comment: "")
+        valueTF.placeholder = NSLocalizedString("VALUE", comment: "")
+        
+        sendButton.setTitle(NSLocalizedString("SEND", comment: ""), for: .normal)
+    }
+    
 
 }

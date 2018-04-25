@@ -26,6 +26,7 @@ class DepositHistoryVC: UIViewController , UITableViewDelegate, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        didLoad()
         
     }
     

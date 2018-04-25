@@ -8,16 +8,16 @@
 
 
 // registeration
-"Enter Information " = "Enter Information";
-"Enter Activation Key" = "enter activation key";
+"Enter Information" = "Enter Information";
+"Enter Activation Key" = "Enter activation key";
 "Registration Title" = "please enter the correct informations ";
-"Phone Number" =  "Phone Number";
 "User Name" = "User Name";
 "Email" = "Email";
 "Password" = "Password";
 "Confirm Password" = "Confirm Password";
 "You Have Account" = " you have account ?";
 "Sign Up" = "Sign Up";
+"SHORTPASSWORD" = "Passwrd should be at least 6 characters";
 //login
 "Header" = " login to yeb2alak";
 "Login Title" = "Login";

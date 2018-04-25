@@ -118,6 +118,14 @@ class EditProfileVC: UIViewController {
         
     }
     func didLoad(){
+        
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
+        else
+        {
+            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
+        }
         self.navigationItem.title = NSLocalizedString("SETTINGS", comment: "")
         editTitle.text = NSLocalizedString("EDIT TITLE", comment: "")
         nameTF.placeholder = NSLocalizedString("USER NAME", comment: "")
@@ -135,13 +143,7 @@ class EditProfileVC: UIViewController {
         else{
             imageSwap(forfirstimage: secondImage, andSecondImage: firstImage)
         }
-        if MOLHLanguage.currentAppleLanguage() == "en"{
-            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
-        }
-        else
-        {
-            SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
-        }
+        
         self.user = NSKeyedUnarchiver.unarchiveObject(with: UserDefaults.standard.getUser() as! Data) as? User
         nameTF.text = user.name
         phoneTF.text = user.phone
