@@ -52,6 +52,13 @@ class WithdrawCompaniesTableViewController: UIViewController , UITableViewDelega
         let storyboard = UIStoryboard(name: "Withdraw", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "withdrawID") as! WithdrawVC
         controller.withdrawId = id
+        if MOLHLanguage.currentAppleLanguage() == "en"{
+        controller.withdraw = withdrawCompanies[indexPath.row].nameEn
+        }
+        else
+        {
+              controller.withdraw = withdrawCompanies[indexPath.row].nameAr
+        }
         self.show(controller, sender: self)
     }
     

@@ -189,6 +189,7 @@ class apiRequests {
                 
                 let msg = dictionaryOfJson!["msg"] as! String
                  self.msg = msg
+                print (self.msg)
                 
                 let status = dictionaryOfJson!["status"] as! Int
                 self.status = status

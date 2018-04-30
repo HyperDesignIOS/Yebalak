@@ -31,7 +31,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cD-Tl-a8x">
                                                 <rect key="frame" x="20" y="20" width="335" height="43"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Withdraw" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQV-0l-cKa">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQV-0l-cKa">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="43"/>
                                                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="0.71246254279999999" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
@@ -246,9 +246,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9DI-6l-evV">
-                                                    <rect key="frame" x="45" y="21" width="285" height="100"/>
+                                                    <rect key="frame" x="45" y="21" width="285" height="130"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="8sA-Di-jpa"/>
+                                                        <constraint firstAttribute="height" constant="130" id="8sA-Di-jpa"/>
                                                         <constraint firstAttribute="width" constant="285" id="LEm-xT-MXb"/>
                                                     </constraints>
                                                 </imageView>

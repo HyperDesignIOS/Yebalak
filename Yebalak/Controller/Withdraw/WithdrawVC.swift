@@ -16,13 +16,14 @@ class WithdrawVC: UIViewController {
     let userId = UserDefaults.standard.getUserID()
     let generalMethod = GeneralMethod()
     var spinner : UIView!
-    
+     var withdraw = ""
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var valueTF: UITextField!
     @IBOutlet weak var withdrawHeader: UILabel!
     @IBOutlet weak var withdrawTite: UILabel!
     
     @IBOutlet weak var sendButton: UIButton!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
       didLoad()
@@ -68,7 +69,7 @@ class WithdrawVC: UIViewController {
 
     func didLoad(){
         self.navigationItem.title = NSLocalizedString("WITHDRAW HEADER", comment: "")
-        withdrawHeader.text = NSLocalizedString("WITHDRAW HEADER", comment: "")
+        withdrawHeader.text = withdraw
         withdrawTite.text = NSLocalizedString("WITHDRAW TITLE", comment: "")
         phoneTF.placeholder = NSLocalizedString("PHONE", comment: "")
         valueTF.placeholder = NSLocalizedString("VALUE", comment: "")
