@@ -36,7 +36,7 @@
 "COIN" = "Egp";
 "HISTORY" = "History";
 "WITHDRAW" = "Withdraw";
-"SETTING" = "Setting";
+"SETTING" = "Settings";
 "BALANCENAV" = "Balance";
 // withdraw
 "WITHDRAW HEADER" = "Withdraw";
