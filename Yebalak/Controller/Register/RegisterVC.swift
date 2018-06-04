@@ -45,7 +45,7 @@ class RegisterVC: UIViewController,UITextFieldDelegate ,UIPopoverPresentationCon
     
     @IBAction func signUpButton(_ sender: Any) {
         
-        
+        var isValidData = true
        // spinner = self.displaySpinner(onView: self.view)
         if MOLHLanguage.currentAppleLanguage() == "en"{
             SwiftSpinner.show(NSLocalizedString("LOADING",comment:""))
@@ -61,7 +61,7 @@ class RegisterVC: UIViewController,UITextFieldDelegate ,UIPopoverPresentationCon
             SwiftSpinner.hide()
             
 //            phoneTF.attributedPlaceholder = NSAttributedString(string: "Please enter Email ID", attributes: [NSAttributedStringKey.foregroundColor: UIColor.red])
-            
+            isValidData = false
             generalMethod.showAlert(title: "", message: NSLocalizedString("NOPHONEENTERED", comment: ""), vc: self, closure: nil)
             return
             
@@ -69,6 +69,7 @@ class RegisterVC: UIViewController,UITextFieldDelegate ,UIPopoverPresentationCon
         else if !phone.isValidPhone() {
            // self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
+            isValidData = false
             generalMethod.showAlert(title: "", message: NSLocalizedString("INVALIDPHONE", comment: ""), vc: self, closure: nil)
             return
         }
@@ -77,6 +78,7 @@ class RegisterVC: UIViewController,UITextFieldDelegate ,UIPopoverPresentationCon
         if name.isEmpty || name.containsWhiteSpace() {
            // self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
+            isValidData = false
             generalMethod.showAlert(title: "", message: NSLocalizedString("NONAMEENTERED", comment: ""), vc: self, closure: nil)
             return
             
@@ -85,12 +87,14 @@ class RegisterVC: UIViewController,UITextFieldDelegate ,UIPopoverPresentationCon
         if mail.isEmpty || mail.containsWhiteSpace()  {
            // self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
+            isValidData = false
             generalMethod.showAlert(title: "", message: NSLocalizedString("NOEMAILENTERED", comment: ""), vc: self, closure: nil)
             return
         }
         else if !mail.isValidEmail() {
             //self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
+            isValidData = false
             generalMethod.showAlert(title: "", message: NSLocalizedString("INVAILDEMAIL", comment: ""), vc: self, closure: nil)
             return
         }
@@ -98,33 +102,40 @@ class RegisterVC: UIViewController,UITextFieldDelegate ,UIPopoverPresentationCon
         if password.isEmpty || password.containsWhiteSpace()  {
             //self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
+            isValidData = false
             generalMethod.showAlert(title: "", message: NSLocalizedString("NOPASSWORDENTERED", comment: ""), vc: self, closure: nil)
             return
             
         }
         else if password.count < 6 {
             SwiftSpinner.hide()
+            isValidData = false
             generalMethod.showAlert(title: "", message: NSLocalizedString("SHORTPASSWORD", comment: ""), vc: self, closure: nil)
             return
         }
-        //        else if !password.isValidPassword() {
-        //            generalMethod.showAlert(title: "", message: "invalid password", vc: self, closure: nil)
-        //            return
-        //        }
+        
+        else if !password.isValidPassword() {
+            SwiftSpinner.hide()
+            isValidData = false
+            generalMethod.showAlert(title: "", message: "invalid password", vc: self, closure: nil)
+            return
+        }
         let confirmpass = self.confirmPasswordTF.text!
         if confirmpass.isEmpty || confirmpass.containsWhiteSpace() {
             //self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
+            isValidData = false
             generalMethod.showAlert(title: "", message: NSLocalizedString("NOCONFIRMATIONPASSWORDENTERED", comment: ""), vc: self, closure: nil)
             return
         }
         else if password != confirmpass {
             //self.removeSpinner(spinner: self.spinner)
             SwiftSpinner.hide()
+            isValidData = false
             generalMethod.showAlert(title: "", message: NSLocalizedString("PASSWORDCONFIRMATIONFAILD", comment: ""), vc: self, closure: nil)
             return
         }
-        
+        if isValidData{
             apiRequests.apisInstance.register(userName:name, userPassword:password,userPhone: phone, userMail:mail ) { (user,msg,done) in
             
             self.done = done
@@ -151,6 +162,8 @@ class RegisterVC: UIViewController,UITextFieldDelegate ,UIPopoverPresentationCon
                 self.generalMethod.showAlert(title: "", message:self.msg, vc: self, closure: nil)
             }
         }
+        }
+        
         
     }
     func didLoad(){

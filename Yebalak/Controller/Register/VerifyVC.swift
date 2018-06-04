@@ -28,9 +28,10 @@ class VerifyVC: UIViewController {
     
     @IBOutlet weak var verifyButton: UIButton!
     @IBOutlet weak var sendCodeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewDidLoad()
+        didLoad()
     }
     
    
@@ -95,16 +96,18 @@ class VerifyVC: UIViewController {
             }
            
         }
-        func didLoad(){
-            enterInformation.text = NSLocalizedString("Enter Information", comment: "")
-            enterActivation.text = NSLocalizedString("Enter Activation Key", comment: "")
-            activationTitle.text = NSLocalizedString("Activation Title", comment: "")
-            codeTF.placeholder = NSLocalizedString("Activation Code", comment: "")
-            verifyButton.setTitle(NSLocalizedString("VERIFY", comment: ""), for: .normal)
-            sendCodeButton.setTitle(NSLocalizedString("SendCodeAgain", comment: ""), for: .normal)
-            
-            hideKeyboardWhenTappedAround()
-        }
+       
+    }
+    
+    func didLoad(){
+        enterInformation.text = NSLocalizedString("Enter Information", comment: "")
+        enterActivation.text = NSLocalizedString("Enter Activation Key", comment: "")
+        activationTitle.text = NSLocalizedString("Activation Title", comment: "")
+        codeTF.placeholder = NSLocalizedString("Activation Code", comment: "")
+        verifyButton.setTitle(NSLocalizedString("VERIFY", comment: ""), for: .normal)
+        sendCodeButton.setTitle(NSLocalizedString("SendCodeAgain", comment: ""), for: .normal)
+        
+        hideKeyboardWhenTappedAround()
     }
 }
     

@@ -57,7 +57,7 @@ class apiRequests {
             didDataReady(self.user,self.msg,self.done)
         }, errorHandler: { (error, msg) in
             print("\(String(describing: msg))")
-            didDataReady(self.user,self.msg,self.done)
+          //didDataReady(self.user,self.msg,self.done)
         })
     }
     

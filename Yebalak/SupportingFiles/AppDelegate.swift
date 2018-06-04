@@ -24,11 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate , MOLHResetable {
             self.window?.rootViewController = controller
         }
         else{
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
-//            //self.present(controller, animated: true, completion: nil)
-//
-//            self.show(controller, sender: self)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "LoginID")
+            //self.present(controller, animated: true, completion: nil)
+
+             self.window?.rootViewController = controller
         }
         return true
     }
